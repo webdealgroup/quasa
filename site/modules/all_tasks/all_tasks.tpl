@@ -150,7 +150,11 @@
               }
             }
         </style>
-
+        <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous">
+        </script>
         <script>
             const menuIconEl = $('.menu-icon');
             const sidenavEl = $('.sidenav');
@@ -174,6 +178,51 @@
             sidenavCloseEl.on('click', function() {
               toggleClassName(sidenavEl, 'active');
             });
+            
+            // Tabs
+            (function() {
+              $(function() {
+                var toggle;
+                return toggle = new Toggle('.toggle');
+              });
+
+              this.Toggle = (function() {
+                Toggle.prototype.el = null;
+
+                Toggle.prototype.tabs = null;
+
+                Toggle.prototype.panels = null;
+
+                function Toggle(toggleClass) {
+                  this.el = $(toggleClass);
+                  this.tabs = this.el.find(".tab");
+                  this.panels = this.el.find(".panel");
+                  this.bind();
+                }
+
+                Toggle.prototype.show = function(index) {
+                  var activePanel, activeTab;
+                  this.tabs.removeClass('active');
+                  activeTab = this.tabs.get(index);
+                  $(activeTab).addClass('active');
+                  this.panels.hide();
+                  activePanel = this.panels.get(index);
+                  return $(activePanel).show();
+                };
+
+                Toggle.prototype.bind = function() {
+                  var _this = this;
+                  return this.tabs.unbind('click').bind('click', function(e) {
+                    return _this.show($(e.currentTarget).index());
+                  });
+                };
+
+                return Toggle;
+
+              })();
+
+            }).call(this);
+
         </script>
 
 
@@ -208,8 +257,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0px;
-  padding: 20px;
-  height: 15px;ы
+  padding: 15px 20px;
   background-color: #e3e4e6;
   color: slategray;
 }
@@ -217,55 +265,114 @@
 .main-overview {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-  grid-auto-rows: 94px;
+  grid-auto-rows: 105px;
   grid-gap: 1px;
   margin: 0px;
 }
 
 .overviewcard {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
   padding: 20px;
   color: #312E35;
   background-color: #fff;
+  border-bottom: 1px solid rgb(245, 244, 247);
+}
+
+.overviewcard__icon {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.overviewcard__icon img {
+    max-width: 30px;
+}
+.overviewcard__title {
+    font-weight: bold;
+    font-size: 15px;
+}
+.overviewcard__address {
+    color: darkgray;
+    font-size: 13px;
+}
+.overviewcard__time_start {
+    font-weight: bold;
+    color: darkgray;
+    font-size: 13px;
+}
+.overviewcard__labels {
+    display: flex;
+}
+.overviewcard__labels div{
+    margin-right:10px;
+}
+.overviewcard__info {
+    font-weight: bold;
+    font-size: 15px;
+}
+.overviewcard__card {
+    background-image: url(../site/img/card.svg);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.toggle .tabs .tab.active {
+  border-bottom: 2px solid rgb(238, 205, 139);
+}
+.toggle .panels .panel {
+  display: none;
+}
+.toggle .panels .panel:first-child {
+  display: block;
 }
 </style> 
-            <main class="main">
+            <main class="main toggle">
 
 
                
 
               
 
-                <div class="main-header">
-                    <div class="main-header__heading">
+                <div class="main-header tabs">
+                    <div class="main-header__heading tab active">
                         ВСЕ
                     </div>
-                    <div class="main-header__updates">
+                    <div class="main-header__updates tab">
                         ИЗБРАННЫЕ
                     </div>
                 </div>
+                <div class="panels">
+                    <div class="panel">
+                        <div class="main-overview">
 
-                <div class="main-overview">
+                            
+                            ~~foreach from=$tasks item=i~
+                            <div class="overviewcard" onclick="javascript: document.location.href = '/task_card/?id=~~$i.id~&referrer=all_tasks';">
+                                <div class="overviewcard__icon" style="background-color: #0bb99f;">
+                                    <img src="../site/img/car.svg">
+                                </div>
+                                <div class="overviewcard__text">
+                                    <div class="overviewcard__title">~~$i.title~</div>
+                                    <div class="overviewcard__address">~~$i.address~</div>
+                                    <div class="overviewcard__time_start">начать ~~$i.time_start~</div>
+                                    <div class="overviewcard__labels">
+                                        <div class="overviewcard__info">~~$i.cost~</div>
+                                        <div class="overviewcard__card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            ~~/foreach~
 
-
-
-                    
-                    ~~foreach from=$tasks item=i~
-                    <div class="overviewcard" onclick="javascript: document.location.href = '/task_card/?id=~~$i.id~&referrer=all_tasks';">
-                        <div class="overviewcard__icon">
-                            <div>~~$i.title~</div>
-                            <div>~~$i.address~</div>
-                            <div>начать ~~$i.time_start~</div> 
-
-                        </div>
-                        <div class="overviewcard__info">
-                            ~~$i.cost~
                         </div>
                     </div>
-                    ~~/foreach~
-
+                    <div class="panel">
+                        123
+                    </div>
                 </div>
 
               
