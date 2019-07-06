@@ -315,7 +315,7 @@
     font-size: 15px;
 }
 .overviewcard__card {
-    background-image: url(../site/img/card.svg);
+    background-image: url(/img/card.svg);
     width: 20px;
     height: 20px;
     background-size: cover;
@@ -354,7 +354,7 @@
                             ~~foreach from=$tasks item=i~
                             <div class="overviewcard" onclick="javascript: document.location.href = '/task_card/?id=~~$i.id~&referrer=all_tasks';">
                                 <div class="overviewcard__icon" style="background-color: #0bb99f;">
-                                    <img src="../site/img/car.svg">
+                                    <img src="/img/car.svg">
                                 </div>
                                 <div class="overviewcard__text">
                                     <div class="overviewcard__title">~~$i.title~</div>
