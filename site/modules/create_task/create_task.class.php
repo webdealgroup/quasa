@@ -7,7 +7,7 @@ class create_task extends aModule{
 		
 		$tasks = rows('SELECT * FROM tasks');
 	    $_SESSION['smarty']->assign('tasks', $tasks); 
-		$_SESSION['smarty']->display('create_task/create_task.tpl');
+		$_SESSION['smarty']->display('create_task/show_catalog.tpl');
         
     }
 }
