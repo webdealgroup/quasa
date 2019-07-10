@@ -178,6 +178,8 @@ ul { margin: 0px; padding: 0px; list-style: none;}
     margin-bottom: 20px;
 }
 
+.allTaskSection .atUl li:last-child{ border-bottom: none; }
+
 .allTaskSection .atUl li .title{ font-size: 17px; font-weight: 500; color: #323136; margin-bottom: 5px; }
 .allTaskSection .atUl li .adress{ font-size: 14px; color: #959499; margin: 5px 0px; }
 .allTaskSection .atUl li .timeStart{ font-size: 14px; color: #959499; font-weight: 500; }
