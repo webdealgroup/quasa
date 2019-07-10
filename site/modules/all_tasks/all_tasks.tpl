@@ -163,134 +163,43 @@
             </header>
 
             ~~include file='tpl/menu.tpl'~
- 
 
-
-<style>
-
-.main {
-  grid-area: main;
-  background-color: #fff;
-  color: #312E35;
-}
-
-
-.main-overview {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-  grid-auto-rows: 105px;
-  grid-gap: 1px;
-  margin: 0px;
-}
-
-.overviewcard {
-  display: flex;
-  align-items: flex-start;
-  padding: 20px;
-  color: #312E35;
-  background-color: #fff;
-  border-bottom: 1px solid rgb(245, 244, 247);
-}
-
-.overviewcard__icon {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-}
-.overviewcard__icon img {
-    max-width: 30px;
-}
-.overviewcard__title {
-    font-weight: bold;
-    font-size: 15px;
-}
-.overviewcard__address {
-    color: darkgray;
-    font-size: 13px;
-}
-.overviewcard__time_start {
-    font-weight: bold;
-    color: darkgray;
-    font-size: 13px;
-}
-.overviewcard__labels {
-    display: flex;
-}
-.overviewcard__labels div{
-    margin-right:10px;
-}
-.overviewcard__info {
-    font-weight: bold;
-    font-size: 15px;
-}
-.overviewcard__card {
-    background-image: url(/img/card.svg);
-    width: 20px;
-    height: 20px;
-    background-size: cover;
-}
-
-.toggle .tabs .tab.active {
-  border-bottom: 2px solid rgb(238, 205, 139);
-}
-.toggle .panels .panel {
-  display: none;
-}
-.toggle .panels .panel:first-child {
-  display: block;
-}
-</style> 
             <main class="main toggle">
 
-
                 <div class="main-header tabs">
-                    <div class="main-header__heading tab active">
-                        ВСЕ
-                    </div>
-                    <div class="main-header__heading tab">
-                        РЕКОМЕНДОВАННЫЕ
-                    </div>
-                    <div class="main-header__updates tab">
-                        ИЗБРАННЫЕ
-                    </div>
+                    <div class="main-header__heading tab active">ВСЕ</div>
+                    <div class="main-header__heading tab">РЕКОМЕНДОВАННЫЕ</div>
+                    <div class="main-header__updates tab">ИЗБРАННЫЕ</div>
                     <div class="line"></div>
                 </div>
 
+                <div class="allTaskSection">
 
-                <div class="panels">
-                    <div class="panel">
-                        <div class="main-overview">
-
-                            
-                            ~~foreach from=$tasks item=i~
-                            <div class="overviewcard" onclick="javascript: document.location.href = '/task_card/?id=~~$i.id~&referrer=all_tasks';">
-                                <div class="overviewcard__icon" style="background-color: #0bb99f;">
-                                    <img src="/img/car.svg">
-                                </div>
-                                <div class="overviewcard__text">
-                                    <div class="overviewcard__title">~~$i.title~</div>
-                                    <div class="overviewcard__address">~~$i.address~</div>
-                                    <div class="overviewcard__time_start">начать ~~$i.time_start~</div>
-                                    <div class="overviewcard__labels">
-                                        <div class="overviewcard__info">~~$i.cost~</div>
-                                        <div class="overviewcard__card"></div>
+                    <div class="panels">
+                        <div class="panel">
+                            <ul class="atUl">
+                                ~~foreach from=$tasks item=i~
+                                <li onclick="javascript: document.location.href = '/task_card/?id=~~$i.id~&referrer=all_tasks';">
+                                    <div class="overviewIcon"><div class="icoCategory ico_03"></div></div>
+                                    <div class="overviewInfo">
+                                        <div class="title">~~$i.title~</div>
+                                        <div class="adress">~~$i.address~</div>
+                                        <div class="timeStart">начать: ~~$i.time_start~</div>
+                                        <div class="price"><span>до ~~$i.cost~</span> <span class="cardIco"></span></div>
                                     </div>
-                                </div>
-                            </div>
-                            ~~/foreach~
-
+                                </li>
+                                ~~/foreach~
+                            </ul>
+                        </div>
+                        <div class="panel">
+                            123
+                        </div>
+                        <div class="panel">
+                            456
                         </div>
                     </div>
-                    <div class="panel">
-                        123
-                    </div>
-                </div>
 
-              
+                </div>
 
             </main>
 
