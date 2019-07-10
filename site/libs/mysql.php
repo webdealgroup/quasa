@@ -4,13 +4,13 @@
 // MYSQL ============================================================================================
 // DB SETTINGS (begin)
 
-define('DBHOST', 'localhost'); //Server
+define('DBHOST', '85.143.174.61'); //Server
 define('DBNAME', 'quasa'); //Database
  
 
 
-define('DBUSER', 'root'); //Database User
-define('DBPASS', ''); //Password
+define('DBUSER', 'quasa'); //Database User
+define('DBPASS', 'q1w2e3'); //Password
 define('PREFIX', ''); //Prefix
 define('PCONNECT', 0);
 define('DEBUGMODE', 1);
