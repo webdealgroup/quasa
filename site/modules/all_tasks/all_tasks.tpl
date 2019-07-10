@@ -150,7 +150,7 @@
 
             <header class="header">
                 <div class="boxAllTasks">
-                    <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <p class="radius200"></p> </div>
+                    <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <!--p class="radius200"></p--> </div>
                     <div class="batSearch">
                         <form action="#" method="post">
                             <input type="text" name="search" class="radius200" value="" placeholder="Поиск по заданиям" />
