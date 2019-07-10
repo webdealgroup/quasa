@@ -10,7 +10,8 @@
         <meta name="description" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
         
         <script type="text/javascript">
             function init() {
@@ -22,91 +23,6 @@
         </script>
 
         <style>
-            body {
-              margin: 0;
-              padding: 0;
-              color: #fff;
-              font-family: 'Roboto', sans-serif;
-              box-sizing: border-box;
-            }
-
-            /* Assign grid instructions to our parent grid container, mobile-first (hide the sidenav) */
-            .grid-container {
-              display: grid;
-              grid-template-columns: 1fr;
-              grid-template-rows: 50px 1fr 50px;
-              grid-template-areas:
-                'header'
-                'main'
-                'footer';
-              height: 100vh;
-            }
-
-
-            /* Give every child element its grid name */
-            .header {
-              grid-area: header;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              padding: 0 16px;
-              background-color: #2A2E43;
-            }
-
-            /* Make room for the menu icon on mobile */
-            .header__search {
-              margin-left: 4px;
-              font-family: Arial;
-              font-size: 1.5em;
-            }
-
-            .sidenav {
-              grid-area: sidenav;
-              display: flex;
-              flex-direction: column;
-              height: 100%;
-              width: 240px;
-              position: fixed;
-              overflow-y: auto;
-              transform: translateX(-245px);
-              transition: all .6s ease-in-out;
-              box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-              z-index: 2; /* Needs to sit above the hamburger menu icon */
-              background-color: #394263;
-            }
-
-            .sidenav.active {
-              transform: translateX(0);
-            }
-
-            .sidenav__close-icon {
-              position: absolute;
-              visibility: visible;
-              top: 8px;
-              right: 12px;
-              cursor: pointer;
-              font-size: 20px;
-              color: #ddd;
-            }
-
-            .sidenav__list {
-              padding: 0;
-              margin-top: 85px;
-              list-style-type: none;
-            }
-
-            .sidenav__list-item {
-              padding: 20px 20px 20px 40px;
-              color: #ddd;
-            }
-
-            .sidenav__list-item:hover {
-              background-color: rgba(255, 255, 255, 0.2);
-              cursor: pointer;
-            }
-
-
-
 
             .footer {
               grid-area: footer;
@@ -233,12 +149,17 @@
         <div class="grid-container">
 
             <header class="header">
-                <div class="header__search" onClick="javascript:return init();">
-                        <span>&#9776;</span>
+                <div class="boxAllTasks">
+                    <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <p class="radius200"></p> </div>
+                    <div class="batSearch">
+                        <form action="#" method="post">
+                            <input type="text" name="search" class="radius200" value="" placeholder="Поиск по заданиям" />
+                        </form>
+                    </div>
+                    <div class="batCategory"><span class="ico settings"></span></div>
+                    <div class="batMap"><span class="ico map"></span></div>
                 </div>
-                <div class="header__avatar">
-                    ~~$page~
-                </div>
+
             </header>
 
             ~~include file='tpl/menu.tpl'~
@@ -253,14 +174,6 @@
   color: #312E35;
 }
 
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px;
-  padding: 15px 20px;
-  background-color: #e3e4e6;
-  color: slategray;
-}
 
 .main-overview {
   display: grid;
@@ -334,18 +247,20 @@
             <main class="main toggle">
 
 
-               
-
-              
-
                 <div class="main-header tabs">
                     <div class="main-header__heading tab active">
                         ВСЕ
                     </div>
+                    <div class="main-header__heading tab">
+                        РЕКОМЕНДОВАННЫЕ
+                    </div>
                     <div class="main-header__updates tab">
                         ИЗБРАННЫЕ
                     </div>
+                    <div class="line"></div>
                 </div>
+
+
                 <div class="panels">
                     <div class="panel">
                         <div class="main-overview">
