@@ -100,6 +100,11 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .header .boxAllTasks .batCategory span.settings{ -webkit-mask-image: url(../img/settings.svg); mask-image: url(../img/settings.svg); }
 .header .boxAllTasks .batMap span.map{ -webkit-mask-image: url(../img/map.svg); mask-image: url(../img/map.svg); }
 .header .boxAllTasks .batMenu span.menu{ -webkit-mask-image: url(../img/menu.svg); mask-image: url(../img/menu.svg);}
+.header .boxAllTasks span.share{ -webkit-mask-image: url(../img/share.svg); mask-image: url(../img/share.svg);}
+.header .boxAllTasks span.options{ -webkit-mask-image: url(../img/options.svg); mask-image: url(../img/options.svg);}
+
+.header .boxAllTasks .batName{ margin-top: -9px; position: relative; left: 33px; }
+.header .boxAllTasks .batName p{ color: #a78fd0; font-size: 14px; }
 
 .header .boxAllTasks .batSearch{ text-align: center; margin-top: -2px; }
 .header .boxAllTasks .batSearch input[type="text"]{
@@ -127,12 +132,17 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 /****************/
 
 .category{ display: grid; grid-template-columns: 1fr; margin-top: 4px; }
-.category li{ display: grid; grid-template-columns: 50px 1fr 20px; border-bottom: 1px solid #f0eff4; padding: 15px 20px 13px; cursor: pointer; }
+.category li{ display: grid; grid-template-columns: 50px 1fr 20px; border-bottom: 1px solid #f0eff4; padding: 15px 20px 13px; cursor: pointer; position: relative; }
+.category li .pointer{ background: #ffbd2c; width: 14px; height: 14px; position: absolute; top: 20px; left: 47px; }
+.userCardInfo .category li{ grid-template-columns: 37px 1fr 20px; }
 
-.category li .name{ font-size: 20px; color: #48444b; padding: 12px 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.category li .name{ font-size: 18px; color: #48444b; padding: 13px 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.category li .name.double{ margin-top: -13px; padding-bottom: 5px;}
+.category li .name p{ font-size: 15px; color: #ffbd2c; padding: 3px 0px 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .category li .arrowCat{ margin: 13px auto;}
 
 .icoCategory{ width: 50px; height: 50px; background: url("../img/ico_pattern_category.png") no-repeat center; }
+.icoCategoryUser{ width: 40px; height: 40px; background: url("../img/ico_pattern_category_two.png") no-repeat center; margin: 0 auto; display: block; }
 .icoCategory.ico_01{ background-position: 0px 0px; }
 .icoCategory.ico_02{ background-position: 0px -54px; }
 .icoCategory.ico_03{ background-position: 0px -109px; }
@@ -149,6 +159,20 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .icoCategory.ico_14{ background-position: 0px -739px; }
 .icoCategory.ico_15{ background-position: 0px -796px; }
 .icoCategory.ico_16{ background-position: 0px -855px; }
+
+.icoCategoryUser.ico_01{ background-position: -3px 3px; }
+.icoCategoryUser.ico_02{ background-position: -3px -36px; }
+.icoCategoryUser.ico_03{ background-position: -3px -76px; }
+.icoCategoryUser.ico_04{ background-position: -3px -115px; }
+.icoCategoryUser.ico_05{ background-position: -3px -153px; }
+.icoCategoryUser.ico_06{ background-position: -3px -199px; }
+
+.icoCategoryUser.ico_06{ background-position: -3px -199px; }
+.icoCategoryUser.ico_06{ background-position: -3px -199px; }
+
+.icoCategoryUser.ico_09{ background-position: -3px -307px; }
+.icoCategoryUser.ico_10{ background-position: -3px -350px; }
+.icoCategoryUser.ico_11{ background-position: -3px -385px; }
 
 /**********************************/
 
@@ -167,7 +191,6 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 /**********************************/
 
 .allTaskSection{}
-
 .allTaskSection .atUl{ display: grid; grid-template-columns: 1fr; height: auto; margin: 20px;  }
 .allTaskSection .atUl li{
     border-bottom: 1px solid #f5f4f7;
@@ -190,6 +213,85 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .toggle .panels .panel:first-child {display: block;}
 
 /**********************************/
+
+.boxUserSection{ width: 100%; overflow: hidden; height: auto; }
+
+.boxUserCard{
+    position: relative;
+    z-index: 2;
+    background: rgba(44,20,69,1);
+    background: -moz-linear-gradient(top, rgba(44,20,69,1) 0%, rgba(71,34,117,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(44,20,69,1)), color-stop(100%, rgba(71,34,117,1)));
+    background: -webkit-linear-gradient(top, rgba(44,20,69,1) 0%, rgba(71,34,117,1) 100%);
+    background: -o-linear-gradient(top, rgba(44,20,69,1) 0%, rgba(71,34,117,1) 100%);
+    background: -ms-linear-gradient(top, rgba(44,20,69,1) 0%, rgba(71,34,117,1) 100%);
+    background: linear-gradient(to bottom, rgba(44,20,69,1) 0%, rgba(71,34,117,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c1445', endColorstr='#472275', GradientType=0 );
+}
+
+.boxUserCard .avatarBox{ display: grid; grid-template-columns: 1fr 1fr 1fr;}
+.boxUserCard .orderBox{ text-align: center; color: #fffffe; font-size: 26px; font-weight: 500; padding: 100px 0px 30px;}
+.boxUserCard .orderBox p{ color: #f3ecf7; font-size: 14px; margin-top: 5px; font-weight: normal; }
+
+.boxUserCard .avatar{ text-align: center; padding: 50px 0px 25px; }
+.boxUserCard .avatar img{width: 150px;}
+
+.boxUserCard .greenBox{ margin: 0px 0px 20px;}
+.boxUserCard .greenBox p{ width: 290px; margin: 0px auto; color: #63a449; border: 2px solid #63a449; text-align: center; font-size: 14px; padding: 10px 7px; cursor: pointer; }
+
+.boxUserCard .sertBox{ margin: 0px 0px 0px;}
+.boxUserCard .sertBox ul{ display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center; width: 300px; margin: 0 auto; padding-bottom: 20px; }
+
+.doubCircle{
+    width: 110%;
+    background: #472275;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    top: -50px;
+    left: -5%;
+    z-index: 1;
+}
+
+.userCardInfo{ margin-top: -40px; }
+.userCardInfo .boxInfo{ margin-bottom: 40px; margin-top: 20px; }
+.userCardInfo .capt { font-size: 30px; font-weight: 600; color: #302d34; display: grid; grid-template-columns: auto 1fr; }
+.userCardInfo .capt .icoCategoryUser { margin: 1px 0px 10px 5px; height: 30px; }
+.userCardInfo .capt .number { color: #ffbd2c; padding-left: 7px; }
+
+.userCardInfo .aboutMe{ padding: 20px; }
+.userCardInfo .aboutMe p{ color: #a098a8; font-size: 17px; padding: 3px; }
+
+.userCardInfo .boxNumber{ }
+.userCardInfo .boxNumber ul{ margin-top: 15px; }
+.userCardInfo .boxNumber ul li{ display: grid; grid-template-columns: 1fr 1fr; padding: 7px 3px; font-size: 17px; color: #3c383f; }
+.userCardInfo .boxNumber ul li .star_05{ background: url("/img/star_sprite.png"); width: 119px; height: 20px; background-position: 0px 0px; }
+.userCardInfo .boxNumber ul li .star_04{ background: url("/img/star_sprite.png"); width: 119px; height: 20px; background-position: 0px -29px; }
+.userCardInfo .boxNumber ul li .star_03{ background: url("/img/star_sprite.png"); width: 119px; height: 20px; background-position: 0px -56px; }
+.userCardInfo .boxNumber ul li .star_02{ background: url("/img/star_sprite.png"); width: 119px; height: 20px; background-position: 0px -83px; }
+.userCardInfo .boxNumber ul li .star_01{ background: url("/img/star_sprite.png"); width: 119px; height: 20px; background-position: 0px -110px; }
+
+.userCardInfo .boxReviews{ padding-top: 40px; }
+.userCardInfo .boxReviews .capt { grid-template-columns: 150px 65px 65px; }
+.userCardInfo .boxReviews .capt .likeReview{ background: url("/img/ico_pattern_category_two.png") no-repeat left; background-position: -10px -234px; padding-left: 32px; padding-top: 4px; color: #65bd4e; font-size: 24px; }
+.userCardInfo .boxReviews .capt .dislikeReview{ background: url("/img/ico_pattern_category_two.png") no-repeat left; background-position: -10px -265px; padding-left: 32px; padding-top: 4px; color: #bdb5c2; font-size: 24px; }
+.userCardInfo .boxReviews .text{ font-size: 17px; padding: 10px 3px; line-height: 24px; }
+.userCardInfo .boxReviews .text p{ padding-top: 7px; }
+.userCardInfo .boxReviews .more{ border: 1px solid #d4d3d7; color: #66606b; width: 190px; font-size: 15px; text-align: center; padding: 8px 5px; margin-top: 5px; cursor: pointer; }
+
+.userCardInfo .boxWork{ padding-top: 40px; }
+.userCardInfo .boxWork ul{ margin-top: 10px; }
+.userCardInfo .boxWork ul li{ padding: 10px 3px; font-size: 18px; }
+.userCardInfo .boxWork ul li p{ padding: 3px 0px; }
+
+.userCardInfo .boxCheck {padding-top: 40px; }
+.userCardInfo .boxCheck ul {margin-top: 15px; }
+.userCardInfo .boxCheck ul li { display: grid; grid-template-columns: 40px 1fr; padding: 7px 3px; font-size: 17px; color: #3c383f; grid-column-gap: 20px; }
+.userCardInfo .boxCheck ul li p{ padding: 2px 0px; font-size: 14px;}
+.userCardInfo .boxCheck ul li span.text{ padding: 9px 0px;}
+
+
+    /**********************************/
 
 .sidenav {
     grid-area: sidenav;
@@ -246,9 +348,6 @@ ul { margin: 0px; padding: 0px; list-style: none;}
     padding: 0 16px;
     background-color: #648ca6;
 }
-
-
-
 
 /* Non-mobile styles, 750px breakpoint */
 @media only screen and (min-width: 46.875em) {
