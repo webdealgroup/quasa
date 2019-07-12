@@ -99,7 +99,7 @@
         <div class="grid-container">
             <header class="header">
                 <div class="boxAllTasks">
-                    <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <!--p class="radius200"></p--> </div>
+                    <div class="batMenu" onClick="javascript:return init();"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
                     <div class="batText">Задание № 4573201</div>
                     <div class="batCategory"><span class="ico heart"></span></div>
                     <div class="batMap"><span class="ico more"></span></div>
@@ -146,7 +146,7 @@
 
                 <div class="boxTaskCard">
                     <div class="nameTask">
-                        <div class="check"><span>Выполнено</span> <span>67</span></div>
+                        <div class="check"><span>Выполнено</span> <span class="ico">67</span></div>
                         <div class="name"> Нужен курьер на машине <p>3 000 &#8381;</p> </div>
                     </div>
 
@@ -170,6 +170,68 @@
                                     <p>Начать</p>
                                     Понедельник, 17 декабря 2018, 10:00
                                 </div>
+                                <div class="description">
+                                    <ul>
+                                        <li><span class="icoCategoryUser ico_12"></span><span class="text">Оплата наличными</span></li>
+                                        <li><span class="icoCategoryUser ico_13"></span><span class="text">Исполнитель должен взять паспорт для оформления расписки</span> <span class="icoCategoryUser ico_14"></span></li>
+                                    </ul>
+                                </div>
+                                <div class="description">
+                                    <p>Создано 17 декабря 2018, 09:21</p>
+                                    <p>Подкатегория &laquo;Услуги курьера на легковом авто&raquo;</p>
+                                </div>
+
+                                <div class="boxReviews">
+                                    <div class="capt"><span class="icoCategoryUser ico_like"></span> <span class="text">Отзыв исполнителя</span></div>
+                                    <div class="ava">
+                                        <div class="photo radius200"><img src="/img/ava.jpg.png" alt=""></div>
+                                        <div class="name">
+                                            <div class="text">Игорь К.</div>
+                                            <div class="like"> <span class="likeReview">5</span> <span class="dislikeReview">0</span> </div>
+                                        </div>
+                                    </div>
+                                    <div class="textReviews">
+                                        <p>Хороший заказчик удалось заработать больше чем планировал</p>
+                                        <ul>
+                                            <li><span class="title">Вежливость</span> <span class="star_05"></span></li>
+                                            <li><span class="title">Пунктуальность</span> <span class="star_04"></span></li>
+                                            <li><span class="title">Адекватность</span> <span class="star_03"></span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dateReviews">17 декабря 2018</div>
+                                </div>
+
+                                <div class="boxReviews">
+                                    <div class="capt"><span class="icoCategoryUser ico_like"></span> <span class="text">Отзыв заказчика</span></div>
+                                    <div class="ava">
+                                        <div class="photo radius200"><img src="/img/no_ava.jpg" alt=""></div>
+                                        <div class="name">
+                                            <div class="text">Алексей</div>
+                                            <div class="like"> <span class="likeReview">396</span> <span class="dislikeReview">0</span> </div>
+                                        </div>
+                                    </div>
+                                    <div class="textReviews">
+                                        <p>Все отлично, спасибо</p>
+                                        <ul>
+                                            <li><span class="title">Качество</span> <span class="star_05"></span></li>
+                                            <li><span class="title">Вежливость</span> <span class="star_04"></span></li>
+                                            <li><span class="title">Стоимость услуг</span> <span class="star_03"></span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dateReviews">18 декабря 2018</div>
+                                </div>
+
+                                <div class="boxReviews">
+                                    <div class="capt"><span class="text">Заказчик</span></div>
+                                    <div class="ava">
+                                        <div class="photo radius200"><img src="/img/no_ava.jpg" alt=""></div>
+                                        <div class="name">
+                                            <div class="text">Алексей</div>
+                                            <div class="like"> <span class="likeReview">396</span> <span class="dislikeReview">0</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="panel">
                                 123
