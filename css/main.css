@@ -319,7 +319,7 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .boxTaskCard .description p{ color: #a098a8; padding-bottom: 5px; }
 .boxTaskCard .description ul li{ display: grid; grid-template-columns: 40px 1fr 40px; padding-bottom: 10px;}
 .boxTaskCard .description ul li:last-child{ padding-bottom: 0px;}
-.boxTaskCard .description ul li span.text{ padding: 7px 10px; }
+.boxTaskCard .description ul li span.text{ padding: 8px 10px; }
 
 .boxTaskCard .boxReviews{ border-top: 20px solid #f6f5fa; padding:  20px; }
 .boxTaskCard .boxReviews .capt{ display: grid; grid-template-columns: 50px 1fr; font-size: 24px; color: #302d33; font-weight: 600; }
