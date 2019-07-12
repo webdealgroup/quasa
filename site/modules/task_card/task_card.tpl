@@ -243,7 +243,7 @@
 
 
 
-                <div class="main-overview">
+                <!--div class="main-overview">
 
                     ~~foreach from=$tasks item=i~
                     <div class="overviewcard">
@@ -262,7 +262,7 @@
                     </div>
                     ~~/foreach~
 
-                </div>
+                </div-->
 
 
             </main>
