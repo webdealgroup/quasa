@@ -130,62 +130,54 @@
 
                 <div class="panels">
                   <div class="panel">
-                    <div class="main-overview">
 
-                        <div class="overviewcard" onclick="javascript: document.location.href = '#';">
-                            <div class="overviewcard__title">Вас выбрали в 5 заданиях</div>
+                    <ul class="tasks">
 
-                            <div class="overviewcard__body">
-                              <div class="overviewcard__main">
-                                <div class="overviewcard__icon icon_red"></div>
-                                <div class="overviewcard__text">
-                                  <div class="overviewcard__status">Выполнены</div>
-                                  <div class="overviewcard__number">5 заданий</div>
-                                </div>
-                              </div>
-                              <a href="#"><div class="arrowCat"></div></a>
-                            </div>
-
+                      <li onclick="javascript: document.location.href = '#';">
+                        <div class="task__title">Вас выбрали в 5 заданиях</div>
+                        <div class="body">
+                          <div class="task__icon icon_red"></div>
+                          <div class="name">
+                            <div>Выполнены</div>
+                            <div class="status">5 заданий</div>
+                          </div>
+                          <div class="arrowCat"></div>
                         </div>
-
-                        <div class="overviewcard" onclick="javascript: document.location.href = '#';">
-                          <div class="overviewcard__title">Отменено или выбран другой исполнитель</div>
-
-                            <div class="overviewcard__body">
-                              <div class="overviewcard__main">
-                                <div class="overviewcard__icon icon_grey"></div>
-                                <div class="overviewcard__text">
-                                  <div class="overviewcard__status">В архиве</div>
-                                  <div class="overviewcard__number">19 заданий</div>
-                                </div>
-                              </div>
-                              <a href="#"><div class="arrowCat"></div></a>
-                            </div>
-
+                      </li>
+                      <li onclick="javascript: document.location.href = '#';">
+                        <div class="task__title">Отменено или выбран другой исполнитель</div>
+                        <div class="body">
+                          <div class="task__icon icon_grey"></div>
+                          <div class="name">
+                            <div>В архиве</div>
+                            <div class="status">19 заданий</div>
+                          </div>
+                          <div class="arrowCat"></div>
                         </div>
-                    </div>
+                      </li>
+
+                    </ul>
                 </div>
                 <div class="panel">
-                  <div class="main-overview">
-                    <div class="overviewcard" onclick="javascript: document.location.href = '#';">
-                        <div class="overviewcard__title">Вы создали 1 задание</div>
 
-                        <div class="overviewcard__body">
-                          <div class="overviewcard__main">
-                            <div class="overviewcard__icon icon_green"></div>
-                            <div class="overviewcard__text">
-                              <div class="overviewcard__status">Открыты</div>
-                              <div class="overviewcard__number">1 задание</div>
-                            </div>
-                          </div>
-                          <a href="#"><div class="arrowCat"></div></a>
+                  <ul class="tasks">
+
+                    <li onclick="javascript: document.location.href = '#';">
+                      <div class="task__title">Вы создали 1 задание</div>
+                      <div class="body">
+                        <div class="task__icon icon_green"></div>
+                        <div class="name">
+                          <div>Открыты</div>
+                          <div class="status">1 задание</div>
                         </div>
+                        <div class="arrowCat"></div>
+                      </div>
+                    </li>
 
-                    </div>
-                  </div>
+                  </ul>
+
                 </div>
               </div>
-
             </main>
 
             <footer class="footer">
