@@ -10,144 +10,19 @@
         <meta name="description" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
         
         <script type="text/javascript">
             function init() {
                 AndroidFunction.showMenu();
             }
         </script>
-
-        <style>
-            body {
-              margin: 0;
-              padding: 0;
-              color: #fff;
-              font-family: 'Roboto', sans-serif;
-              box-sizing: border-box;
-            }
-
-            /* Assign grid instructions to our parent grid container, mobile-first (hide the sidenav) */
-            .grid-container {
-              display: grid;
-              grid-template-columns: 1fr;
-              grid-template-rows: 50px 1fr 50px;
-              grid-template-areas:
-                'header'
-                'main'
-                'footer';
-              height: 100vh;
-            }
-
-
-            /* Give every child element its grid name */
-            .header {
-              grid-area: header;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              padding: 0 16px;
-              background-color: #2A2E43;
-            }
-
-            /* Make room for the menu icon on mobile */
-            .header__search {
-              margin-left: 4px;
-              font-family: Arial;
-              font-size: 1.5em;
-            }
-
-            .sidenav {
-              grid-area: sidenav;
-              display: flex;
-              flex-direction: column;
-              height: 100%;
-              width: 240px;
-              position: fixed;
-              overflow-y: auto;
-              transform: translateX(-245px);
-              transition: all .6s ease-in-out;
-              box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-              z-index: 2; /* Needs to sit above the hamburger menu icon */
-              background-color: #394263;
-            }
-
-            .sidenav.active {
-              transform: translateX(0);
-            }
-
-            .sidenav__close-icon {
-              position: absolute;
-              visibility: visible;
-              top: 8px;
-              right: 12px;
-              cursor: pointer;
-              font-size: 20px;
-              color: #ddd;
-            }
-
-            .sidenav__list {
-              padding: 0;
-              margin-top: 85px;
-              list-style-type: none;
-            }
-
-            .sidenav__list-item {
-              padding: 20px 20px 20px 40px;
-              color: #ddd;
-            }
-
-            .sidenav__list-item:hover {
-              background-color: rgba(255, 255, 255, 0.2);
-              cursor: pointer;
-            }
-
-
-
-
-            .footer {
-              grid-area: footer;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              padding: 0 16px;
-              background-color: #648ca6;
-            }
-
-            /* Non-mobile styles, 750px breakpoint */
-            @media only screen and (min-width: 46.875em) {
-              /* Show the sidenav */
-              .grid-container {
-                grid-template-columns: 240px 1fr;
-                grid-template-areas:
-                  "sidenav header"
-                  "sidenav main"
-                  "sidenav footer";
-              }
-
-              .header__search {
-                margin-left: 0;
-              }
-
-              .sidenav {
-                position: relative;
-                transform: translateX(0);
-              }
-
-              .sidenav__close-icon {
-                visibility: hidden;
-              }
-            }
-
-            /* Medium screens breakpoint (1050px) */
-            @media only screen and (min-width: 65.625em) {
-              /* Break out main cards into two columns */
-              .main-cards {
-                column-count: 2;
-              }
-            }
-        </style>
-
+        <script
+                src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                crossorigin="anonymous">
+        </script>
         <script>
             const menuIconEl = $('.menu-icon');
             const sidenavEl = $('.sidenav');
@@ -171,26 +46,66 @@
             sidenavCloseEl.on('click', function() {
               toggleClassName(sidenavEl, 'active');
             });
-        </script>
 
+            // Tabs
+            (function() {
+                $(function() {
+                    var toggle;
+                    return toggle = new Toggle('.toggle');
+                });
+
+                this.Toggle = (function() {
+                    Toggle.prototype.el = null;
+
+                    Toggle.prototype.tabs = null;
+
+                    Toggle.prototype.panels = null;
+
+                    function Toggle(toggleClass) {
+                        this.el = $(toggleClass);
+                        this.tabs = this.el.find(".tab");
+                        this.panels = this.el.find(".panel");
+                        this.bind();
+                    }
+
+                    Toggle.prototype.show = function(index) {
+                        var activePanel, activeTab;
+                        this.tabs.removeClass('active');
+                        activeTab = this.tabs.get(index);
+                        $(activeTab).addClass('active');
+                        this.panels.hide();
+                        activePanel = this.panels.get(index);
+                        return $(activePanel).show();
+                    };
+
+                    Toggle.prototype.bind = function() {
+                        var _this = this;
+                        return this.tabs.unbind('click').bind('click', function(e) {
+                            return _this.show($(e.currentTarget).index());
+                        });
+                    };
+
+                    return Toggle;
+
+                })();
+
+            }).call(this);
+
+        </script>
 
     </head>
 
     <body class="">
-
         <div class="grid-container">
-
             <header class="header">
-                <div class="header__search" onClick="javascript: document.location.href = '/all_tasks/';">
-                        <span>&#8592;</span>
-                </div>
-                <div class="header__avatar">
-                    ~~$page~
+                <div class="boxAllTasks">
+                    <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <!--p class="radius200"></p--> </div>
+                    <div class="batText">Задание № 4573201</div>
+                    <div class="batCategory"><span class="ico heart"></span></div>
+                    <div class="batMap"><span class="ico more"></span></div>
                 </div>
             </header>
-
             ~~include file='tpl/menu.tpl'~
- 
 <style>
 
 .main {
@@ -204,7 +119,7 @@
   justify-content: space-between;
   margin: 0px;
   padding: 20px;
-  height: 15px;ы
+  height: 15px;
   background-color: #e3e4e6;
   color: slategray;
 }
@@ -225,25 +140,49 @@
   color: #312E35;
   background-color: #fff;
 }
-</style> 
+</style>
+
             <main class="main">
 
+                <div class="boxTaskCard">
+                    <div class="nameTask">
+                        <div class="check"><span>Выполнено</span> <span>67</span></div>
+                        <div class="name"> Нужен курьер на машине <p>3 000 &#8381;</p> </div>
+                    </div>
+
+                    <div class="toggle">
+                        <div class="tabs">
+                            <div class="tab active">ДЕТАЛИ</div>
+                            <div class="tab">ПРЕДЛОЖЕНИЯ</div>
+                            <div class="line"></div>
+                        </div>
+
+                        <div class="panels">
+                            <div class="panel">
+                                <div class="mapGoogle">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d46754.40056263223!2d37.601975890560354!3d55.759437993972426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1562929366358!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                                <div class="description">
+                                    <p>Описание</p>
+                                    Приехать забрать посылки развезти по одному району
+                                </div>
+                                <div class="description">
+                                    <p>Начать</p>
+                                    Понедельник, 17 декабря 2018, 10:00
+                                </div>
+                            </div>
+                            <div class="panel">
+                                123
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
 
 
-                <!--div class="main-header">
-                    <div class="main-header__heading">
-                        Я ИСПОЛНИТЕЛЬ
-                    </div>
-                    <div class="main-header__updates">
-                        Я ЗАКАЗЧИК
-                    </div>
-                </div--> 
 
                 <div class="main-overview">
 
-
-
-                    
                     ~~foreach from=$tasks item=i~
                     <div class="overviewcard">
                         <div class="overviewcard__icon">
@@ -263,7 +202,6 @@
 
                 </div>
 
-              
 
             </main>
 
