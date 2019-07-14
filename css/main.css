@@ -35,6 +35,8 @@ ul { margin: 0px; padding: 0px; list-style: none;}
     border-radius: 200px;
 }
 
+.textNoWrap{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
 /************************/
 
 .captionMenu{ background: #2c1445; color: #fdfffe; display: grid; grid-template-columns: 1fr; text-align: center; font-size: 22px; position: relative; }
@@ -87,7 +89,7 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .header .boxAllTasks .batMenu:hover{ color: #FFF; }
 .header .boxAllTasks .batMenu p{ position: absolute; width: 14px; height: 14px; top: 0px; right: 9px; background: #e57f02; }
 
-.header .boxAllTasks span.ico{
+.header .boxAllTasks span.ico, span.icoSvg{
     width: 24px;
     height: 24px;
     display: block;
@@ -105,6 +107,9 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .header .boxAllTasks span.options{ -webkit-mask-image: url(../img/options.svg); mask-image: url(../img/options.svg);}
 .header .boxAllTasks span.more{ -webkit-mask-image: url(../img/more.svg); mask-image: url(../img/more.svg);}
 .header .boxAllTasks span.heart{ -webkit-mask-image: url(../img/heart.svg); mask-image: url(../img/heart.svg);}
+
+span.icoSvgClose{ -webkit-mask-image: url(../img/close.svg); mask-image: url(../img/close.svg); background-color: #FFF;}
+span.icoSvgArrowWhite{ -webkit-mask-image: url(../img/light_arrow.svg); mask-image: url(../img/light_arrow.svg); background-color: #FFF;}
 
 .header .boxAllTasks .batName{ margin-top: -8px; position: relative; left: 33px; }
 .header .boxAllTasks .batName p{ color: #a78fd0; font-size: 14px; }
@@ -176,13 +181,14 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .icoCategoryUser.ico_09{ background-position: -3px -307px; }
 .icoCategoryUser.ico_10{ background-position: -3px -350px; }
 .icoCategoryUser.ico_11{ background-position: -3px -385px; }
-
 .icoCategoryUser.ico_12{ background-position: -1px -455px; }
 .icoCategoryUser.ico_13{ background-position: -1px -501px; }
 .icoCategoryUser.ico_14{ background-position: -1px -545px; }
-
 .icoCategoryUser.ico_like{ background-position: -10px -234px; }
 .icoCategoryUser.ico_dislike{ background-position: -10px -265px; }
+.icoCategoryUser.ico_keys{ background-position: -1px -586px; }
+.icoCategoryUser.icoMsg{ background-position: -3px -714px; }
+.icoCategoryUser.icoCall{ background-position: -3px -760px; }
 
 /**********************************/
 
@@ -195,7 +201,8 @@ ul { margin: 0px; padding: 0px; list-style: none;}
     position: relative;
 }
 .main-header .line, .boxTaskCard .line{ background: #eae7f2; width: 100%; height: 2px; position: absolute; bottom: 0px; left: 0px; }
-.main-header .tab, .boxTaskCard .tab{ padding: 15px 0px; font-weight: 500; letter-spacing: .5px; color: #a8a5ab; font-size: 16px; cursor: pointer; position: relative; z-index: 2; }
+.main-header .tab, .boxTaskCard .tab{ padding: 15px 0px; font-weight: 500; letter-spacing: .5px; color: #a8a5ab; font-size: 15px; cursor: pointer; position: relative; z-index: 2; }
+.main-header .tab, .boxTaskCard .tab span{color: #fea200; }
 .main-header .tab.active, .boxTaskCard .tab.active{ color: #464548; border-bottom: 2px solid #ffbd2c; }
 
 .boxTaskCard .tabs{ background: #ffffff; display: grid; grid-template-columns: 1fr 1fr; text-align: center; margin: 25px 20px 0px; position: relative; }
@@ -303,8 +310,7 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .userCardInfo .boxCheck ul li p{ padding: 2px 0px; font-size: 14px;}
 .userCardInfo .boxCheck ul li span.text{ padding: 9px 0px;}
 
-
-    /**********************************/
+/**********************************/
 
 .boxTaskCard{}
 .boxTaskCard .check{ display: grid; grid-template-columns: 1fr 65px; color: #ff5e5e; font-weight: 500; padding: 25px 20px 20px; }
@@ -331,9 +337,9 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 
 .boxTaskCard .boxReviews .ava .name{ font-size: 22px; font-weight: 500; margin-top: 22px;}
 
-.boxTaskCard .boxReviews .ava .like{ margin-top: 5px; }
-.boxTaskCard .boxReviews .ava .like .likeReview{ background: url("/img/ico_pattern_category_two.png") no-repeat left; background-position: -10px -238px; padding-left: 32px; padding-top: 4px; color: #bdb5c2; font-size: 18px; margin-right: 10px; }
-.boxTaskCard .boxReviews .ava .like .dislikeReview{ background: url("/img/ico_pattern_category_two.png") no-repeat left; background-position: -10px -269px; padding-left: 32px; padding-top: 4px; color: #bdb5c2; font-size: 18px; }
+.boxTaskCard .boxReviews .ava .like, .boxTaskCard .avatarInfo .like{ margin-top: 5px; }
+.boxTaskCard .boxReviews .ava .like .likeReview, .boxTaskCard .avatarInfo .like .likeReview{ background: url("/img/ico_pattern_category_two.png") no-repeat left; background-position: -10px -238px; padding-left: 32px; padding-top: 4px; color: #bdb5c2; font-size: 18px; margin-right: 10px; }
+.boxTaskCard .boxReviews .ava .like .dislikeReview, .boxTaskCard .avatarInfo .like .dislikeReview{ background: url("/img/ico_pattern_category_two.png") no-repeat left; background-position: -10px -269px; padding-left: 32px; padding-top: 4px; color: #bdb5c2; font-size: 18px; }
 
 .boxTaskCard .boxReviews .textReviews{ margin: 20px 0px; padding: 20px 0px; border-top: 1px solid #d4d3d7; border-bottom: 1px solid #d4d3d7;}
 .boxTaskCard .boxReviews .textReviews p{ color: #3c383f; font-size: 17px; }
@@ -346,7 +352,53 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .boxTaskCard .boxReviews .textReviews ul li .star_01{ background: url("/img/star_sprite.png"); width: 119px; height: 20px; background-position: 0px -110px; }
 .boxTaskCard .boxReviews .dateReviews{ color: #a09aa3; text-align: right; font-size: 16px }
 
-    /**********************************/
+.boxTaskCard .captSmall{ color: #302d35; display: grid; grid-template-columns: 1fr 40px; padding: 20px; }
+.boxTaskCard .captSmall .text{ font-size: 18px; font-weight: 500; padding-top: 7px; }
+
+.boxTaskCard .avatarInfo{ display: grid; grid-template-columns: 100px 1fr; padding: 20px; border-top: 2px solid #eae9ee; margin-top: 20px; }
+.boxTaskCard .avatarInfo .nameAva{ padding-left: 10px; margin-top: 3px; position: relative; }
+.boxTaskCard .avatarInfo .nameAva .ico_keys{ position: absolute; right: 0px; top: 0px;}
+.boxTaskCard .avatarInfo .fio{ font-size: 22px; font-weight: 500; margin-bottom: 10px; }
+.boxTaskCard .avatarInfo .status{ font-size: 14px; font-weight: 500; color: #70c728; margin-top: 10px; background: url("/img/ico_pattern_category_two.png") no-repeat left; padding: 3px 0px; background-position: -10px -642px; padding-left: 26px; }
+.boxTaskCard .priceDescriptionInfo{ margin: 0px 20px; border-top: 1px solid #d4d3d7; border-bottom: 1px solid #d4d3d7; }
+.boxTaskCard .priceDescriptionInfo .price{ display: grid; grid-template-columns: 1fr 40px; padding: 20px 0px; }
+.boxTaskCard .priceDescriptionInfo .price span.text{ font-size: 22px; font-weight: 600; padding-top: 6px; }
+.boxTaskCard .priceDescriptionInfo .price span.text i.priceIcon{ background: url("/img/ico_pattern_category_two.png") no-repeat; background-position: -4px -678px; vertical-align: middle; width: 35px; height: 30px; display: inline-block; }
+.boxTaskCard .priceDescriptionInfo .price span.text p{ font-size: 14px; font-weight: 400; color: #a098a8; }
+.boxTaskCard .priceDescriptionInfo .descriptionTask{ color: #3c383f; font-size: 17px; }
+.boxTaskCard .priceDescriptionInfo .buttonCall{ width: 320px; margin: 20px auto; display: grid; grid-template-columns: 1fr 1fr; text-align: left; grid-column-gap: 10px; color: #5f5867; font-size: 18px; font-weight: 500;}
+.boxTaskCard .priceDescriptionInfo .buttonCall div{ display: grid; cursor: pointer; grid-template-columns: 40px 1fr; grid-column-gap: 10px; }
+.boxTaskCard .priceDescriptionInfo .buttonCall span.text{ padding: 9px 0px; }
+.boxTaskCard .priceDescriptionInfo .order{ background: #70c728; color: #FFF; font-weight: 500; font-size: 20px; text-align: center; padding: 20px 0px; margin-bottom: 20px; cursor: pointer; }
+.boxTaskCard .dateReviewsPred{ color: #a09aa3; text-align: right; font-size: 16px; padding: 20px; }
+.boxTaskCard .editButton{ border-top: 20px solid #f6f5fa; background: #fea200; text-align: center; color: #FFF; font-size: 22px; font-weight: 500; padding: 20px 0px; cursor: pointer; }
+
+/**********************************/
+
+.alertBox{
+    color: #FFF;
+    margin: 0px 20px;
+    background: rgba(255,122,99,1);
+    background: -moz-linear-gradient(left, rgba(255,122,99,1) 0%, rgba(255,137,63,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,122,99,1)), color-stop(100%, rgba(255,137,63,1)));
+    background: -webkit-linear-gradient(left, rgba(255,122,99,1) 0%, rgba(255,137,63,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,122,99,1) 0%, rgba(255,137,63,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,122,99,1) 0%, rgba(255,137,63,1) 100%);
+    background: linear-gradient(to right, rgba(255,122,99,1) 0%, rgba(255,137,63,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7a63', endColorstr='#ff893f', GradientType=1 );
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.alertBox .caption{ padding: 20px 20px 15px; border-bottom: 1px solid #ff9c73; font-size: 17px; font-weight: 500; display: grid; grid-template-columns: 1fr 30px; }
+.alertBox .caption .textCapt{padding: 3px 0px; }
+.alertBox .caption .icoSvgClose{ margin: 0 auto; }
+.alertBox .text{ padding: 20px 20px; font-size: 15px; font-weight: 400; display: grid; grid-template-columns: 1fr 30px; grid-column-gap: 12px }
+.alertBox .text .icoSvgArrowWhite{ position: relative; top: 31%; }
+
+/**********************************/
 
 .sidenav {
     grid-area: sidenav;
