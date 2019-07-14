@@ -153,7 +153,7 @@
                     <div class="toggle">
                         <div class="tabs">
                             <div class="tab active">ДЕТАЛИ</div>
-                            <div class="tab">ПРЕДЛОЖЕНИЯ</div>
+                            <div class="tab">ПРЕДЛОЖЕНИЯ <span>(1)</span></div>
                             <div class="line"></div>
                         </div>
 
@@ -234,7 +234,40 @@
 
                             </div>
                             <div class="panel">
-                                123
+                                <div class="captSmall"><span class="text">У задания 1 предложение</span> <span class="icoCategoryUser ico_14"></span></div>
+
+                                <div class="alertBox">
+                                    <div class="caption"><span class="textCapt">Внимание!</span> <span class="icoSvg icoSvgClose"></span></div>
+                                    <div class="text">
+                                        <p>При передачи денег и любых ценных вещей составьте с исполнителем расписку и проверьте его паспорт. Примеры расписки в рекомендациях.</p>
+                                        <span class="icoSvg icoSvgArrowWhite"></span>
+                                    </div>
+                                </div>
+
+                                <div class="avatarInfo">
+                                    <div class="photo"><img src="/img/ava_1.png" alt=""></div>
+                                    <div class="nameAva">
+                                        <div class="fio">Константин Н.</div>
+                                        <div class="like"><span class="likeReview">8</span> <span class="dislikeReview">0</span></div>
+                                        <div class="status textNoWrap">Проверенный исполнитель</div>
+                                        <span class="icoCategoryUser ico_keys"></span>
+                                    </div>
+                                </div>
+
+                                <div class="priceDescriptionInfo">
+                                    <div class="price">
+                                        <span class="text">3 365 &#8381; <i class="priceIcon"></i> <p>Оплата картой через Сделку без риска</p></span> <span class="icoCategoryUser ico_14"></span>
+                                    </div>
+                                    <div class="descriptionTask">можно подробнеЕ?</div>
+                                    <div class="buttonCall">
+                                        <div> <span class="icoCategoryUser icoMsg"></span> <span class="text">Написать</span></div>
+                                        <div> <span class="icoCategoryUser icoCall"></span> <span class="text">Позвонить</span></div>
+                                    </div>
+                                    <div class="order radius200">Выбрать исполнителем</div>
+                                </div>
+                                <div class="dateReviewsPred">15 июня 2019, 21:25</div>
+                                <div class="editButton">Редактировать задание</div>
+
                             </div>
                         </div>
 
