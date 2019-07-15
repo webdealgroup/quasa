@@ -45,16 +45,6 @@
 			//echo "<pre style='display:none;'>"; print_r($page); echo "</pre>"; //die();
 
 
-			if ($page == 'login')
-			{
-				print ($_SESSION['smarty']->fetch('mod:login'));
-				exit();
-			}
-			if ($page == 'all_tasks')
-			{
-				print ($_SESSION['smarty']->fetch('mod:all_tasks'));
-				exit();
-			}
 
 			switch ($page) {
 
@@ -65,7 +55,7 @@
 				case 'task_card':		print ($_SESSION['smarty']->fetch('mod:task_card'));		exit();		break; 
 				case 'user_card':		print ($_SESSION['smarty']->fetch('mod:user_card'));		exit();		break; 
 				case 'messages':		print ($_SESSION['smarty']->fetch('mod:messages'));			exit();		break;
-        case 'profile_edit': print ($_SESSION['smarty']->fetch('mod:profile_edit'));			exit();		break;
+        		case 'profile_edit':	print ($_SESSION['smarty']->fetch('mod:profile_edit'));		exit();		break;
 
 
         default:		print ($_SESSION['smarty']->fetch('mod:login'));	exit();		break;
