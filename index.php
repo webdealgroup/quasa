@@ -32,7 +32,7 @@
 			{
 				$arr['q']='/index';
 			} // если пусто, считаем что это index
-			$alias = split("[\/]+", $arr['q']); // разбираем строку
+			@$alias = split("[\/]+", $arr['q']); // разбираем строку
 			foreach($alias as $a)	{if($a!='') {$post[] = $a; $aliases[] = $a;}}
 			$page = "";
 			
