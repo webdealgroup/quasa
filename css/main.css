@@ -21,6 +21,11 @@ fieldset {border: 0;}
 ul { margin: 0px; padding: 0px; list-style: none;}
 .clear {clear: both;}
 
+::-webkit-input-placeholder { color: #d8d5db; font-weight: 400; }
+::-moz-placeholder { color: #d8d5db; font-weight: 400;}
+:-ms-input-placeholder { color: #d8d5db; font-weight: 400;}
+:-moz-placeholder { color: #d8d5db; font-weight: 400; }
+
 .content {
     margin: 0 auto;
     max-width: 1080px;
@@ -85,6 +90,8 @@ ul { margin: 0px; padding: 0px; list-style: none;}
     padding-right: 20px;
 }
 
+.header .boxAllTasks.oneText{ grid-template-columns: 50px 1fr; }
+
 .header .boxAllTasks .batMenu{ color: #a78fd0; position: relative; cursor: pointer; text-align: center; }
 .header .boxAllTasks .batMenu:hover{ color: #FFF; }
 .header .boxAllTasks .batMenu p{ position: absolute; width: 14px; height: 14px; top: 0px; right: 9px; background: #e57f02; }
@@ -102,7 +109,7 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .header .boxAllTasks .batCategory span.settings{ -webkit-mask-image: url(../img/settings.svg); mask-image: url(../img/settings.svg); }
 .header .boxAllTasks .batMap span.map{ -webkit-mask-image: url(../img/map.svg); mask-image: url(../img/map.svg); }
 .header .boxAllTasks .batMenu span.menu{ -webkit-mask-image: url(../img/menu.svg); mask-image: url(../img/menu.svg);}
-.header .boxAllTasks .batMenu span.arrowLeft{ -webkit-mask-image: url(../img/arrow_left.svg); mask-image: url(../img/arrow_left.svg); position: relative; top: 2px;}
+.header .boxAllTasks .batMenu span.arrowLeft{ -webkit-mask-image: url(../img/arrow_left.svg); mask-image: url(../img/arrow_left.svg); position: relative; top: 1px;}
 .header .boxAllTasks span.share{ -webkit-mask-image: url(../img/share.svg); mask-image: url(../img/share.svg);}
 .header .boxAllTasks span.options{ -webkit-mask-image: url(../img/options.svg); mask-image: url(../img/options.svg);}
 .header .boxAllTasks span.more{ -webkit-mask-image: url(../img/more.svg); mask-image: url(../img/more.svg);}
@@ -374,6 +381,34 @@ span.icoSvgArrowWhite{ -webkit-mask-image: url(../img/light_arrow.svg); mask-ima
 .boxTaskCard .editButton{ border-top: 20px solid #f6f5fa; background: #fea200; text-align: center; color: #FFF; font-size: 22px; font-weight: 500; padding: 20px 0px; cursor: pointer; }
 
 /**********************************/
+
+.personalInfoUser{ padding: 20px; }
+.personalInfoUser form{ width: 100%; }
+.personalInfoUser form .photo{ width: 200px; margin: 0 auto }
+.personalInfoUser form .photo .ava{ width: 100%; }
+.personalInfoUser form .photo .ava img{ width: 100%; }
+.personalInfoUser form .photo .btnUpload{ text-align: center; color: #3c383f; width: 200px; font-size: 15px; border: 1px solid #d8d5db; padding: 10px 0px; margin: 10px 0px; cursor: pointer; }
+.personalInfoUser form .input{ margin-top: 0px; }
+.personalInfoUser form .input .inp{ margin-bottom: 30px; }
+.personalInfoUser form .input .inp p{ font-size: 16px; color: #a09aa3; font-weight: 400 }
+.personalInfoUser form .input .inp input[type="text"],
+.personalInfoUser form .input .inp input[type="date"]
+{ border: none; letter-spacing: .3px; border-bottom: 1px solid #d8d5db; width: 100%; padding: 12px 0px 14px; outline: none; font-family: 'Roboto', sans-serif; font-size: 20px; color: #302d32; font-weight: 500; }
+.personalInfoUser form input[type="file"]{height: 1px; opacity: .000001;}
+
+.personalInfoUser form .input .inp input[type="text"].city,
+.personalInfoUser form .input .inp input[type="text"].phone
+{ background: url("../img/arrow_cat.png") center right no-repeat; background-size: 3%; }
+
+.personalInfoUser form .input .selectGen{}
+.personalInfoUser form .input .selectGen ul{ display: grid; grid-template-columns: 1fr 1fr; text-align: center; border: 1px solid #d8d5db; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.personalInfoUser form .input .selectGen ul li{ padding: 15px 0px; font-size: 17px; color: #a59eac; font-weight: 500; }
+.personalInfoUser form .input .selectGen ul li.active{ background: #ffebae; color: #302d32; }
+
+.deletePage{ border-top: 20px solid #f6f5fa; padding:  30px 0px; text-align: center; }
+.deletePage a{ color: #aa98d8; text-decoration: none; font-size: 17px; font-family: 'Roboto', sans-serif; }
+
+    /**********************************/
 
 .alertBox{
     color: #FFF;
