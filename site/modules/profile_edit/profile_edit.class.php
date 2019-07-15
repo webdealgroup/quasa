@@ -7,8 +7,7 @@ class profile_edit extends aModule{
 		
 		$_SESSION['smarty']->assign('user', $_SESSION['user']);
 
-		$tasks = rows('SELECT * FROM tasks');
-	    $_SESSION['smarty']->assign('tasks', $tasks); 
+
 		$_SESSION['smarty']->display('profile_edit/profile_edit.tpl');
         
     }
