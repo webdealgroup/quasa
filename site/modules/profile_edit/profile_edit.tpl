@@ -67,7 +67,7 @@
                         <div class="input">
                             <div class="inp">
                                 <p>Имя</p>
-                                <input type="text" name="name" value="" placeholder="Ваше Имя" />
+                                <input type="text" name="name" value="~~$user.name~" placeholder="Ваше Имя" />
                             </div>
                             <div class="inp">
                                 <p>Фамилия</p>

@@ -52,7 +52,8 @@
                     <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <!--p class="radius200"></p--> </div>
                     <div class="batName">~~$user.name~<p>43 года, Москва</p></div>
                     <div class="batCategory"><span class="ico share"></span></div>
-                    <div class="batMap"><span class="ico options"></span></div>
+                    <div class="batMap"><span class="ico options" onclick="javascript: document.location.href = '/profile_edit/';">
+                        </span></div> <!-- sc //-->
                 </div>
             </header>
             ~~include file='tpl/menu.tpl'~
