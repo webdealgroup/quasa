@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fc65cd6-544c-4f37-b0e5-ce336a53d375" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/site/modules/profile_edit/profile_edit.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/modules/profile_edit/profile_edit.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/modules/user_card/user_card.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/modules/user_card/user_card.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/modules/user_card/user_card.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/site/modules/user_card/user_card.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,20 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/modules/user_card/user_card.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+            <state relative-caret-position="496">
+              <caret line="69" column="13" lean-forward="true" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site/modules/user_card/user_card.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -74,8 +72,8 @@
         <option value="$PROJECT_DIR$/site/modules/my_tasks/my_tasks.class.php" />
         <option value="$PROJECT_DIR$/site/modules/profile_edit/profile_edit.tpl" />
         <option value="$PROJECT_DIR$/site/modules/profile_edit/profile_edit.class.php" />
-        <option value="$PROJECT_DIR$/site/modules/user_card/user_card.class.php" />
         <option value="$PROJECT_DIR$/site/modules/user_card/user_card.tpl" />
+        <option value="$PROJECT_DIR$/site/modules/user_card/user_card.class.php" />
       </list>
     </option>
   </component>
@@ -182,12 +180,12 @@
       <option name="presentableId" value="Default" />
       <updated>1563198403878</updated>
       <workItem from="1563198405278" duration="1718000" />
-      <workItem from="1563260563335" duration="6871000" />
+      <workItem from="1563260563335" duration="7637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8589000" />
+    <option name="totallyTimeSpent" value="9355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="4" width="1451" height="1057" extended-state="0" />
@@ -256,17 +254,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/modules/user_card/user_card.class.php">
+    <entry file="file://$PROJECT_DIR$/site/modules/user_card/user_card.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="496">
+          <caret line="69" column="13" lean-forward="true" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/modules/user_card/user_card.tpl">
+    <entry file="file://$PROJECT_DIR$/site/modules/user_card/user_card.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
