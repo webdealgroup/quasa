@@ -106,11 +106,11 @@
                         </div>
 
                         <div class="boxNumber">
-                            <div class="capt"><span>Средняя оценка - </span><span class="number">5,0</span> </div>
+                            <div class="capt"><span>Средняя оценка - </span><span class="number">~~$rating~</span> </div>
                             <ul>
-                                <li><span class="title">Качество</span> <span class="~~$rating~"></span></li>  <!-- star_05 -->
-                                <li><span class="title">Вежливость</span> <span class="~~$rating~"></span></li>  <!-- star_04 -->
-                                <li><span class="title">Стоимость услуг</span> <span class="~~$rating~"></span></li>  <!-- star_03 -->
+                                <li><span class="title">Качество</span> <span class="star_0~~$rating~"></span></li>  <!-- star_05 -->
+                                <li><span class="title">Вежливость</span> <span class="star_0~~$rating~"></span></li>  <!-- star_04 -->
+                                <li><span class="title">Стоимость услуг</span> <span class="star_0~~$rating~"></span></li>  <!-- star_03 -->
                             </ul>
                         </div>
 
