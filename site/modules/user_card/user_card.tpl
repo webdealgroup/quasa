@@ -82,7 +82,7 @@
                 <div class="userCardInfo">
                     <ul class="category">
                         <li>
-                            <div class="icoCategoryUser ico_01"></div> <div class="name">На счете 1 037 &#8381;</div> <div class="arrowCat"></div>
+                            <div class="icoCategoryUser ico_01"></div> <div class="name">На счете ~~$money~ &#8381;</div> <div class="arrowCat"></div>
                         </li>
                         <li>
                             <div class="icoCategoryUser ico_02"></div> <div class="name">Безлимитные предложения</div> <div class="arrowCat"></div>
@@ -108,9 +108,9 @@
                         <div class="boxNumber">
                             <div class="capt"><span>Средняя оценка - </span><span class="number">5,0</span> </div>
                             <ul>
-                                <li><span class="title">Качество</span> <span class="star_05"></span></li>
-                                <li><span class="title">Вежливость</span> <span class="star_04"></span></li>
-                                <li><span class="title">Стоимость услуг</span> <span class="star_03"></span></li>
+                                <li><span class="title">Качество</span> <span class="~~$rating~"></span></li>  <!-- star_05 -->
+                                <li><span class="title">Вежливость</span> <span class="~~$rating~"></span></li>  <!-- star_04 -->
+                                <li><span class="title">Стоимость услуг</span> <span class="~~$rating~"></span></li>  <!-- star_03 -->
                             </ul>
                         </div>
 
