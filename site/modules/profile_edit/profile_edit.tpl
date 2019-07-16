@@ -71,7 +71,7 @@
                             </div>
                             <div class="inp">
                                 <p>Фамилия</p>
-                                <input type="text" name="last_name" value="" placeholder="Ваша Фамилия" />
+                                <input type="text" name="last_name" value="~~$user.surname~" placeholder="Ваша Фамилия" />
                             </div>
                             <div class="inp">
                                 <div class="selectGen">
@@ -92,11 +92,11 @@
                             </div>
                             <div class="inp">
                                 <p>Электронная почта</p>
-                                <input type="text" name="email" value="" placeholder="name@email.com" />
+                                <input type="text" name="email" value="~~$user.email~" placeholder="name@email.com" />
                             </div>
                             <div class="inp">
                                 <p>Телефон</p>
-                                <input type="text" name="phone" class="phone" value="" placeholder="+7 (000) 000-00-00" />
+                                <input type="text" name="phone" class="phone" value="~~$user.phone~" placeholder="+7 (000) 000-00-00" />
                             </div>
                         </div>
 
