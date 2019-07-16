@@ -3,6 +3,21 @@ class profile_edit extends aModule{
     function execute($arr)
     {
 
+/*
+ [id] => 2
+    [login] => Igor
+    [password] => 123
+    [name] => Василий
+    [surname] => ПЕтров
+    [city] => Владивосток
+    [birthday] => 0000-00-00
+    [phone] => +8 (333) 444-55-66
+    [create_time] => 2019-07-01 09:00:00
+    [rating] => 0.9
+    [money] => 34567.0
+    [gender] => 1
+    [email] => test@rambler.ru
+)* */
       if (isset($_REQUEST['scSendBtn'])) {
         $cName = $_REQUEST['name'];
         $cSurname = $_REQUEST['last_name'];
@@ -19,7 +34,18 @@ class profile_edit extends aModule{
                 . " birthday='{$cBirthday}', email='{$cEmail}', phone='{$cPhone}' WHERE id=" . $_SESSION['user']['id'];
         q($cQueue);
 
-        $_SESSION['user'] = $cName;
+        $_SESSION['user'][login]    = 'Igor';
+        $_SESSION['user'][password] = '123';
+        $_SESSION['user'][name]     = $cName;
+        $_SESSION['user'][surname]  = $cSurname;
+        $_SESSION['user'][city]     = $cCity;
+        $_SESSION['user'][birthday] = $cBirthday;
+        $_SESSION['user'][phone]    = $cPhone;
+        $_SESSION['user'][create_time] = '2019-07-01 09:00:00';
+        $_SESSION['user'][rating]   = 0.7;
+        $_SESSION['user'][money]    = 2345;
+        $_SESSION['user'][gender]   = $cGender;
+        $_SESSION['user'][email]    = $cEmail;
 
 echo '<pre>';
 print_r ($cQueue);
