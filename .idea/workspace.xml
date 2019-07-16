@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5fc65cd6-544c-4f37-b0e5-ce336a53d375" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/site/modules/profile_edit/profile_edit.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/modules/profile_edit/profile_edit.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/modules/user_card/user_card.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/modules/user_card/user_card.class.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/modules/profile_edit/profile_edit.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="516">
+              <caret line="62" selection-start-line="57" selection-end-line="62" />
             </state>
           </provider>
         </entry>
@@ -44,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site/modules/user_card/user_card.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="272">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -80,8 +81,8 @@
         <option value="$PROJECT_DIR$/site/modules/my_tasks/my_tasks.class.php" />
         <option value="$PROJECT_DIR$/site/modules/user_card/user_card.tpl" />
         <option value="$PROJECT_DIR$/site/modules/profile_edit/profile_edit.tpl" />
-        <option value="$PROJECT_DIR$/site/modules/user_card/user_card.class.php" />
         <option value="$PROJECT_DIR$/site/modules/profile_edit/profile_edit.class.php" />
+        <option value="$PROJECT_DIR$/site/modules/user_card/user_card.class.php" />
       </list>
     </option>
   </component>
@@ -188,12 +189,12 @@
       <option name="presentableId" value="Default" />
       <updated>1563198403878</updated>
       <workItem from="1563198405278" duration="1718000" />
-      <workItem from="1563260563335" duration="23148000" />
+      <workItem from="1563260563335" duration="23604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24866000" />
+    <option name="totallyTimeSpent" value="25322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="4" width="1451" height="1057" extended-state="0" />
@@ -262,17 +263,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/modules/user_card/user_card.class.php">
+    <entry file="file://$PROJECT_DIR$/site/modules/profile_edit/profile_edit.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="516">
+          <caret line="62" selection-start-line="57" selection-end-line="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/modules/profile_edit/profile_edit.class.php">
+    <entry file="file://$PROJECT_DIR$/site/modules/user_card/user_card.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

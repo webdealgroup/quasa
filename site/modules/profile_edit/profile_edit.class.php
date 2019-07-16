@@ -30,7 +30,7 @@ class profile_edit extends aModule{
         $_SESSION['user'][city]     = $cCity;
         $_SESSION['user'][birthday] = $cBirthday;
         $_SESSION['user'][phone]    = $cPhone;
-        $_SESSION['user'][create_time] = '2019-07-01 09:00:00';
+//        $_SESSION['user'][create_time] = '2019-07-01 09:00:00';
         $_SESSION['user'][rating]   = 0.7;
         $_SESSION['user'][money]    = 2345;
         $_SESSION['user'][gender]   = $cGender;
@@ -55,13 +55,19 @@ class profile_edit extends aModule{
       $phone = rows("SELECT phone as v FROM users WHERE id=" . $_SESSION['user']['id']);
       $birthday = rows("SELECT birthday as v FROM users WHERE id=" . $_SESSION['user']['id']);
 
+      $cDate = $birthday[0]['v']; // 1999.mm.dd
+      $cDay  = mb_substr($cDate, 8,2);
+      $cMonth = mb_substr($cDate, 5,2);
+      $cYear = mb_substr($cDate, 0,4);
+      $cBirthday = $cDay . '.' . $cMonth . '.' . $cYear;
+
       $_SESSION['smarty']->assign('user', $_SESSION['user']);
       $_SESSION['smarty']->assign('genmen', $genmen);
       $_SESSION['smarty']->assign('genbab', $genbab);
       $_SESSION['smarty']->assign('city', $city[0]['v']);
       $_SESSION['smarty']->assign('email', $email[0]['v']);
       $_SESSION['smarty']->assign('phone', $phone[0]['v']);
-      $_SESSION['smarty']->assign('birthday', $birthday[0]['v']);
+      $_SESSION['smarty']->assign('birthday', $cBirthday);
 
 		$_SESSION['smarty']->display('profile_edit/profile_edit.tpl');
         
