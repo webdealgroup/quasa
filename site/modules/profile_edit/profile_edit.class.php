@@ -4,14 +4,9 @@ class profile_edit extends aModule{
     {           
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
-//echo "<pre>";
-//print_r ($_SESSION);
-//echo "</pre>";
 
 		$_SESSION['smarty']->assign('user', $_SESSION['user']);
 //    $_SESSION['smarty']->assign('city', $_SESSION['city']);
-
-
 //    $selInf = rows('SELECT count(id_client) FROM tasks WHERE id_client='.$_SESSION['contractor']['id']);
 
 		$_SESSION['smarty']->display('profile_edit/profile_edit.tpl');
