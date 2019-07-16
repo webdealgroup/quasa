@@ -88,7 +88,7 @@
                             </div>
                             <div class="inp">
                                 <p>Дата рождения</p>
-                                <input type="text" name="date_Birt" class="date" value="" placeholder="01.07.1975" />
+                                <input type="text" name="date_Birt" class="date" value="~~$birthday~" placeholder="01.07.1975" />
                             </div>
                             <div class="inp">
                                 <p>Электронная почта</p>
@@ -100,10 +100,13 @@
                             </div>
                         </div>
 
+                        <input type='submit' name='scSendBtn' value='Сохранить профиль'>
+
                     </form>
 
                 </div>
-                <div class="deletePage"><a href="#">Удалить профиль</a> </div>
+                <div class="deletePage"><a href="#">Сохранить профиль</a>
+                </div>
 
             </main>
 
