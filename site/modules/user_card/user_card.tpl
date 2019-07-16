@@ -64,9 +64,8 @@
                     <div class="boxUserCard">
                         <div class="avatarBox">
                             <div class="orderBox"> ~~$task_no~ <p>задание <br/> создано</p> </div>
-<!--                            <div class="orderBox"> 1 <p>задание <br/> создано</p> </div> //-->
                             <div class="avatar"><img src="/img/ava.jpg.png" alt=""></div>
-                            <div class="orderBox"> 5 <p>заданий <br/> выполнено</p> </div>
+                            <div class="orderBox"> ~~$task_done~ <p>заданий <br/> выполнено</p> </div>
                         </div>
                         <div class="greenBox"> <p class="radius200">Станьте проверенным исполнителем</p> </div>
                         <div class="sertBox">
