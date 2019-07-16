@@ -22,7 +22,7 @@ class profile_edit extends aModule{
         $cQueue = "UPDATE users SET name='{$cName}', surname='{$cSurname}', gender={$cGender}, city='{$cCity}',"
                 . " birthday='{$cBirthday}', email='{$cEmail}', phone='{$cPhone}' WHERE id=" . $_SESSION['user']['id'];
         q($cQueue);
-
+/*
         $_SESSION['user'][login]    = 'Igor';
         $_SESSION['user'][password] = '123';
         $_SESSION['user'][name]     = $cName;
@@ -35,6 +35,8 @@ class profile_edit extends aModule{
         $_SESSION['user'][money]    = 2345;
         $_SESSION['user'][gender]   = $cGender;
         $_SESSION['user'][email]    = $cEmail;
+*/
+        $_SESSION['user'] = row("SELECT * FROM users WHERE id=".$_SESSION['user']['id']);
 
       }
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
