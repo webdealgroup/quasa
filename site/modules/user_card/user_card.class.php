@@ -38,7 +38,7 @@ class user_card extends aModule{
 
       $_SESSION['smarty']->assign('birthday', $cDst);
       $_SESSION['smarty']->assign('rating', $iRating);
-      $_SESSION['smarty']->assign('money', $money[0]['v']);
+      $_SESSION['smarty']->assign('money', ceil($money[0]['v'])); // округление в большую сторону, floor() - в меньшую
       $_SESSION['smarty']->assign('userid', $_SESSION['user']['id']);
       $_SESSION['smarty']->assign('create_time', $create_time[0]['v']);
 
