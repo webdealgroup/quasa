@@ -16,12 +16,14 @@ class profile_edit extends aModule{
         $cEmail = $_REQUEST['email'];
         $cPhone = $_REQUEST['phone'];
         $cQueue = "UPDATE users SET name='{$cName}', surname='{$cSurname}', gender={$cGender}, city='{$cCity}',"
-                .               " birthday='{$cBirthday}', email='{$cEmail}', phone='{$cPhone}' WHERE id=" . $_SESSION['user']['id'];
+                . " birthday='{$cBirthday}', email='{$cEmail}', phone='{$cPhone}' WHERE id=" . $_SESSION['user']['id'];
+        q($cQueue);
+
+        $_SESSION['user'] = $cName;
 
 echo '<pre>';
 print_r ($cQueue);
 echo '</pre>';
-        q($cQueue);
       }
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
