@@ -100,9 +100,9 @@
 
                     <div class="aboutMe">
                         <div class="boxInfo">
-                            <div class="capt"><span>О себе</span><span class="icoCategoryUser ico_06"></span> </div>
-                            <p>YouDo с августа 2017 г.</p>
-                            <p>Номер пользователя: 3547383</p>
+                            <div class="capt"><span>О себе</span><span class="icoCategoryUser ico_06" onclick="javascript: document.location.href = '/profile_edit/';"></span> </div>
+                            <p>На сайте с ~~$create_time~</p>
+                            <p>Номер пользователя: ~~$userid~</p>
                         </div>
 
                         <div class="boxNumber">
