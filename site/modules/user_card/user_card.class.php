@@ -10,7 +10,6 @@ class user_card extends aModule{
 		$tasks = rows('SELECT * FROM tasks');
     $_SESSION['smarty']->assign('tasks', $tasks);
 
-      $j = 0;
       $birthday = rows("SELECT birthday as v FROM users WHERE id=" . $_SESSION['user']['id']);
       $city = rows("SELECT city as v FROM users WHERE id=" . $_SESSION['user']['id']);
       $rating = rows("SELECT rating as v FROM users WHERE id=" . $_SESSION['user']['id']);

@@ -76,15 +76,15 @@
                             <div class="inp">
                                 <div class="selectGen">
                                     <ul id="selectGen">
-                                        <li class="active" id="genMen">Мужчина</li>
-                                        <li id="genWomen">Женщина</li>
+                                        <li ~~$genmen~ id="genMen">Мужчина</li>
+                                        <li ~~$genbab~ id="genWomen">Женщина</li>
                                     </ul>
                                     <input type="hidden" name="gender" id="inputGender" value="genMen" />
                                 </div>
                             </div>
                             <div class="inp">
                                 <p>Город</p>
-                                <input type="text" name="city" value="" placeholder="Ваш Город" />
+                                <input type="text" name="city" value="~~$city~" placeholder="Ваш Город" />
                             </div>
                             <div class="inp">
                                 <p>Дата рождения</p>
@@ -92,11 +92,11 @@
                             </div>
                             <div class="inp">
                                 <p>Электронная почта</p>
-                                <input type="text" name="email" value="~~$user.email~" placeholder="name@email.com" />
+                                <input type="text" name="email" value="~~$email~" placeholder="name@email.com" />
                             </div>
                             <div class="inp">
                                 <p>Телефон</p>
-                                <input type="text" name="phone" class="phone" value="~~$user.phone~" placeholder="+7 (000) 000-00-00" />
+                                <input type="text" name="phone" class="phone" value="~~$phone~" placeholder="+7 (000) 000-00-00" />
                             </div>
                         </div>
 
