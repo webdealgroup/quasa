@@ -12,16 +12,32 @@ class profile_edit extends aModule{
           $cGender = 1;
         }
         $cCity = $_REQUEST['city'];
-        $cBirthday = $_REQUEST['date_Birt'];
+        $cDate = $_REQUEST['date_Birt'];
+        $cDay  = mb_substr($cDate, 0,2);
+        $cMonth = mb_substr($cDate, 3,2);
+        $cYear = mb_substr($cDate, 6,4);
+        $cBirthday = $cYear . '.' . $cMonth . '.' . $cDay;
         $cEmail = $_REQUEST['email'];
         $cPhone = $_REQUEST['phone'];
         $cQueue = "UPDATE users SET name='{$cName}', surname='{$cSurname}', gender={$cGender}, city='{$cCity}',"
-                .               " birthday='{$cBirthday}', email='{$cEmail}', phone='{$cPhone}' WHERE id=" . $_SESSION['user']['id'];
-
-echo '<pre>';
-print_r ($cQueue);
-echo '</pre>';
+                . " birthday='{$cBirthday}', email='{$cEmail}', phone='{$cPhone}' WHERE id=" . $_SESSION['user']['id'];
         q($cQueue);
+/*
+        $_SESSION['user'][login]    = 'Igor';
+        $_SESSION['user'][password] = '123';
+        $_SESSION['user'][name]     = $cName;
+        $_SESSION['user'][surname]  = $cSurname;
+        $_SESSION['user'][city]     = $cCity;
+        $_SESSION['user'][birthday] = $cBirthday;
+        $_SESSION['user'][phone]    = $cPhone;
+//        $_SESSION['user'][create_time] = '2019-07-01 09:00:00';
+        $_SESSION['user'][rating]   = 0.7;
+        $_SESSION['user'][money]    = 2345;
+        $_SESSION['user'][gender]   = $cGender;
+        $_SESSION['user'][email]    = $cEmail;
+*/
+        $_SESSION['user'] = row("SELECT * FROM users WHERE id=".$_SESSION['user']['id']);
+
       }
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
@@ -41,19 +57,19 @@ echo '</pre>';
       $phone = rows("SELECT phone as v FROM users WHERE id=" . $_SESSION['user']['id']);
       $birthday = rows("SELECT birthday as v FROM users WHERE id=" . $_SESSION['user']['id']);
 
+      $cDate = $birthday[0]['v']; // 1999.mm.dd
+      $cDay  = mb_substr($cDate, 8,2);
+      $cMonth = mb_substr($cDate, 5,2);
+      $cYear = mb_substr($cDate, 0,4);
+      $cBirthday = $cDay . '.' . $cMonth . '.' . $cYear;
+
       $_SESSION['smarty']->assign('user', $_SESSION['user']);
       $_SESSION['smarty']->assign('genmen', $genmen);
       $_SESSION['smarty']->assign('genbab', $genbab);
       $_SESSION['smarty']->assign('city', $city[0]['v']);
       $_SESSION['smarty']->assign('email', $email[0]['v']);
       $_SESSION['smarty']->assign('phone', $phone[0]['v']);
-      $_SESSION['smarty']->assign('birthday', $birthday[0]['v']);
-
-echo '<pre>';
-print_r ($_REQUEST);
-echo '</pre>';
-
-//    $selInf = rows('SELECT count(id_client) FROM tasks WHERE id_client='.$_SESSION['contractor']['id']);
+      $_SESSION['smarty']->assign('birthday', $cBirthday);
 
 		$_SESSION['smarty']->display('profile_edit/profile_edit.tpl');
         
