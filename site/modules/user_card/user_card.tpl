@@ -83,7 +83,7 @@
                     <ul class="category">
                         <li>
                             <div class="icoCategoryUser ico_01"></div>
-                              <div class="name"onclick="javascript: document.location.href = '/user_card/?bill=y';">На счете ~~$money~ &#8381;</div>
+                              <div class="name" onclick="javascript: document.location.href = '/user_card/?bill=y';">На счете ~~$money~ &#8381;</div>
                             <div class="arrowCat"></div>
                         </li>
                         <li>

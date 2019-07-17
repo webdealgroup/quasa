@@ -52,7 +52,7 @@
 <header class="header">
     <div class="boxAllTasks oneText">
         <div class="batMenu" onClick="javascript:return init();">
-            <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=0';">>
+            <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=0';">
             </span> <!--p class="radius200"></p--> </div>
         <div class="batText">Грузоперевозки</div>
     </div>
