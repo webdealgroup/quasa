@@ -7,10 +7,13 @@ class pay extends aModule{
 		    $in = $arr["send_params"];
 
 
-        $money = rows("SELECT money as v FROM users WHERE id=" . $_SESSION['user']['id']);
+        $pays = rows("SELECT * FROM pay WHERE id>0");
 
-        $_SESSION['smarty']->assign('money', ceil($money[0]['v'])); // округление в большую сторону, floor() - в меньшую
+//      echo '<pre>pay=';
+//      print_r ($pays);
+//      echo '</pre>';
 
+        $_SESSION['smarty']->assign('pays', $pays);
         $_SESSION['smarty']->display('pay/pay.tpl');
 
     }

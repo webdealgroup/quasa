@@ -84,32 +84,13 @@
             </li>
           </ul>
           <ul class="category">
-            <li>
-                <div class="icoCategory ico_02"></div> <div class="name">Google Pay</div> <div class="arrowCat"></div>
-            </li>
-            <li>
-                <div class="icoCategory ico_03"></div>
-                <div class="name">
-                   <div>Банковские карты</div>
-                   <div class="text">Visa, MasterCard, Maestro</div>
-                </div>
-                <div class="arrowCat"></div>
-            </li>
-            <li>
-                <div class="icoCategory ico_04"></div> <div class="name">Сбербанк Онлайн</div> <div class="arrowCat"></div>
-            </li>
-            <li>
-                <div class="icoCategory ico_05"></div> <div class="name">Qiwi кошелёк</div> <div class="arrowCat"></div>
-            </li>
-            <li>
-                <div class="icoCategory ico_06"></div> <div class="name">Яндекс.Деньги</div> <div class="arrowCat"></div>
-            </li>
-            <li>
-                <div class="icoCategory ico_07"></div> <div class="name">Альфа-Клик</div> <div class="arrowCat"></div>
-            </li>
-            <li>
-                <div class="icoCategory ico_08"></div> <div class="name">WebMoney</div> <div class="arrowCat"></div>
-            </li>
+
+              ~~foreach from=$pays item=i~
+              <li onclick="javascript: document.location.href = '/pay/';">
+                  <div class="icoCategory ~~$i.pic~"></div>
+                  <div class="name">~~$i.name~</div>
+                  <div class="arrowCat"></div></li>
+              ~~/foreach~
         </ul>
 
     </main>
