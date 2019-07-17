@@ -61,8 +61,8 @@
     <main class="main">
         <div class="billUserBox">
             <div class="billUserGradient">
-                1 037 &#x20bd;
-                <p>37 &#x20bd; + 1 000 &#x20bd; бонусов</p>
+                ~~$money~ &#x20bd;
+               <!-- <p>37 &#x20bd; + 1 000 &#x20bd; бонусов</p> //-->
             </div>
             <div class="btnNext">Далее</div>
         </div>
