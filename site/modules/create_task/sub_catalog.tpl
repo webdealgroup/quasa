@@ -59,10 +59,10 @@
 
     <main class="main">
 
-        <ul class="category subCategoryTask">
+        <ul class="category subCategoryTask"> <!-- ?cat_id=~~$i.id~-->
 
             ~~foreach from=$cat_items item=i~
-            <li onclick="javascript: document.location.href = '/create_task/?cat_id=~~$i.id~';">
+            <li onclick="javascript: document.location.href = '/create_task/?cat_id=~~$i.id~&create_task=1';">
                 <div class="name">~~$i.name~</div>
                 <span class="icoSvg icoSvgArrowWhite"></span></li>
             ~~/foreach~
