@@ -4,10 +4,21 @@ class create_task extends aModule{
     {           
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
-		
-		$tasks = rows('SELECT * FROM cat WHERE id_parent = 0');
-	    $_SESSION['smarty']->assign('cat_items', $cat_items); 
-		$_SESSION['smarty']->display('create_task/show_catalog.tpl');
+
+		$cat_id = isset($_REQUEST['cat_id']) ? $_REQUEST['cat_id'] : 0;
+    $cat_items = rows('SELECT * FROM cat WHERE id_parent = ' . $cat_id);
+
+//echo '<pre>';
+//print_r ($_REQUEST);
+//echo '</pre>';
+
+    $_SESSION['smarty']->assign('cat_items', $cat_items);
+
+    if ($cat_id > 0) {
+      $_SESSION['smarty']->display('create_task/sub_catalog.tpl');
+    } else {
+      $_SESSION['smarty']->display('create_task/show_catalog.tpl');
+    }
         
     }
 }

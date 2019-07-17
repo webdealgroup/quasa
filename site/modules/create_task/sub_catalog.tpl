@@ -60,36 +60,13 @@
     <main class="main">
 
         <ul class="category subCategoryTask">
-            <li>
-                <div class="name">Перевозка вещей, переезды</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Пассажирские перевозки</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Строительные грузы и оборудование</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Вывоз мусора</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Эвакуаторы</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Международные перевозки</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Услуги грузчиков</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Перевозка продуктов</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Услуги манипулятора</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Другой груз</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
+
+            ~~foreach from=$cat_items item=i~
+            <li onclick="javascript: document.location.href = '/create_task/?cat_id=~~$i.id~';">
+                <div class="name">~~$i.name~</div>
+                <span class="icoSvg icoSvgArrowWhite"></span></li>
+            ~~/foreach~
+
         </ul>
      </main>
 </div>
