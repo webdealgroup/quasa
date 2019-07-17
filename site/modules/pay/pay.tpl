@@ -58,11 +58,12 @@
             <div class="header__avatar">
                 ~~$page~
             </div-->
-        <div class="captionMenu"><span class="arrowBack"></span>Пополнение</div>
+        <div class="captionMenu"><span class="arrowBack" onclick="javascript: document.location.href = '/user_card/?bill=y';">
+        </span>Пополнение</div>
 
     </header>
 
-<!--    ~~include file='tpl/menu.tpl'~    -->
+    ~~include file='tpl/menu.tpl'~
 
     <main class="main">
 
