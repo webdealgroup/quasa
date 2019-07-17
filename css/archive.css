@@ -1,0 +1,20 @@
+
+.category li{
+  grid-template-columns: 50px 1fr 100px;
+  align-items: center;
+}
+.category li .name {
+  font-size: 15px;
+  color: #302d34;
+}
+.category li .name .status{
+  font-size: 12px;
+  color: #8e8b94;
+  margin-top: 10px;
+}
+
+.category li .name .title{
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
