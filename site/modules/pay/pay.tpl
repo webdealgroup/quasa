@@ -11,8 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/pay.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/pay.css">
 
     <script type="text/javascript">
         function init() {
