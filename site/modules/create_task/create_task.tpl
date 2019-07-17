@@ -52,7 +52,7 @@
     <header class="header">
         <div class="boxAllTasks createTaskStep">
             <div class="batMenu" onClick="javascript:return init();">
-                <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id_back=s&cat_id_no=~~$cat_id_no~';">
+                <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=~~$cat_id~';">
                 </span>
             </div>
             <div class="batName">Перевозка вещей, переезды<p>Шаг 1 из 7</p></div>
