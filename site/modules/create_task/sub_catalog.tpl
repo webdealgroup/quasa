@@ -51,7 +51,10 @@
 <div class="grid-container">
 <header class="header">
     <div class="boxAllTasks oneText">
-        <div class="batMenu" onClick="javascript:return init();"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
+        <div class="batMenu" onClick="javascript:return init();">
+            <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id_back=c&cat_id_no=0';">>
+
+            </span> <!--p class="radius200"></p--> </div>
         <div class="batText">Грузоперевозки</div>
     </div>
 </header>

@@ -51,7 +51,10 @@
 <div class="grid-container">
     <header class="header">
         <div class="boxAllTasks createTaskStep">
-            <div class="batMenu" onClick="javascript:return init();"><span class="ico arrowLeft"></span></div>
+            <div class="batMenu" onClick="javascript:return init();">
+                <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id_back=s&cat_id_no=~~$cat_id_no~';">
+                </span>
+            </div>
             <div class="batName">Перевозка вещей, переезды<p>Шаг 1 из 7</p></div>
             <div class="batCategory">Отмена</div>
         </div>
@@ -68,6 +71,8 @@
                     <input type="text" name="name" value="" />
                     <p>Например, перевезти все вещи на новую квартиру</p>
                 </div>
+                <br/>
+                <input type='submit' name='scSendBtn' value='Сохранить задание'>
             </form>
             <div class="btnNext">Далее</div>
         </div>
