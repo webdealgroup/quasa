@@ -6,12 +6,7 @@ class pay extends aModule{
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		    $in = $arr["send_params"];
 
-
-        $pays = rows("SELECT * FROM pay WHERE id>0");
-
-//      echo '<pre>pay=';
-//      print_r ($pays);
-//      echo '</pre>';
+        $pays = rows("SELECT * FROM pay_ways WHERE active = 1 ORDER BY sort ASC");
 
         $_SESSION['smarty']->assign('pays', $pays);
         $_SESSION['smarty']->display('pay/pay.tpl');
