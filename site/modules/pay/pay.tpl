@@ -85,9 +85,8 @@
             </li>
           </ul>
           <ul class="category">
-
               ~~foreach from=$pays item=i~
-              <li onclick="javascript: document.location.href = '/pay/';">
+              <li  onclick="javascript: document.location.href = '/pay/?call=y';">
                   <div class="icoCategory ~~$i.pic~"></div>
                   <div class="name">~~$i.name~</div>
                   <div class="arrowCat"></div></li>

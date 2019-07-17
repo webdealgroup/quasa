@@ -2,14 +2,18 @@
 class pay extends aModule{
 
     function execute($arr)
-    {           
-        //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
+    {
+        //echo "<pre>"; print_r($arr); echo "</pre>"; //die();
 		    $in = $arr["send_params"];
 
         $pays = rows("SELECT * FROM pay_ways WHERE active = 1 ORDER BY sort ASC");
 
         $_SESSION['smarty']->assign('pays', $pays);
-        $_SESSION['smarty']->display('pay/pay.tpl');
+        if (isset($_REQUEST['call'])) {
+          $_SESSION['smarty']->display('pay/pay-cards.tpl');
+        } else {
+          $_SESSION['smarty']->display('pay/pay.tpl');
+        }
 
     }
 }
