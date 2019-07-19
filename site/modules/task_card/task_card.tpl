@@ -183,8 +183,8 @@
                                     <p>Подкатегория &laquo;Услуги курьера на легковом авто&raquo;</p>
                                 </div>
 
-                                <form action="#" method="post">
-                                <input type='submit' name='scSendBtn' value='50 руб.'>
+                                <form action="#" method="post" enctype='multipart/form-data'>
+                                  <input type='submit' name='scSendBtn' value='50 руб.'>
                                 </form>
 
                                 <div class="boxReviews">

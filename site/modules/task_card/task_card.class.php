@@ -4,7 +4,7 @@ class task_card extends aModule{
     {           
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
-		
+
 		$tasks = row('SELECT * FROM tasks WHERE id ='.$in['id']);
 
 //echo '<pre>';
@@ -33,6 +33,11 @@ $cCost        = $tasks['cost'];
 $cTimeStart   = $tasks['time_start'];
 $cTimeEnd     = $tasks['time_end'];
 
+      if (isset($_REQUEST['scSendBtn'])) {
+        $cQueue = "UPDATE tasks SET cost=cost-50 WHERE id=" . $cId;
+        q($cQueue);
+      }
+
 //echo '<pre>';
 //print_r ($cTitle . '/'. $cDescription . '/'. $cCost);
 //echo '</pre>';
@@ -46,7 +51,7 @@ $cTimeEnd     = $tasks['time_end'];
 
       $_SESSION['smarty']->assign('tasks', $tasks);
 
-		$_SESSION['smarty']->display('task_card/task_card.tpl');
+	  	$_SESSION['smarty']->display('task_card/task_card.tpl');
         
     }
 }
