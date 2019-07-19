@@ -149,8 +149,10 @@
         <div class="grid-container">
 
             <header class="header">
+                Открытые задания
+<!--
                 <div class="boxAllTasks">
-                    <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <!--p class="radius200"></p--> </div>
+                    <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span></div>
                     <div class="batSearch">
                         <form action="#" method="post">
                             <input type="text" name="search" class="radius200" value="" placeholder="Поиск по заданиям" />
@@ -159,20 +161,21 @@
                     <div class="batCategory"><span class="ico settings"></span></div>
                     <div class="batMap"><span class="ico map"></span></div>
                 </div>
-
+//-->
+<!--p class="radius200"></p-->
             </header>
 
             ~~include file='tpl/menu.tpl'~
 
             <main class="main toggle">
-
+<!--
                 <div class="main-header tabs">
                     <div class="main-header__heading tab active">ВСЕ</div>
                     <div class="main-header__heading tab">РЕКОМЕНДОВАННЫЕ</div>
                     <div class="main-header__updates tab">ИЗБРАННЫЕ</div>
                     <div class="line"></div>
                 </div>
-
+//-->
                 <div class="allTaskSection">
 
                     <div class="panels">

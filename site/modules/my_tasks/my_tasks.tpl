@@ -162,7 +162,7 @@
 
                   <ul class="tasks">
 
-                    <li onclick="javascript: document.location.href = '#';">
+                    <li  onclick="javascript: document.location.href = '/my_tasks/?all_tasks=y';">
                       <div class="task__title">Заданий - ~~$count_tasks~</div>
                       <div class="body">
                         <div class="task__icon icon_green"></div>
