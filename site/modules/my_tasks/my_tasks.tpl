@@ -158,17 +158,39 @@
 
                     </ul>
                 </div>
-                <div class="panel">
 
+<script language=JavaScript><!--
+    // onclick="javascript: document.location.href = '/my_tasks/?all_tasks=a';"
+  function GetOjInfo(oj)
+  {
+    var sText = '';
+    for (var i in oj) { sText += i + ' = ' + oj[i]+"; "; }
+    return sText;
+  }
+    function scfCall(the) {
+      if (the.innerHTML.length > 20) {
+        event.stopPropagation();
+        document.location.href = '/my_tasks/?all_tasks=a';
+      } else {
+        event.stopPropagation();
+        document.location.href = '/my_tasks/?all_tasks=c';
+      }
+    }
+    //--></script>
+<!--onclick="JavaScript: scfCall(this);"> -->
+
+                <div class="panel">
                   <ul class="tasks">
 
-                    <li onclick="javascript: document.location.href = '#';">
-                      <div class="task__title">Вы создали 1 задание</div>
+                    <li onclick="javascript: document.location.href = '/my_tasks/?all_tasks=a';">
+                      <div class="task__title">Заданий - ~~$count_tasks~</div>
                       <div class="body">
                         <div class="task__icon icon_green"></div>
                         <div class="name">
-                          <div>Открыты</div>
-                          <div class="status">1 задание</div>
+                          <div onclick="javascript: document.location.href = '/my_tasks/?all_tasks=c';">Выполнено</div>
+                          <div>
+                              Заданий - ~~$count_ready~
+                          </div>
                         </div>
                         <div class="arrowCat"></div>
                       </div>

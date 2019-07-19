@@ -49,29 +49,27 @@
 
 <body class="">
 <div class="grid-container">
-    <header class="header">
-        <div class="boxAllTasks createTaskStep">
-            <div class="batMenu" onClick="javascript:return init();"><span class="ico arrowLeft"></span></div>
-            <div class="batName">Перевозка вещей, переезды<p>Шаг 1 из 7</p></div>
-            <div class="batCategory">Отмена</div>
-        </div>
-    </header>
+<header class="header">
+    <div class="boxAllTasks oneText">
+        <div class="batMenu" onClick="javascript:return init();">
+            <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=0';">
+            </span> <!--p class="radius200"></p--> </div>
+        <div class="batText">Грузоперевозки</div>
+    </div>
+</header>
 ~~include file='tpl/menu.tpl'~
 
     <main class="main">
 
-        <div class="addTaskStep">
-            <form action="#" method="post">
-                <div class="capt">Что нужно сделать?</div>
-                <div class="inp">
-                    <p>Название задания</p>
-                    <input type="text" name="name" value="" />
-                    <p>Например, перевезти все вещи на новую квартиру</p>
-                </div>
-            </form>
-            <div class="btnNext">Далее</div>
-        </div>
+        <ul class="category subCategoryTask"> <!-- ?cat_id=~~$i.id~-->
 
+            ~~foreach from=$cat_items item=i~
+            <li onclick="javascript: document.location.href = '/create_task/?cat_id=~~$i.id~&create_task=1';">
+                <div class="name">~~$i.name~</div>
+                <span class="icoSvg icoSvgArrowWhite"></span></li>
+            ~~/foreach~
+
+        </ul>
      </main>
 </div>
 <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>

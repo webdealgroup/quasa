@@ -12,6 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/pay.css">
 
     <script type="text/javascript">
         function init() {
@@ -57,22 +58,39 @@
             <div class="header__avatar">
                 ~~$page~
             </div-->
-        <div class="captionMenu"><span class="arrowBack"></span>Категории</div>
+        <div class="captionMenu"><span class="arrowBack" onclick="javascript: document.location.href = '/user_card/?bill=y';">
+        </span>Пополнение</div>
 
     </header>
+
     ~~include file='tpl/menu.tpl'~
 
     <main class="main">
 
         <ul class="category">
-
-            ~~foreach from=$cat_items item=i~
-            <li onclick="javascript: document.location.href = '/create_task/?cat_id=~~$i.id~';">
-                <div class="icoCategory ~~$i.pic~"></div>
-                <div class="name">~~$i.name~</div>
-                <div class="arrowCat"></div></li>
-            ~~/foreach~
-
+            <li>
+                <div class="icoCategory ico_01"></div>
+                <div class="name">
+                  <div class="text">Сумма пополнения</div>
+                  <div> <input type="text" name="" placeholder="  400 &#8381;"></div>
+                </div> <div></div>
+            </li>
+          </ul>
+          <ul class="card">
+            <li style="border-bottom: none">
+                <div class="name">
+                  <div class="text">Минимальная сумма - 400 &#8381;</div>
+                  <div class="title">Способ оплаты</div>
+                </div>
+            </li>
+          </ul>
+          <ul class="category">
+              ~~foreach from=$pays item=i~
+              <li  onclick="javascript: document.location.href = '/pay/?call=y';">
+                  <div class="icoCategory ~~$i.pic~"></div>
+                  <div class="name">~~$i.name~</div>
+                  <div class="arrowCat"></div></li>
+              ~~/foreach~
         </ul>
 
     </main>

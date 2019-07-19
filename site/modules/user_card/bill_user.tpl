@@ -50,47 +50,22 @@
 <body class="">
 <div class="grid-container">
 <header class="header">
-    <div class="boxAllTasks oneText">
+    <div class="boxAllTasks billUser">
         <div class="batMenu" onClick="javascript:return init();"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
-        <div class="batText">Грузоперевозки</div>
+        <div class="batText">Счет</div>
+        <div class="batCategory"><span class="icoSvg icoSvgHelp"></span></div>
     </div>
 </header>
 ~~include file='tpl/menu.tpl'~
 
     <main class="main">
-
-        <ul class="category subCategoryTask">
-            <li>
-                <div class="name">Перевозка вещей, переезды</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Пассажирские перевозки</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Строительные грузы и оборудование</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Вывоз мусора</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Эвакуаторы</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Международные перевозки</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Услуги грузчиков</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Перевозка продуктов</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Услуги манипулятора</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-            <li>
-                <div class="name">Другой груз</div> <span class="icoSvg icoSvgArrowWhite"></span>
-            </li>
-        </ul>
+        <div class="billUserBox">
+            <div class="billUserGradient">
+                ~~$money~ &#x20bd;
+               <!-- <p>37 &#x20bd; + 1 000 &#x20bd; бонусов</p> //-->
+            </div>
+            <div class="btnNext" onclick="javascript: document.location.href = '/pay/';">Далее</div>
+        </div>
      </main>
 </div>
 <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>

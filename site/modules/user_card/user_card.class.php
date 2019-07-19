@@ -4,8 +4,15 @@ class user_card extends aModule{
     {           
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
-		
-		$_SESSION['smarty']->assign('user', $_SESSION['user']);
+
+      $_SESSION['smarty']->assign('user', $_SESSION['user']);
+
+      if (isset($_REQUEST['bill'])) {
+        $money = rows("SELECT money as v FROM users WHERE id=" . $_SESSION['user']['id']);
+        $_SESSION['smarty']->assign('money', ceil($money[0]['v'])); // округление в большую сторону, floor() - в меньшую
+        $_SESSION['smarty']->display('user_card/bill_user.tpl');
+      return;
+    }
 
 		$tasks = rows('SELECT * FROM tasks');
     $_SESSION['smarty']->assign('tasks', $tasks);

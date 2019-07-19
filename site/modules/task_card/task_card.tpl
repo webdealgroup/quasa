@@ -100,7 +100,7 @@
             <header class="header">
                 <div class="boxAllTasks">
                     <div class="batMenu" onClick="javascript:return init();"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
-                    <div class="batText">Задание № 4573201</div>
+                    <div class="batText">Задание № ~~$task_id~</div>
                     <div class="batCategory"><span class="ico heart"></span></div>
                     <div class="batMap"><span class="ico more"></span></div>
                 </div>
@@ -147,7 +147,7 @@
                 <div class="boxTaskCard">
                     <div class="nameTask">
                         <div class="check"><span>Выполнено</span> <span class="ico">67</span></div>
-                        <div class="name"> Нужен курьер на машине <p>3 000 &#8381;</p> </div>
+                        <div class="name"> Нужен курьер на машине <p> ~~$cost~ &#8381;</p> </div>
                     </div>
 
                     <div class="toggle">
@@ -163,12 +163,14 @@
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d46754.40056263223!2d37.601975890560354!3d55.759437993972426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1562929366358!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
                                 </div>
                                 <div class="description">
-                                    <p>Описание</p>
-                                    Приехать забрать посылки развезти по одному району
+                                    <p>~~$title~</p>
+                                    ~~$description~
                                 </div>
                                 <div class="description">
                                     <p>Начать</p>
-                                    Понедельник, 17 декабря 2018, 10:00
+                                    ~~$time_start~
+                                    <p>Завершить</p>
+                                    ~~$time_end~
                                 </div>
                                 <div class="description">
                                     <ul>
@@ -180,6 +182,10 @@
                                     <p>Создано 17 декабря 2018, 09:21</p>
                                     <p>Подкатегория &laquo;Услуги курьера на легковом авто&raquo;</p>
                                 </div>
+
+                                <form action="#" method="post">
+                                <input type='submit' name='scSendBtn' value='50 руб.'>
+                                </form>
 
                                 <div class="boxReviews">
                                     <div class="capt"><span class="icoCategoryUser ico_like"></span> <span class="text">Отзыв исполнителя</span></div>

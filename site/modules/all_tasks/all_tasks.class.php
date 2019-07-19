@@ -4,16 +4,11 @@ class all_tasks extends aModule{
     {           
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
-		
-		
-
 
 		$tasks = rows('SELECT * FROM tasks');
-	    $_SESSION['smarty']->assign('tasks', $tasks); 
+	  $_SESSION['smarty']->assign('tasks', $tasks);
 
-
-	    $_SESSION['smarty']->assign('user_name', $_SESSION['user']['login']); 
-
+	  $_SESSION['smarty']->assign('user_name', $_SESSION['user']['login']);
 		$_SESSION['smarty']->display('all_tasks/all_tasks.tpl');
         
     }
