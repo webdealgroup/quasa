@@ -8,10 +8,20 @@ class my_tasks extends aModule{
 //      echo '<pre>';
 //      print_r ($_REQUEST);
 //      echo '</pre>';
+
       if (isset($_REQUEST['all_tasks'])) {
-        $tasks = rows('SELECT * FROM tasks WHERE id_client=' . $_SESSION['user']['id']);
-        $_SESSION['smarty']->assign('tasks', $tasks);
-        $_SESSION['smarty']->display('my_tasks/open_tasks.tpl');
+        switch ($_REQUEST['all_tasks']) {
+          case 'a':
+            $tasks = rows('SELECT * FROM tasks WHERE id_client=' . $_SESSION['user']['id']);
+            $_SESSION['smarty']->assign('tasks', $tasks);
+            $_SESSION['smarty']->display('my_tasks/open_tasks.tpl');
+            break;
+          case 'c':
+            $tasks = rows('SELECT * FROM tasks WHERE completed=1 and id_client=' . $_SESSION['user']['id']);
+            $_SESSION['smarty']->assign('tasks', $tasks);
+            $_SESSION['smarty']->display('my_tasks/completed_tasks.tpl');
+            break;
+        }
         return;
       }
 

@@ -149,7 +149,7 @@
         <div class="grid-container">
 
             <header class="header">
-                Открытые задания
+                Завершенные задания
 <!--
                 <div class="boxAllTasks">
                     <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span></div>
