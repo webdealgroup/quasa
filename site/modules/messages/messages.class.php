@@ -6,7 +6,8 @@ class messages extends aModule{
 		$in = $arr["send_params"];
 		
 		$tasks = rows('SELECT * FROM tasks WHERE id_client ='.$_SESSION['user']['id']);
-	    $_SESSION['smarty']->assign('tasks', $tasks); 
+
+	  $_SESSION['smarty']->assign('tasks', $tasks);
 		$_SESSION['smarty']->display('messages/messages.tpl');
         
     }
