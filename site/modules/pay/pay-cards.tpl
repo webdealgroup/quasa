@@ -106,7 +106,9 @@
         </ul>
 
         <div class="total">
-          Заплатить 400 &#8381;
+            <form action="#" method="post" enctype='multipart/form-data'>
+                <input type='submit' name='scSendBtn' value='Заплатить 400 &#8381;'>
+            </form>
         </div>
     </main>
 

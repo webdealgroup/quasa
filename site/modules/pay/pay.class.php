@@ -8,6 +8,11 @@ class pay extends aModule{
 
         $pays = rows("SELECT * FROM pay_ways WHERE active = 1 ORDER BY sort ASC");
 
+      if (isset($_REQUEST['scSendBtn'])) {
+ //        $cQueue = "UPDATE tasks SET cost=cost-50 WHERE id=" . $cId;
+   //     q($cQueue);
+      }
+
         $_SESSION['smarty']->assign('pays', $pays);
         if (isset($_REQUEST['call'])) {
           $_SESSION['smarty']->display('pay/pay-cards.tpl');
