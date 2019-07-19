@@ -8,6 +8,12 @@ class create_task extends aModule{
 echo '<pre>';
 print_r ($_REQUEST);
 echo '</pre>';
+$cUser = $_SESSION['user']['id'];
+$cDesc = $_REQUEST['name'];
+// insert into tasks (id, id_client, id_contractor, title, description, address, cost, time_start, time_end, completed)
+$cQueue = "insert into tasks (id_client, title, description) '
+        . 'values ({$cUser}, 'Тест', '{$cDesc}')";
+q($cQueue);
       }
 
     $cat_id = isset($_REQUEST['cat_id']) ? $_REQUEST['cat_id'] : 0;
