@@ -181,12 +181,12 @@
                 <div class="panel">
                   <ul class="tasks">
 
-                    <li onclick="JavaScript: scfCall(this);">
+                    <li onclick="javascript: document.location.href = '/my_tasks/?all_tasks=all';"> <!--onclick="JavaScript: scfCall(this);"> -->
                       <div class="task__title">Заданий - ~~$count_tasks~</div>
                       <div class="body">
                         <div class="task__icon icon_green"></div>
                         <div class="name">
-                          <div onclick="JavaScript: scfCall(this);">Выполнено</div>
+                          <div onclick="javascript: document.location.href = '/my_tasks/?all_tasks=complete';">Выполнено</div>
                           <div>
                               Заданий - ~~$count_ready~
                           </div>
