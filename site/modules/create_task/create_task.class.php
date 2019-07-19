@@ -5,8 +5,8 @@ class create_task extends aModule{
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
 		
-		$tasks = rows('SELECT * FROM cat WHERE id_parent = 0');
-	    $_SESSION['smarty']->assign('cat_items', $cat_items); 
+		$tasks = rows('SELECT * FROM tasks');
+	    $_SESSION['smarty']->assign('tasks', $tasks); 
 		$_SESSION['smarty']->display('create_task/show_catalog.tpl');
         
     }
