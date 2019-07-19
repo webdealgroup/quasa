@@ -102,9 +102,6 @@
               cursor: pointer;
             }
 
-
-
-
             .footer {
               grid-area: footer;
               display: flex;
@@ -231,11 +228,6 @@
 </style> 
             <main class="main">
 
-
-               
-
-              
-
                 <div class="main-header">
                     <div class="main-header__heading">
                         Я ИСПОЛНИТЕЛЬ
@@ -247,9 +239,6 @@
 
                 <div class="main-overview">
 
-
-
-                    
                     ~~foreach from=$tasks item=i~
                     <div class="overviewcard">
                         <div class="overviewcard__icon">
