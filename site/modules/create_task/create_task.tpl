@@ -68,8 +68,24 @@
                 <div class="capt">Что нужно сделать?</div>
                 <div class="inp">
                     <p>Название задания</p>
-                    <input type="text" name="name" value="" />
+                    <input type="text" name="title" value="" />
                     <p>Например, перевезти все вещи на новую квартиру</p>
+                </div>
+                <div class="inp">
+                    <p>Содержание задания</p>
+                    <input type="text" name="description" value="" />
+                </div>
+                <div class="inp">
+                    <p>Стоимость</p>
+                    <input type="text" name="cost" value="" />
+                </div>
+                <div class="inp">
+                    <p>Начало исполнения</p>
+                    <input type="text" name="time_start" value="" placeholder="~~$time_start~"/>
+                </div>
+                <div class="inp">
+                    <p>Завершение исполнения</p>
+                    <input type="text" name="time_end" value="" placeholder="~~$time_start~"/>
                 </div>
                 <br/>
                 <input type='submit' name='scSendBtn' value='Сохранить задание'>

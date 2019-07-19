@@ -9,12 +9,16 @@ class create_task extends aModule{
 //print_r ($_REQUEST);
 //echo '</pre>';
 $cUser = $_SESSION['user']['id'];
-$cDesc = $_REQUEST['name'];
+$cTitle = $_REQUEST['title'];
+$cDescription = $_REQUEST['description'];
+$cCost = $_REQUEST['cost'];
+$cTimeStart = $_REQUEST['time_start'];
+$cTimeEnd   = $_REQUEST['time_end'];
 // insert into tasks (id_client, title, description) values (3, 'Тест', 'cDesc')
 // insert into tasks (id, id_client, id_contractor, title, description, address, cost, time_start, time_end, completed)
-$cQueue = "insert into tasks (id_client, title, description) '
-        . 'values ({$cUser}, 'Тест', '{$cDesc}')";
-//q($cQueue);
+$cQueue = "insert into tasks (id_client, title, description, cost, time_start, time_end) "
+        . "values ({$cUser}, '{$cTitle}', '{$cDescription}', {$cCost}, '2019.07.19 11:22:33', '2019.07.19 11:22:33')";
+q($cQueue);
       }
 
     $cat_id = isset($_REQUEST['cat_id']) ? $_REQUEST['cat_id'] : 0;
@@ -34,13 +38,18 @@ $cQueue = "insert into tasks (id_client, title, description) '
 
     $create_task = isset($_REQUEST['create_task']) ? $_REQUEST['create_task'] : 0;
 
+      $dTimeStart = getdate();
+      $cTimeStart = $dTimeStart['mday'] . '.' . $dTimeStart['mon'] . '.' . $dTimeStart['year']
+                  . ' ' . $dTimeStart['hours'] . ':' . $dTimeStart['minutes'] . ':' . $dTimeStart['seconds'];
 //echo '<pre>';
-//print_r ($_REQUEST);
+//print_r ($cTimeStart);
 //echo '</pre>';
 
-    if ($create_task > 0) {
+
+      if ($create_task > 0) {
       $_SESSION['smarty']->assign('cat_id', $cat_id);
       $_SESSION['smarty']->assign('cat_name', $cat_name['name']);
+      $_SESSION['smarty']->assign('time_start', $cTimeStart);
       $_SESSION['smarty']->display('create_task/create_task.tpl');
     } else {
       $_SESSION['smarty']->assign('cat_items', $cat_items);
