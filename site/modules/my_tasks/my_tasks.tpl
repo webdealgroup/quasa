@@ -168,7 +168,6 @@
     return sText;
   }
     function scfCall(the) {
-//      alert(the.innerHTML);
       if (the.innerHTML.length > 20) {
         event.stopPropagation();
         document.location.href = '/my_tasks/?all_tasks=a';
@@ -177,7 +176,6 @@
         document.location.href = '/my_tasks/?all_tasks=c';
       }
     }
-
 //--></script>
 
                 <div class="panel">

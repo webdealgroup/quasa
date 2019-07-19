@@ -5,9 +5,9 @@ class my_tasks extends aModule{
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
 
-//      echo '<pre>';
+// echo '<pre>';
 //      print_r ($_REQUEST);
-//      echo '</pre>';
+// echo '</pre>';
 
       if (isset($_REQUEST['all_tasks'])) {
         switch ($_REQUEST['all_tasks']) {
