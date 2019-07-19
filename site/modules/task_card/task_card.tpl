@@ -164,17 +164,17 @@
                                 </div>
                                 <div class="description">
                                     <p>~~$title~</p>
-                                    ~~description~
+                                    ~~$description~
                                 </div>
                                 <div class="description">
                                     <p>Начать</p>
-                                    ~~time_start~
+                                    ~~$time_start~
                                     <p>Завершить</p>
-                                    ~~time_end~
+                                    ~~$time_end~
                                 </div>
                                 <div class="description">
                                     <ul>
-                                        <li><span class="icoCategoryUser ico_12"></span><span class="text">Оплата наличными - ~~cost~</span></li>
+                                        <li><span class="icoCategoryUser ico_12"></span><span class="text">Оплата наличными - ~~$cost~</span></li>
                                         <li><span class="icoCategoryUser ico_13"></span><span class="text">Исполнитель должен взять паспорт для оформления расписки</span> <span class="icoCategoryUser ico_14"></span></li>
                                     </ul>
                                 </div>
