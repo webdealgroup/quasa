@@ -5,10 +5,45 @@ class task_card extends aModule{
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
 		
-		$tasks = rows('SELECT * FROM tasks WHERE id ='.$in['id']);
+		$tasks = row('SELECT * FROM tasks WHERE id ='.$in['id']);
 
-	    $_SESSION['smarty']->assign('referrer', $in['referrer']); 
-	    $_SESSION['smarty']->assign('tasks', $tasks); 
+//echo '<pre>';
+//print_r ($tasks);
+//echo '</pre>';
+
+/*
+[id] => 25
+    [id_client] => 3
+    [id_contractor] =>
+    [title] => наименование
+    [description] => содержание
+    [address] =>
+    [cost] => 1234.50
+    [time_start] => 2019-07-19 11:22:33
+    [time_end] => 2019-07-19 11:22:33
+    [approved] => 0
+    [completed] => 0
+    [in_archive] => 0
+*/
+
+$cTitle       = $tasks['title'];
+$cDescription = $tasks['description'];
+$cCost        = $tasks['cost'];
+$cTimeStart   = $tasks['time_start'];
+$cTimeEnd     = $tasks['time_end'];
+
+//echo '<pre>';
+//print_r ($cTitle . '/'. $cDescription . '/'. $cCost);
+//echo '</pre>';
+
+      $_SESSION['smarty']->assign('title', $cTitle);
+      $_SESSION['smarty']->assign('description', $cDescription);
+      $_SESSION['smarty']->assign('cost', $cCost);
+      $_SESSION['smarty']->assign('time_start', $cTimeStart);
+      $_SESSION['smarty']->assign('time_end', $cTimeEnd);
+
+      $_SESSION['smarty']->assign('tasks', $tasks);
+
 		$_SESSION['smarty']->display('task_card/task_card.tpl');
         
     }
