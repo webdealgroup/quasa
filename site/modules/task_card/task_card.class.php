@@ -26,6 +26,7 @@ class task_card extends aModule{
     [in_archive] => 0
 */
 
+$cId          = $tasks['id'];
 $cTitle       = $tasks['title'];
 $cDescription = $tasks['description'];
 $cCost        = $tasks['cost'];
@@ -36,6 +37,7 @@ $cTimeEnd     = $tasks['time_end'];
 //print_r ($cTitle . '/'. $cDescription . '/'. $cCost);
 //echo '</pre>';
 
+      $_SESSION['smarty']->assign('task_id', $cId);
       $_SESSION['smarty']->assign('title', $cTitle);
       $_SESSION['smarty']->assign('description', $cDescription);
       $_SESSION['smarty']->assign('cost', $cCost);

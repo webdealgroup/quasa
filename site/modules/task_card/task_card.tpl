@@ -100,7 +100,7 @@
             <header class="header">
                 <div class="boxAllTasks">
                     <div class="batMenu" onClick="javascript:return init();"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
-                    <div class="batText">Задание № 4573201</div>
+                    <div class="batText">Задание № ~~$task_id~</div>
                     <div class="batCategory"><span class="ico heart"></span></div>
                     <div class="batMap"><span class="ico more"></span></div>
                 </div>
@@ -147,7 +147,7 @@
                 <div class="boxTaskCard">
                     <div class="nameTask">
                         <div class="check"><span>Выполнено</span> <span class="ico">67</span></div>
-                        <div class="name"> Нужен курьер на машине <p>3 000 &#8381;</p> </div>
+                        <div class="name"> Нужен курьер на машине <p> ~~$cost~ &#8381;</p> </div>
                     </div>
 
                     <div class="toggle">
@@ -174,7 +174,7 @@
                                 </div>
                                 <div class="description">
                                     <ul>
-                                        <li><span class="icoCategoryUser ico_12"></span><span class="text">Оплата наличными - ~~$cost~</span></li>
+                                        <li><span class="icoCategoryUser ico_12"></span><span class="text">Оплата наличными</span></li>
                                         <li><span class="icoCategoryUser ico_13"></span><span class="text">Исполнитель должен взять паспорт для оформления расписки</span> <span class="icoCategoryUser ico_14"></span></li>
                                     </ul>
                                 </div>
@@ -182,6 +182,10 @@
                                     <p>Создано 17 декабря 2018, 09:21</p>
                                     <p>Подкатегория &laquo;Услуги курьера на легковом авто&raquo;</p>
                                 </div>
+
+                                <form action="#" method="post">
+                                <input type='submit' name='scSendBtn' value='50 руб.'>
+                                </form>
 
                                 <div class="boxReviews">
                                     <div class="capt"><span class="icoCategoryUser ico_like"></span> <span class="text">Отзыв исполнителя</span></div>
