@@ -69,7 +69,6 @@
                 <div class="inp">
                     <p>Название задания</p>
                     <input type="text" name="title" value="" />
-                    <p>Например, перевезти все вещи на новую квартиру</p>
                 </div>
                 <div class="inp">
                     <p>Содержание задания</p>
@@ -77,7 +76,7 @@
                 </div>
                 <div class="inp">
                     <p>Стоимость</p>
-                    <input type="text" name="cost" value="" />
+                    <input type="text" name="cost" value="" placeholder="99999999.99"/>
                 </div>
                 <div class="inp">
                     <p>Начало исполнения</p>

@@ -163,12 +163,12 @@
                   <ul class="tasks">
 
                     <li onclick="javascript: document.location.href = '#';">
-                      <div class="task__title">Вы создали 1 задание</div>
+                      <div class="task__title">Заданий - ~~$count_tasks~</div>
                       <div class="body">
                         <div class="task__icon icon_green"></div>
                         <div class="name">
-                          <div>Открыты</div>
-                          <div class="status">1 задание</div>
+                          <div>Выполнено</div>
+                          <div class="status">Заданий - ~~$count_ready~</div>
                         </div>
                         <div class="arrowCat"></div>
                       </div>
