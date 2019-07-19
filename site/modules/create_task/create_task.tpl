@@ -55,7 +55,7 @@
                 <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=~~$cat_id~';">
                 </span>
             </div>
-            <div class="batName">Перевозка вещей, переезды<p>Шаг 1 из 7</p></div>
+            <div class="batName">~~$cat_name~<p>Шаг 1 из 7</p></div>
             <div class="batCategory">Отмена</div>
         </div>
     </header>

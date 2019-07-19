@@ -20,9 +20,10 @@ $cQueue = "insert into tasks (id_client, title, description) '
     $cat_id = isset($_REQUEST['cat_id']) ? $_REQUEST['cat_id'] : 0;
     if ($cat_id > 2) {
       $cat_parent = row('SELECT id_parent FROM cat WHERE id = ' . $cat_id);
+      $cat_name = row('SELECT name FROM cat WHERE id='.$cat_id);
       $cat_id = $cat_parent['id_parent'];
-//echo '<pre>id_parent=';
-//print_r ($cat_id);
+//echo '<pre>';
+//print_r ($cat_name);
 //echo '</pre>';
     }
 //      echo '<pre>cat_id=';
@@ -39,6 +40,7 @@ $cQueue = "insert into tasks (id_client, title, description) '
 
     if ($create_task > 0) {
       $_SESSION['smarty']->assign('cat_id', $cat_id);
+      $_SESSION['smarty']->assign('cat_name', $cat_name['name']);
       $_SESSION['smarty']->display('create_task/create_task.tpl');
     } else {
       $_SESSION['smarty']->assign('cat_items', $cat_items);
