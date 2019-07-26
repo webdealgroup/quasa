@@ -99,10 +99,15 @@
                                 <input type="text" name="phone" class="phone" value="~~$phone~" placeholder="+7 (000) 000-00-00" />
                             </div>
                         </div>
+							
+						<div class="center">
+                        <input class="deletePageButton" type='submit' name='scSendBtn' value='Сохранить профиль'>
+						</div>
+
                     </form>
 
                 </div>
-                <div class="deletePage"><a href="#">Сохранить профиль</a>
+                
                 </div>
 
             </main>
