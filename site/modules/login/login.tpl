@@ -129,8 +129,8 @@
             		<input type="hidden" name="mod" value='login' />
 
 	            	<div class="grid">
-	            		<div><input class="login" type="text" name="login" value="" placeholder="login" autocomplete="off"></div>
-	            		<div><input class="login" type="password" name="password" value=""  placeholder="***" autocomplete="off"></div>
+	            		<div><input class="login" type="text" name="login" value="" required autocomplete="off"></div>
+	            		<div><input class="login" type="password" name="password" value="" required autocomplete="off"></div>
 	            		<button class="btn_subm" type="submit">ВОЙТИ</button>
 	            	</div>
 
