@@ -99,9 +99,6 @@
                                 <input type="text" name="phone" class="phone" value="~~$phone~" placeholder="+7 (000) 000-00-00" />
                             </div>
                         </div>
-
-                        <input type='submit' name='scSendBtn' value='Сохранить профиль'>
-
                     </form>
 
                 </div>
