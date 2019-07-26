@@ -57,6 +57,8 @@
 				case 'messages':		print ($_SESSION['smarty']->fetch('mod:messages'));			exit();		break;
         		case 'profile_edit':	print ($_SESSION['smarty']->fetch('mod:profile_edit'));		exit();		break;
         		case 'pay':				print ($_SESSION['smarty']->fetch('mod:pay'));				exit();		break;
+				case 'reg':			print ($_SESSION['smarty']->fetch('mod:reg'));			exit();		break;
+				case 'ver':			print ($_SESSION['smarty']->fetch('mod:ver'));			exit();		break;
 
 
         default:		print ($_SESSION['smarty']->fetch('mod:login'));	exit();		break;
