@@ -12,7 +12,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/main.css">
-        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"> </script>
         <script type="text/javascript">
             function init() {
                 AndroidFunction.showMenu();
@@ -66,11 +66,6 @@
               }
             }
         </style>
-        <script
-          src="https://code.jquery.com/jquery-3.4.1.min.js"
-          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-          crossorigin="anonymous">
-        </script>
         <script>
             const menuIconEl = $('.menu-icon');
             const sidenavEl = $('.sidenav');
@@ -192,10 +187,34 @@
                             </ul>
                         </div>
                         <div class="panel">
-                            123
+                            <ul class="atUl">
+                                ~~foreach from=$tasks item=i~
+                                <li onclick="javascript: document.location.href = '/task_card/?id=~~$i.id~&referrer=all_tasks';">
+                                    <div class="overviewIcon"><div class="icoCategory ico_03"></div></div>
+                                    <div class="overviewInfo">
+                                        <div class="title">~~$i.title~</div>
+                                        <div class="adress">~~$i.address~</div>
+                                        <div class="timeStart">начать: ~~$i.time_start~</div>
+                                        <div class="price"><span>до ~~$i.cost~</span> <span class="cardIco"></span></div>
+                                    </div>
+                                </li>
+                                ~~/foreach~
+                            </ul>
                         </div>
                         <div class="panel">
-                            456
+                            <ul class="atUl">
+                                ~~foreach from=$tasks item=i~
+                                <li onclick="javascript: document.location.href = '/task_card/?id=~~$i.id~&referrer=all_tasks';">
+                                    <div class="overviewIcon"><div class="icoCategory ico_03"></div></div>
+                                    <div class="overviewInfo">
+                                        <div class="title">~~$i.title~</div>
+                                        <div class="adress">~~$i.address~</div>
+                                        <div class="timeStart">начать: ~~$i.time_start~</div>
+                                        <div class="price"><span>до ~~$i.cost~</span> <span class="cardIco"></span></div>
+                                    </div>
+                                </li>
+                                ~~/foreach~
+                            </ul>
                         </div>
                     </div>
 
