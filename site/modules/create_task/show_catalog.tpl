@@ -57,7 +57,7 @@
             <div class="header__avatar">
                 ~~$page~
             </div-->
-        <div class="captionMenu"><span class="arrowBack"></span>Категории</div>
+        <div class="captionMenu"><span class="arrowBack" onClick="javascript:return init();"></span>Категории</div>
 
     </header>
     ~~include file='tpl/menu.tpl'~

@@ -55,16 +55,19 @@
                 <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=~~$cat_id~';">
                 </span>
             </div>
-            <div class="batName">~~$cat_name~<p>Шаг 1 из 7</p></div>
+            <div class="batName">~~$cat_name~<p>Шаг 1 из 1</p></div>
             <div class="batCategory">Отмена</div>
         </div>
     </header>
-~~include file='tpl/menu.tpl'~
+    
+    ~~include file='tpl/menu.tpl'~
 
     <main class="main">
 
         <div class="addTaskStep">
-            <form action="#" method="post">
+            <form action="/create_task/" method="post">
+                <input type='hidden' name='save_task' value='1'>
+
                 <div class="capt">Что нужно сделать?</div>
                 <div class="inp">
                     <p>Название задания</p>
@@ -87,7 +90,7 @@
                     <input type="text" name="time_end" value="" placeholder="~~$time_start~"/>
                 </div>
                 <br/>
-                <input type='submit' name='scSendBtn' value='Сохранить задание'>
+                
             </form>
             <div class="btnNext">Далее</div>
         </div>
