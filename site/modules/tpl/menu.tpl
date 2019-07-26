@@ -23,5 +23,9 @@
                     <li class="sidenav__list-item" onclick="javascript: document.location.href = '/user_card/';">
                         Профиль
                     </li>
+					
+					<li class="sidenav__list-item" onclick="javascript: document.location.href = '/';">
+                        Выйти
+                    </li>
                 </ul>                
             </aside>
