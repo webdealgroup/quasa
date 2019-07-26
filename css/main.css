@@ -410,7 +410,7 @@ span.icoSvgHelp{ -webkit-mask-image: url(../img/help.svg); mask-image: url(../im
 .personalInfoUser form .input .selectGen ul li{ padding: 15px 0px; font-size: 17px; color: #a59eac; font-weight: 500; }
 .personalInfoUser form .input .selectGen ul li.active{ background: #ffebae; color: #302d32; }
 
-.deletePage{ border-top: 20px solid #f6f5fa; padding:  30px 0px; text-align: center; }
+.deletePage{ border-top: 20px solid #f6f5fa; padding:  30px 0px; text-align: center; margin-top: -55px;}
 .deletePage a{ color: #aa98d8; text-decoration: none; font-size: 17px; font-family: 'Roboto', sans-serif; }
 
 /**********************************/
@@ -506,7 +506,7 @@ span.icoSvgHelp{ -webkit-mask-image: url(../img/help.svg); mask-image: url(../im
     transition: all .6s ease-in-out;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
     z-index: 2; /* Needs to sit above the hamburger menu icon */
-    background-color: #394263;
+    background-color: #2c1445;
 }
 
 .sidenav.active {
@@ -547,7 +547,8 @@ span.icoSvgHelp{ -webkit-mask-image: url(../img/help.svg); mask-image: url(../im
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
-    background-color: #648ca6;
+    background-color: #2c1445!important;
+	color: #fff;
 }
 
 /* Non-mobile styles, 750px breakpoint */
