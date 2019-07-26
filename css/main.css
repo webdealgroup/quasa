@@ -551,6 +551,43 @@ span.icoSvgHelp{ -webkit-mask-image: url(../img/help.svg); mask-image: url(../im
 	color: #fff;
 }
 
+/**********************************/
+input.deletePageButton {
+	text-align: center;
+	margin-top: -45px;
+	color: #aa98d8;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	background-color: transparent;
+	text-align: center;
+	font-weight: 400;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+input.deletePageButton:hover {
+	text-align: center;
+	margin-top: -45px;
+	color: #aa98d8;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	background-color: transparent;
+	text-align: center;
+	font-weight: 400;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.center {
+	text-align: center;
+}
+
+
+
 /* Non-mobile styles, 750px breakpoint */
 @media only screen and (min-width: 46.875em) {
     /* Show the sidenav */
