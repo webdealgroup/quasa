@@ -95,6 +95,24 @@
 			.submit_btn input{
 				background-color: #394263 !important;
 			}
+			
+			input.login {
+				font-size: 12px!important;
+				color: #fff;
+			}
+			
+			button.btn_subm {
+			cursor: pointer!important;
+			background-color: #2c1445;
+			color: #fff;
+			font-size: 12px;
+			text-align: center;
+			width: 233px;
+			height: 40px;
+			outline: none;
+			border-radius: 10px;
+			border:none;
+			}
         </style>
 
 
@@ -111,9 +129,9 @@
             		<input type="hidden" name="mod" value='login' />
 
 	            	<div class="grid">
-	            		<div><input type="text" name="login" value="" placeholder="login" autocomplete="off"></div>
-	            		<div><input type="password" name="password" value=""  placeholder="***" autocomplete="off"></div>
-	            		<div class="submit_btn" ><input type="submit" name="btn"value="Войти"></div>
+	            		<div><input class="login" type="text" name="login" value="" placeholder="login" autocomplete="off"></div>
+	            		<div><input class="login" type="password" name="password" value=""  placeholder="***" autocomplete="off"></div>
+	            		<button class="btn_subm" type="submit">ВОЙТИ</button>
 	            	</div>
 
                 </form>
