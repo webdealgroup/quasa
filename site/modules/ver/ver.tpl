@@ -124,11 +124,11 @@
 			
             <main class="main">
 				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;"><a style="text-decoration: none; color: #fff;" href="/">QUASA</a></p></center>
-            	<form method="POST" action="/ver/">
+            	<form method="POST" action="/login/">
             		<input type="hidden" name="mod" value='phonenum' />
 
 	            	<div class="grid">
-	            		<div><input class="reg" type="text" name="phonenum" value="" placeholder="*** *** ***" required autocomplete="off"></div>
+	            		<div><input class="reg" type="text" name="phonenum" value="" placeholder="****" required autocomplete="off"></div>
 						<button class="btn_subm" type="submit" value="Подтвердить">ПОДТВЕРДИТЬ</div>
 	            	</div>
 					</br>
