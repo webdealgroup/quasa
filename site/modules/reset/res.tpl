@@ -130,9 +130,8 @@
 	            	<div class="grid">
 	            		<div><input class="reg" type="text" name="phonenum" value="" placeholder="Номер телефона" required autocomplete="off"></div>
 						<button class="btn_subm" type="submit" value="Восстановить">ВОССТАНОВИТЬ</div>
-	            	</div>
-					</br>
-					<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login">Назад</a></center>	
+						<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login">Назад</a></center>
+						</div>	
                 </form>
 
             </main>
