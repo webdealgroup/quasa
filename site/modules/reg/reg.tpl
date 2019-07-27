@@ -136,7 +136,7 @@
         <div class="grid-container">
 
             <main class="main">
-				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;">QUASA</p></center>
+				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;"><a style="text-decoration: none; color: #fff;" href="/">QUASA</a></p></center>
 				
             	<form method="POST" action="/ver/">
             		<input type="hidden" name="mod" value='phonenum' />
