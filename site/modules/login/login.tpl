@@ -152,6 +152,7 @@
                 </form>
 				</br>
 				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/reg">Регистрация</a></center>
+				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/res">Забыли пароль?</a></center>
             </main>
 
         </div>
