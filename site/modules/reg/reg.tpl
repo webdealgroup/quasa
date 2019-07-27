@@ -112,30 +112,45 @@
 			border-radius: 10px;
 			border:none;
 			}
+			
+			button.btn_subm:hover {
+			cursor: pointer!important;
+			background-color: #422165;
+			color: #fff;
+			font-size: 12px;
+			text-align: center;
+			width: 233px;
+			height: 40px;
+			outline: none;
+			border-radius: 10px;
+			border:none;
+			}
         </style>
 
 
 
     </head>
-
+	
     <body class="">
 
         <div class="grid-container">
 
             <main class="main">
-
+				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;">QUASA</p></center>
+				
             	<form method="POST" action="/ver/">
             		<input type="hidden" name="mod" value='phonenum' />
 
 	            	<div class="grid">
 	            		<div><input class="reg" type="text" name="phonenum" value="" placeholder="+7 (911) 799-66-44" required autocomplete="off"></div>
-						<button class="btn_subm" type="submit" value="Зарегистрироваться">ЗАРЕГИСТРИРОВАТЬСЯ</div>
+						<div><input class="reg" type="password" name="password" value="" placeholder="Пароль" required autocomplete="off"></div>
+						<div><input class="reg" type="password" name="pass_conf" value="" placeholder="Подтверждение пароля" required autocomplete="off"></div>
+						<button class="btn_subm" type="submit" name="scSendBtn" value="Зарегистрироваться">ЗАРЕГИСТРИРОВАТЬСЯ</div>
+						</br>
+						<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login">Авторизация</a></center>
 	            	</div>
-
                 </form>
-
             </main>
-
         </div>
     </body>
 </html>
