@@ -59,6 +59,7 @@
         		case 'pay':				print ($_SESSION['smarty']->fetch('mod:pay'));				exit();		break;
 				case 'reg':			print ($_SESSION['smarty']->fetch('mod:reg'));			exit();		break;
 				case 'ver':			print ($_SESSION['smarty']->fetch('mod:ver'));			exit();		break;
+				case 'res':			print ($_SESSION['smarty']->fetch('mod:res'));			exit();		break;
 
 
         default:		print ($_SESSION['smarty']->fetch('mod:login'));	exit();		break;
