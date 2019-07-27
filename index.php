@@ -60,6 +60,7 @@
 				case 'reg':			print ($_SESSION['smarty']->fetch('mod:reg'));			exit();		break;
 				case 'ver':			print ($_SESSION['smarty']->fetch('mod:ver'));			exit();		break;
 				case 'res':			print ($_SESSION['smarty']->fetch('mod:res'));			exit();		break;
+				case 'sms':			print ($_SESSION['smarty']->fetch('mod:sms'));			exit();		break;
 
 
         default:		print ($_SESSION['smarty']->fetch('mod:login'));	exit();		break;
