@@ -113,6 +113,20 @@
 			border-radius: 10px;
 			border:none;
 			}
+			
+			button.btn_subm:hover {
+			cursor: pointer!important;
+			background-color: #422165;
+			color: #fff;
+			font-size: 12px;
+			text-align: center;
+			width: 233px;
+			height: 40px;
+			outline: none;
+			border-radius: 10px;
+			border:none;
+			}
+			
         </style>
 
 
@@ -124,18 +138,20 @@
         <div class="grid-container">
 
             <main class="main">
-
+				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;">QUASA</p></center>
+				
             	<form method="POST" action="/login/">
             		<input type="hidden" name="mod" value='login' />
 
 	            	<div class="grid">
-	            		<div><input class="login" type="text" name="login" value="" required autocomplete="off"></div>
-	            		<div><input class="login" type="password" name="password" value="" required autocomplete="off"></div>
+	            		<div><input class="login" type="text" name="login" value="" autocomplete="off"></div>
+	            		<div><input class="login" type="password" name="password" value="" autocomplete="off"></div>
 	            		<button class="btn_subm" type="submit">ВОЙТИ</button>
 	            	</div>
 
                 </form>
-
+				</br>
+				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/reg">Регистрация</a></center>
             </main>
 
         </div>
