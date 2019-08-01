@@ -10,8 +10,10 @@
         <meta name="description" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/main.css">
+        ~~include file="tpl/fonts.tpl"~
+        ~~include file="tpl/js.tpl"~
+        ~~include file="tpl/css.tpl"~
+
         
         <script type="text/javascript">
             function init() {
@@ -65,7 +67,7 @@
     <main class="main">
 
         <div class="addTaskStep">
-            <form action="/create_task/" method="post">
+            <form action="/create_task/" method="post" id="add_task_form">
                 <input type='hidden' name='save_task' value='1'>
 
                 <div class="capt">Что нужно сделать?</div>
@@ -92,7 +94,7 @@
                 <br/>
                 
             </form>
-            <div class="btnNext">Далее</div>
+            <div class="btnNext" onclick="$('#add_task_form').submit();">Далее</div>
         </div>
 
      </main>
