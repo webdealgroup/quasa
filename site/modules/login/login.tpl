@@ -145,8 +145,8 @@
             		<input type="hidden" name="mod" value='login' />
 
 	            	<div class="grid">
-	            		<div><input class="login" type="text" name="login" value="" placeholder="номер телефона" autocomplete="off"></div>
-	            		<div><input class="login" type="password" name="password" value="" placeholder="пароль" autocomplete="off"></div>
+	            		<div><input class="login" type="text" name="login"  placeholder="номер телефона" autocomplete="off"></div>
+	            		<div><input class="login" type="password" name="password"  placeholder="пароль" autocomplete="off"></div>
 	            		<button class="btn_subm" type="submit">ВОЙТИ</button>
 	            	</div>
 

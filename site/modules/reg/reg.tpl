@@ -139,16 +139,16 @@
 				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;"><a style="text-decoration: none; color: #fff;" href="/">QUASA</a></p></center>
 				
             	<form method="POST" action="">
-            		<input type="hidden" name="mod" value='phonenum' />
+            		<input type="hidden" name="registration" value='1' />
 
 	            	<div class="grid">
-	            		<div><input class="reg" type="text" name="phonenum" value="" placeholder="+7 (911) 799-66-44" required autocomplete="off"></div>
+	            		<div><input class="reg" type="text" name="phonenum" value="" placeholder="номер телефона" required autocomplete="off"></div>
 						<div><input class="reg" type="text" name="fio" value="" placeholder="Ф.И.О" required autocomplete="off"></div>
 						<div><input class="reg" type="password" name="password" value="" placeholder="Пароль" required autocomplete="off"></div>
 						<div><input class="reg" type="password" name="pass_conf" value="" placeholder="Подтверждение пароля" required autocomplete="off"></div>
 						<button class="btn_subm" type="submit" name="scSendBtn" value="Зарегистрироваться">ЗАРЕГИСТРИРОВАТЬСЯ</div>
 						</br>
-						<center><a href="/sms"><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login">Авторизация</a></a></center>
+						<a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login/">Авторизация</a>
 	            	</div>
                 </form>
             </main>
