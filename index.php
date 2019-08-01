@@ -27,10 +27,11 @@
 			$post = array_reverse($post);    // $post[0] - алиас запрашиваемой страницы
 			
 			$_SESSION['smarty']->assign('page', $page); 
-			//echo "<pre style='display:none;'>"; print_r($page); echo "</pre>"; //die();
+			//echo "<pre >"; print_r($page); echo "</pre>"; //die();
 
 
 			$mods = array(
+
 				'login',
 				'create_task',
 				'all_tasks',
@@ -53,6 +54,10 @@
 	        		default:	   print ($_SESSION['smarty']->fetch('mod:login'));		exit();	break;
 				}				
 			}
+			else
+			{
+				print ($_SESSION['smarty']->fetch('mod:login')); exit();
+			} 
 		}
 	}
 

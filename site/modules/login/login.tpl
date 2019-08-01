@@ -10,8 +10,9 @@
         <meta name="description" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        
+        ~~include file="tpl/fonts.tpl"~
+        ~~include file="tpl/js.tpl"~
+
         <script type="text/javascript">
             function init() {
                 AndroidFunction.showMenu();
@@ -144,14 +145,15 @@
             		<input type="hidden" name="mod" value='login' />
 
 	            	<div class="grid">
-	            		<div><input class="login" type="text" name="login" value="" autocomplete="off"></div>
-	            		<div><input class="login" type="password" name="password" value="" autocomplete="off"></div>
+	            		<div><input class="login" type="text" name="login" value="" placeholder="номер телефона" autocomplete="off"></div>
+	            		<div><input class="login" type="password" name="password" value="" placeholder="пароль" autocomplete="off"></div>
 	            		<button class="btn_subm" type="submit">ВОЙТИ</button>
 	            	</div>
 
                 </form>
 				</br>
-				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/reg">Регистрация</a></center>
+				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/reg">Регистрация</a></center>.
+				</br> 
 				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/res">Забыли пароль?</a></center>
             </main>
 
