@@ -2,10 +2,10 @@
 class create_task extends aModule{
     function execute($arr)
     {           
-        //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
+        echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		    $in = $arr["send_params"];
 
-        if (isset($_REQUEST['save_task'])) {
+        if (isset($_REQUEST['save_task']) && $_REQUEST['save_task']==1) {
     
           q("INSERT INTO tasks (
               id_client, 
