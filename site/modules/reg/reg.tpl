@@ -12,6 +12,9 @@
 
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         
+
+        <script src="/js/toastr/toastjs.js"> </script>
+
         <script type="text/javascript">
             function init() {
                 AndroidFunction.showMenu();
@@ -146,12 +149,15 @@
 						<div><input class="reg" type="text" name="fio" value="" placeholder="Ф.И.О" required autocomplete="off"></div>
 						<div><input class="reg" type="password" name="password" value="" placeholder="Пароль" required autocomplete="off"></div>
 						<div><input class="reg" type="password" name="pass_conf" value="" placeholder="Подтверждение пароля" required autocomplete="off"></div>
-						<button class="btn_subm" type="submit" name="scSendBtn" value="Зарегистрироваться">ЗАРЕГИСТРИРОВАТЬСЯ</div>
+						<button class="btn_subm" type="button" name="scSendBtn" value="Зарегистрироваться" onclick="toastr.info('Текст уведомления',3);">ЗАРЕГИСТРИРОВАТЬСЯ</div>
 						</br>
 						<a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login/">Авторизация</a>
 	            	</div>
                 </form>
             </main>
         </div>
+
+        <div id="toastjs"></div>
+        
     </body>
 </html>

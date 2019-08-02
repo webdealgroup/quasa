@@ -14,7 +14,7 @@ class reg extends aModule{
 			) 
 		{
 			
-			q($"INSERT INTO users(login, name, password) 
+			q("INSERT INTO users(login, name, password) 
 				VALUES (
 				'".filter_num_characters($_REQUEST['phonenum'])."', 
 				'".noSQL($_REQUEST['fio'])."', 

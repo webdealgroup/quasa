@@ -5,7 +5,7 @@ class login extends aModule{
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
 
-		$login = noSQL($in['login']);
+		$login = filter_num_characters(noSQL($in['login']));
 		$password = noSQL($in['password']);
 
 		$res = rows("SELECT * FROM users WHERE login LIKE '".$login."' AND password LIKE '".$in['password']."' ");
