@@ -99,8 +99,8 @@
         <div class="grid-container">
             <header class="header">
                 <div class="boxAllTasks">
-                    <div class="batMenu" onClick="javascript:return init();"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
-                    <div class="batText">Задание № ~~$task_id~</div>
+                    <div class="batMenu" onClick="javascript: document.location.href = '/~~$in.referrer~/';"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
+                    <div class="batText">Задание № ~~$task.id~</div>
                     <div class="batCategory"><span class="ico heart"></span></div>
                     <div class="batMap"><span class="ico more"></span></div>
                 </div>
@@ -146,8 +146,8 @@
 
                 <div class="boxTaskCard">
                     <div class="nameTask">
-                        <div class="check"><span>Выполнено</span> <span class="ico">67</span></div>
-                        <div class="name"> Нужен курьер на машине <p> ~~$cost~ &#8381;</p> </div>
+                        <div class="check"><span>Выполнено</span> <span class="ico">1</span></div>
+                        <div class="name"> ~~$task.title~ <p> ~~$task.cost~ &#8381;</p> </div>
                     </div>
 
                     <div class="toggle">
