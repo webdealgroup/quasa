@@ -23,7 +23,7 @@
             }
         </script>
 
-        ~~include file="grid_css.tpl"~
+        ~~include file="tpl/grid_css.tpl"~
  
 
     </head>
