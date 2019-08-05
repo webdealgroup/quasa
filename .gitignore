@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 /site/libs/smarty/templates_c
 /.idea
+=======
+/site/libs/mysql.php
+/site/libs/smarty/templates_c
+>>>>>>> 98d28d66ddd5d4443b4c4a928a0027a2fd982b47

@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-
-        <title></title>
-
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-        ~~include file="tpl/fonts.tpl"~
-        ~~include file="tpl/js.tpl"~
-
-        <script type="text/javascript">
-            function init() {
-                AndroidFunction.showMenu();
-            }
-        </script>
 
         <style>
             body {
@@ -97,9 +77,8 @@
 				background-color: #394263 !important;
 			}
 			
-			input.login {
+			input.reg {
 				font-size: 12px!important;
-				color: #fff;
 			}
 			
 			button.btn_subm {
@@ -127,36 +106,4 @@
 			border-radius: 10px;
 			border:none;
 			}
-			
         </style>
-
-
-
-    </head>
-
-    <body class="">
-
-        <div class="grid-container">
-
-            <main class="main">
-				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;"><a style="text-decoration: none; color: #fff;" href="/">QUASA</a></p></center>
-				
-            	<form method="POST" action="/login/">
-            		<input type="hidden" name="mod" value='login' />
-
-	            	<div class="grid">
-	            		<div><input class="login" type="text" name="login"  placeholder="номер телефона" autocomplete="off"></div>
-	            		<div><input class="login" type="password" name="password"  placeholder="пароль" autocomplete="off"></div>
-	            		<button class="btn_subm" type="submit">ВОЙТИ</button>
-	            	</div>
-
-                </form>
-				</br>
-				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/reg">Регистрация</a></center>
-				</br> 
-				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/res">Забыли пароль?</a></center>
-            </main>
-
-        </div>
-    </body>
-</html>

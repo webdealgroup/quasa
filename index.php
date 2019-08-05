@@ -5,23 +5,8 @@
 
 
     require_once('site/libs/smarty/Smarty.class.php');
+    include_once('site/libs/functions.php');
     include_once('site/modules/aModule.class.php');
-
-	function getRequest()
-    {
-        $params = array_merge($_GET, $_POST);
-        reset($params);
-        while(list($key,$value) = each($params)){
-            if (gettype($params[$key]) != "array"){
-                if (get_magic_quotes_gpc()){
-                    $value = stripslashes(trim($value));
-                }
-                $params[$key] = $value;
-            }
-        } 
-        return $params; 
-    }
-
 
 
     class router extends aModule{
@@ -42,29 +27,37 @@
 			$post = array_reverse($post);    // $post[0] - алиас запрашиваемой страницы
 			
 			$_SESSION['smarty']->assign('page', $page); 
-			//echo "<pre style='display:none;'>"; print_r($page); echo "</pre>"; //die();
+			//echo "<pre >"; print_r($page); echo "</pre>"; //die();
 
 
+			$mods = array(
 
-			switch ($page) {
+				'login',
+				'create_task',
+				'all_tasks',
+				'my_tasks',
+				'task_card',
+				'user_card',
+				'messages',
+				'profile_edit',
+				'pay',
+				'reg',
+				'ver',
+				'res',
+				'sms'
+			);
 
-				case 'login':			print ($_SESSION['smarty']->fetch('mod:login'));			exit();		break;
-				case 'create_task':		print ($_SESSION['smarty']->fetch('mod:create_task'));		exit();		break;
-				case 'all_tasks':		print ($_SESSION['smarty']->fetch('mod:all_tasks'));		exit();		break;
-				case 'my_tasks':		print ($_SESSION['smarty']->fetch('mod:my_tasks'));			exit();		break;
-				case 'task_card':		print ($_SESSION['smarty']->fetch('mod:task_card'));		exit();		break; 
-				case 'user_card':		print ($_SESSION['smarty']->fetch('mod:user_card'));		exit();		break; 
-				case 'messages':		print ($_SESSION['smarty']->fetch('mod:messages'));			exit();		break;
-        		case 'profile_edit':	print ($_SESSION['smarty']->fetch('mod:profile_edit'));		exit();		break;
-        		case 'pay':				print ($_SESSION['smarty']->fetch('mod:pay'));				exit();		break;
-				case 'reg':			print ($_SESSION['smarty']->fetch('mod:reg'));			exit();		break;
-				case 'ver':			print ($_SESSION['smarty']->fetch('mod:ver'));			exit();		break;
-				case 'res':			print ($_SESSION['smarty']->fetch('mod:res'));			exit();		break;
-				case 'sms':			print ($_SESSION['smarty']->fetch('mod:sms'));			exit();		break;
-
-
-        default:		print ($_SESSION['smarty']->fetch('mod:login'));	exit();		break;
+			if (in_array($page, $mods))
+			{
+				switch ($page) {
+					case $page:	   print ($_SESSION['smarty']->fetch('mod:'.$page));	exit();	break;
+	        		default:	   print ($_SESSION['smarty']->fetch('mod:login'));		exit();	break;
+				}				
 			}
+			else
+			{
+				print ($_SESSION['smarty']->fetch('mod:login')); exit();
+			} 
 		}
 	}
 

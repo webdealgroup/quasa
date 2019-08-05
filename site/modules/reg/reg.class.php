@@ -2,17 +2,26 @@
 class reg extends aModule{
     function execute($arr)
     {           
-		$_SESSION['smarty']->display('reg/reg.tpl');          
 		$in = $arr["send_params"];
-		if (isset($_REQUEST['scSendBtn'])) {
-			$cPhone = $_REQUEST['phonenum'];
-			$cUser = $_REQUEST['fio'];
-			$cPassword = $_REQUEST['password'];
-			$cQueue = "insert into users(login, name, password) "
-			. "values ('{$cPhone}', '{$cUser}', '{$cPassword}')";
-			q($cQueue);
+		if ($_REQUEST['password']  != $_REQUEST['pass_conf'])
+		{
+  			$_SESSION['smarty']->assign('error', 'Пароли не совпадают');
+  			$_SESSION['smarty']->display('reg/reg.tpl');
+		}
+		if (	
+				   isset($_REQUEST['registration']) 
+				&& $_REQUEST['registration'] == 1 
+			) 
+		{
 			
-			require_once 'sms.ru.php';
+			q("INSERT INTO users(login, name, password) 
+				VALUES (
+				'".filter_num_characters($_REQUEST['phonenum'])."', 
+				'".noSQL($_REQUEST['fio'])."', 
+				'".noSQL($_REQUEST['password'])."'
+			)");
+			
+			require_once '/site/libs/sms.ru.php';
 			
 			$phone = $_REQUEST["phonenum"];
 			
@@ -20,26 +29,26 @@ class reg extends aModule{
 			
 			$data = new stdClass();
 			$data->to = $phone;
+
 			$data->text = 'Ваш проверочный код: 1574'; // Текст сообщения
-			// $data->from = ''; // Если у вас уже одобрен буквенный отправитель, его можно указать здесь, в противном случае будет использоваться ваш отправитель по умолчанию
-			// $data->time = time() + 7*60*60; // Отложить отправку на 7 часов
-			// $data->translit = 1; // Перевести все русские символы в латиницу (позволяет сэкономить на длине СМС)
-			// $data->test = 1; // Позволяет выполнить запрос в тестовом режиме без реальной отправки сообщения
-			// $data->partner_id = '1'; // Можно указать ваш ID партнера, если вы интегрируете код в чужую систему
+
 			$sms = $smsru->send_one($data); // Отправка сообщения и возврат данных в переменную
 
 			if ($sms->status == "OK") { // Запрос выполнен успешно
-				echo "Сообщение отправлено успешно. ";
-				echo "ID сообщения: $sms->sms_id. ";
-				echo "Ваш новый баланс: $sms->balance";
+				//echo "Сообщение отправлено успешно. ";
+				//echo "ID сообщения: $sms->sms_id. ";
+				//echo "Ваш новый баланс: $sms->balance";
 			} 
 			else {
-				echo "Сообщение не отправлено. ";
-				echo "Код ошибки: $sms->status_code. ";
-				echo "Текст ошибки: $sms->status_text.";
+				//echo "Сообщение не отправлено. ";
+				//echo "Код ошибки: $sms->status_code. ";
+				//echo "Текст ошибки: $sms->status_text.";
 			}
-			header('Location: /ver');
+			header('Location: /ver/');
 		}
+
+
+		$_SESSION['smarty']->display('reg/reg.tpl');          
     }
 }
 ?>
