@@ -21,6 +21,39 @@
             function init() {
                 AndroidFunction.showMenu();
             }
+
+            function send_form() {
+
+                var tel   = $('#reg_t').val();
+                var name  = $('#reg_n').val();
+                
+                var p1 = $('#reg_p1').val();
+                var p2 = $('#reg_p2').val();
+
+                if(p1=='')
+                {
+                    console.log('Пустой пароль');
+                    //AndroidFunction.show_message('Пароли не совпадают');
+                }
+                if(p1!=p2)
+                {
+                    console.log('Пароли не совпадают');
+                    //AndroidFunction.show_message('Пароли не совпадают');
+                }
+
+                if(tel=='')
+                {
+                    console.log('введите номер телефона');
+                }
+
+                if(name=='')
+                {
+                    console.log('имя не должно быть пустым');
+                }
+
+                
+            }
+
         </script>
 
         ~~include file="tpl/grid_css.tpl"~
@@ -35,15 +68,15 @@
             <main class="main">
 				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;"><a style="text-decoration: none; color: #fff;" href="/">QUASA</a></p></center>
 				
-            	<form method="POST" action="">
+            	<form method="POST" action="/reg/" id="reg_form">
             		<input type="hidden" name="registration" value='1' />
 
 	            	<div class="grid">
-	            		<div><input class="reg" type="text" name="phonenum" value="" placeholder="номер телефона" required autocomplete="off"></div>
-						<div><input class="reg" type="text" name="fio" value="" placeholder="Ф.И.О" required autocomplete="off"></div>
-						<div><input class="reg" type="password" name="password" value="" placeholder="Пароль" required autocomplete="off"></div>
-						<div><input class="reg" type="password" name="pass_conf" value="" placeholder="Подтверждение пароля" required autocomplete="off"></div>
-						<button class="btn_subm" type="button" name="scSendBtn" value="Зарегистрироваться" onclick="AndroidFunction.show_message('123456789');">ЗАРЕГИСТРИРОВАТЬСЯ</div>
+	            		<div><input class="reg" type="text" name="phonenum" id="reg_t" value="" placeholder="номер телефона" required autocomplete="off"></div>
+						<div><input class="reg" type="text" name="fio" value="" id="reg_n" placeholder="Ф.И.О" required autocomplete="off"></div>
+						<div><input class="reg" type="password" name="password" id="reg_p1" value="" placeholder="Пароль" required autocomplete="off"></div>
+						<div><input class="reg" type="password" name="pass_conf" id="reg_p2" value="" placeholder="Подтверждение пароля" required autocomplete="off"></div>
+						<button class="btn_subm" type="button" name="scSendBtn" value="Зарегистрироваться" onclick="send_form();">ЗАРЕГИСТРИРОВАТЬСЯ</div>
 						</br>
 						<a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login/">Авторизация</a>
 	            	</div>
