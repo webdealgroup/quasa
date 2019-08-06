@@ -166,8 +166,9 @@
         <script>
             $(".phone_mask").mask("+7 (999) 999-99-99");
 
-           // console.log('~~$error~');
-            AndroidFunction.show_message('~~$error~');
+            //console.log('~~$error~');
+            var err = '~~$error~';
+            if (err != '') AndroidFunction.show_message(err);
         </script>  
 
     </body>

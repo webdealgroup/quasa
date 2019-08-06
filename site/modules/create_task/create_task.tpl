@@ -14,6 +14,10 @@
         ~~include file="tpl/js.tpl"~
         ~~include file="tpl/css.tpl"~
 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/js/jquery.maskedinput.min.js"></script>
+
         
         <script type="text/javascript">
             function init() {
@@ -47,58 +51,128 @@
         </script>
 
 
+
+
+        <script>
+
+            function send_form() {
+
+                var task_title          = $('#task_title').val();
+                var task_description    = $('#task_description').val();
+                
+                var task_cost           = $('#task_cost').val();
+                var time_start          = $('#time_start').val();
+
+                var mess = '';
+                var i = 0;
+
+
+                if(task_title=='')
+                {
+                    if (i>0) {mess = mess + '\r\n';}
+                    mess += 'Введите номер телефона';
+                    i++;
+                }
+
+                if(task_description=='')
+                {
+                    if (i>0) {mess = mess + '\r\n';}
+                    mess += 'Имя не должно быть пустым';
+                    i++;
+                }
+               
+                if(task_cost=='')
+                {
+                    if (i>0) {mess = mess + '\r\n';}
+                    mess += 'Пустой пароль';
+                    i++;
+                }
+                if(time_start=='')
+                {
+                    if (i>0) {mess = mess + '\r\n';}
+                    mess += 'Пароли не совпадают';
+                    i++;
+                }
+
+
+                if (mess != '')
+                {
+                    console.log(mess);
+                    //AndroidFunction.show_message(mess);
+               }
+                else
+                {
+                    $('#reg_form').submit();
+                }
+
+                
+            }
+
+        </script>
+
+
+
+
+
+
     </head>
 
-<body class="">
-<div class="grid-container">
-    <header class="header">
-        <div class="boxAllTasks createTaskStep">
-            <div class="batMenu" onClick="javascript:return init();">
-                <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=~~$cat_id~';">
-                </span>
-            </div>
-            <div class="batName">~~$cat_name~<p>Шаг 1 из 1</p></div>
-            <div class="batCategory">Отмена</div>
+    <body class="">
+
+
+        <div class="grid-container">
+            <header class="header">
+                <div class="boxAllTasks createTaskStep">
+                    <div class="batMenu" onClick="javascript:return init();">
+                        <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=~~$cat_id~';">
+                        </span>
+                    </div>
+                    <div class="batName">~~$cat_name~<p>Шаг 1 из 1</p></div>
+                    <div class="batCategory">Отмена</div>
+                </div>
+            </header>
+            
+            ~~include file='tpl/menu.tpl'~
+
+            <main class="main">
+
+                <div class="addTaskStep">
+                    <form action="/create_task/" method="post" id="add_task_form">
+                        <input type='hidden' name='save_task' value='1'>
+
+                        <div class="capt">Что нужно сделать?</div>
+                        <div class="inp">
+                            <p>Название задания</p>
+                            <input type="text" name="title" id="task_title" value="" />
+                        </div>
+                        <div class="inp">
+                            <p>Содержание задания</p>
+                            <input type="text" name="description" id="task_description" value="" />
+                        </div>
+                        <div class="inp">
+                            <p>Стоимость</p>
+                            <input  type="text" name="cost" id="task_cost"  value="" placeholder="0"/>
+                        </div>
+                        <div class="inp">
+                            <p>Начало исполнения</p>
+                            <input class="date" type="text" name="time_start" id="task_time_start" value="" placeholder="дд.мм.гггг чч:мм"/>
+                        </div>
+                        <br/>
+                        
+                    </form>
+                    <div class="btnNext" onclick="send_form();">Далее</div>
+                </div>
+
+             </main>
         </div>
-    </header>
-    
-    ~~include file='tpl/menu.tpl'~
 
-    <main class="main">
+        <script>
+            $(".date").mask("99.99.9999 99:99");
 
-        <div class="addTaskStep">
-            <form action="/create_task/" method="post" id="add_task_form">
-                <input type='hidden' name='save_task' value='1'>
+            //console.log('~~$error~');
+            var err = '~~$error~';
+            if (err != '') AndroidFunction.show_message(err);
+        </script>  
 
-                <div class="capt">Что нужно сделать?</div>
-                <div class="inp">
-                    <p>Название задания</p>
-                    <input type="text" name="title" value="" />
-                </div>
-                <div class="inp">
-                    <p>Содержание задания</p>
-                    <input type="text" name="description" value="" />
-                </div>
-                <div class="inp">
-                    <p>Стоимость</p>
-                    <input type="text" name="cost" value="" placeholder="99999999.99"/>
-                </div>
-                <div class="inp">
-                    <p>Начало исполнения</p>
-                    <input type="text" name="time_start" value="" placeholder="~~$time_start~"/>
-                </div>
-                <div class="inp">
-                    <p>Завершение исполнения</p>
-                    <input type="text" name="time_end" value="" placeholder="~~$time_start~"/>
-                </div>
-                <br/>
-                
-            </form>
-            <div class="btnNext" onclick="$('#add_task_form').submit();">Далее</div>
-        </div>
-
-     </main>
-</div>
-<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-</body>
+    </body>
 </html>

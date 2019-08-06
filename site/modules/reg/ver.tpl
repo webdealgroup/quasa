@@ -142,7 +142,8 @@
 
         <script>
             //console.log('~~$error~');
-            AndroidFunction.show_message('~~$error~');
+            var err = '~~$error~';
+            if (err != '') AndroidFunction.show_message(err);
         </script>          
 
     </body>
