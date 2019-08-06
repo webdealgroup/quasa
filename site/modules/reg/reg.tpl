@@ -30,25 +30,46 @@
                 var p1 = $('#reg_p1').val();
                 var p2 = $('#reg_p2').val();
 
-                if(p1=='')
-                {
-                    AndroidFunction.show_message('Пустой пароль');
-                    //AndroidFunction.show_message('Пароли не совпадают');
-                }
-                if(p1!=p2)
-                {
-                    AndroidFunction.show_message('Пароли не совпадают');
-                    //AndroidFunction.show_message('Пароли не совпадают');
-                }
+                var mess = '';
+                var i = 0;
+
 
                 if(tel=='')
                 {
-                    AndroidFunction.show_message('введите номер телефона');
+                    if (i>0) {mess = mess + '\r\n';}
+                    mess += 'Введите номер телефона';
+                    i++;
                 }
 
                 if(name=='')
                 {
-                    AndroidFunction.show_message('имя не должно быть пустым');
+                    if (i>0) {mess = mess + '\r\n';}
+                    mess += 'Имя не должно быть пустым';
+                    i++;
+                }
+               
+                if(p1=='')
+                {
+                    if (i>0) {mess = mess + '\r\n';}
+                    mess += 'Пустой пароль';
+                    i++;
+                }
+                if(p1!=p2)
+                {
+                    if (i>0) {mess = mess + '\r\n';}
+                    mess += 'Пароли не совпадают';
+                    i++;
+                }
+
+                
+                if (mess != '')
+                {
+                    //AndroidFunction.show_message(mess);
+                    console.log(mess);
+                }
+                else
+                {
+                    $('#reg_form').submit();
                 }
 
                 
