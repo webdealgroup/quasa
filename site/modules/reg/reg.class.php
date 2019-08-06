@@ -3,11 +3,7 @@ class reg extends aModule{
     function execute($arr)
     {           
 		$in = $arr["send_params"];
-		if ($_REQUEST['password']  != $_REQUEST['pass_conf'])
-		{
-  			$_SESSION['smarty']->assign('error', 'Пароли не совпадают');
-  			$_SESSION['smarty']->display('reg/reg.tpl');
-		}
+
 		if (	
 				   isset($_REQUEST['registration']) 
 				&& $_REQUEST['registration'] == 1 
@@ -16,21 +12,24 @@ class reg extends aModule{
 			
 			q("INSERT INTO users(login, name, password) 
 				VALUES (
-				'".filter_num_characters($_REQUEST['phonenum'])."', 
-				'".noSQL($_REQUEST['fio'])."', 
-				'".noSQL($_REQUEST['password'])."'
+				'".filter_num_characters($_REQUEST['phone'])."', 
+				'".noSQL($_REQUEST['name'])."', 
+				'".noSQL(MD5($_REQUEST['password']))."'
 			)");
 			
 			require_once '/site/libs/sms.ru.php';
 			
-			$phone = $_REQUEST["phonenum"];
+			$phone = $_REQUEST["phone"];
 			
 			$smsru = new SMSRU('C1C780D2-EC04-5DAE-D6B6-938A17E5CAE0'); // Ваш уникальный программный ключ, который можно получить на главной странице
 			
 			$data = new stdClass();
 			$data->to = $phone;
 
-			$data->text = 'Ваш проверочный код: 1574'; // Текст сообщения
+			$ver_code = rand(1111, 9999);
+			$_SESSION['ver_code'] = $ver_code;
+
+			$data->text = $ver_code; // Текст сообщения
 
 			$sms = $smsru->send_one($data); // Отправка сообщения и возврат данных в переменную
 
@@ -38,6 +37,8 @@ class reg extends aModule{
 				//echo "Сообщение отправлено успешно. ";
 				//echo "ID сообщения: $sms->sms_id. ";
 				//echo "Ваш новый баланс: $sms->balance";
+
+				header('Location: /login/');	
 			} 
 			else {
 				//echo "Сообщение не отправлено. ";

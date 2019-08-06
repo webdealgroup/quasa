@@ -13,6 +13,8 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/js/jquery.maskedinput.min.js"></script>
+        
         <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
@@ -64,8 +66,8 @@
 
                 if (mess != '')
                 {
-                    AndroidFunction.show_message(mess);
-                    //console.log(mess);
+                    //AndroidFunction.show_message(mess);
+                    console.log(mess);
                 }
                 else
                 {
@@ -88,24 +90,29 @@
 
             <main class="main">
 				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;"><a style="text-decoration: none; color: #fff;" href="/">QUASA</a></p></center>
-				
+
             	<form method="POST" action="/reg/" id="reg_form">
             		<input type="hidden" name="registration" value='1' />
 
 	            	<div class="grid">
-	            		<div><input class="reg" type="text" name="phonenum" id="reg_t" value="" placeholder="номер телефона" required autocomplete="off"></div>
-						<div><input class="reg" type="text" name="fio" value="" id="reg_n" placeholder="Ф.И.О" required autocomplete="off"></div>
+	            		<div><input class="reg phone_mask" type="text" name="phone" id="reg_t" value="" placeholder="+7 (999) 999-99-99" required autocomplete="off"></div>
+						<div><input class="reg" type="text" name="name" value="" id="reg_n" placeholder="ваше имя" required autocomplete="off"></div>
 						<div><input class="reg" type="password" name="password" id="reg_p1" value="" placeholder="Пароль" required autocomplete="off"></div>
 						<div><input class="reg" type="password" name="pass_conf" id="reg_p2" value="" placeholder="Подтверждение пароля" required autocomplete="off"></div>
 						<button class="btn_subm" type="button" name="scSendBtn" value="Зарегистрироваться" onclick="send_form();">ЗАРЕГИСТРИРОВАТЬСЯ</div>
 						</br>
-						<a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login/">Авторизация</a>
+						<center><a style="margin:0 auto;text-decoration: none; color: #fff; font-size: 12px;" href="/login/">Авторизация</a></center>
 	            	</div>
                 </form>
             </main>
         </div>
 
         <div id="toastjs"></div>
-        
+
+
+        <script>
+            $(".phone_mask").mask("+7 (999) 999-99-99");
+        </script>        
+
     </body>
 </html>
