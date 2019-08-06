@@ -12,6 +12,10 @@
 
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/js/jquery.maskedinput.min.js"></script>
+
+        
         <script type="text/javascript">
             function init() {
                 AndroidFunction.showMenu();
@@ -124,19 +128,28 @@
 			
             <main class="main">
 				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;"><a style="text-decoration: none; color: #fff;" href="/">QUASA</a></p></center>
-            	<form method="POST" action="/ver/">
-            		<input type="hidden" name="mod" value='phonenum' />
+            	<form method="POST" action="/login/">
+            		<input type="hidden" name="recovery_pass" value='1' />
 
 	            	<div class="grid">
-	            		<div><input class="reg" type="text" name="phonenum" value="" placeholder="Номер телефона" required autocomplete="off"></div>
+	            		<div><input class="reg phone_mask" type="text" name="phone" value="" placeholder="+7 (999) 999-99-99" required autocomplete="off"></div>
 						<button class="btn_subm" type="submit" value="Восстановить">ВОССТАНОВИТЬ</div>
 						</br>
-					<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login">Назад</a></center>	
+					<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login/">Назад</a></center>	
 	            	</div>				
                 </form>
 
             </main>
 
         </div>
+
+
+        <script>
+            $(".phone_mask").mask("+7 (999) 999-99-99");
+
+            console.log('~~$error~');
+            //AndroidFunction.show_message(mess);
+        </script> 
+
     </body>
 </html>

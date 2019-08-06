@@ -149,16 +149,16 @@
             		<input type="hidden" name="mod" value='login' />
 
 	            	<div class="grid">
-	            		<div><input class="login phone_mask" type="text" name="login"  placeholder="+7 (999) 999-99-99" autocomplete="off"></div>
+	            		<div><input class="login phone_mask" type="text" name="login" value="~~$phone~" placeholder="+7 (999) 999-99-99" autocomplete="off"></div>
 	            		<div><input class="login" type="password" name="password"  placeholder="пароль" autocomplete="off"></div>
 	            		<button class="btn_subm" type="submit">ВОЙТИ</button>
 	            	</div>
 
                 </form>
 				</br>
-				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/reg">Регистрация</a></center>
+				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/reg/">Регистрация</a></center>
 				</br> 
-				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/res">Забыли пароль?</a></center>
+				<center><a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login/?recovery=1">Забыли пароль?</a></center>
             </main>
 
         </div>
