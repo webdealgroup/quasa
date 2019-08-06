@@ -28,14 +28,14 @@
 	function now()
 	{
 		$now = array();
-		list($now['year'], $now['month'], $now['months'], $now['day'], $now['hour'], $now['hours'], $now['minute'], $now['minutes'], $now['second']) = sscanf(date("Y m m d H H i i s"), "%d %d %s %d %d %s %d %s %d");
+		list($now['year'], $now['month'], $now['months'], $now['day'], $now['days'], $now['hour'], $now['hours'], $now['minute'], $now['minutes'], $now['second']) = sscanf(date("Y m m d d H H i i s"), "%d %d %s %d %s %d %s %d %s %d");
 		return $now;
 	}
     
 	function time_format($time)
 	{
 		$now = array();
-		list($now['year'], $now['month'], $now['months'], $now['day'], $now['hour'], $now['hours'], $now['minute'], $now['minutes'], $now['second']) = sscanf(date("Y m m d H H i i s",$time), "%d %d %s %d %d %s %d %s %d");
+		list($now['year'], $now['month'], $now['months'], $now['day'], $now['days'], $now['hour'], $now['hours'], $now['minute'], $now['minutes'], $now['second']) = sscanf(date("Y m m d d H H i i s",$time), "%d %d %s %d  %s %d %s %d %s %d");
 		return $now;
 	}    
 

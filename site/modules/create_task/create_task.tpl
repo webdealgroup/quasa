@@ -156,7 +156,7 @@
                         </div>
                         <div class="inp">
                             <p>Начало исполнения</p>
-                            <input class="date" type="text" name="time_start" id="task_time_start" value="" placeholder="дд.мм.гггг чч:мм"/>
+                            <input class="date" type="text" name="time_start" id="task_time_start" value="~~$now.days~.~~$now.months~.~~$now.year~ ~~$now.hours~:~~$now.minutes~" placeholder="дд.мм.гггг чч:мм"/>
                         </div>
                         <br/>
                         
