@@ -70,27 +70,28 @@
                 if(task_title=='')
                 {
                     if (i>0) {mess = mess + '\r\n';}
-                    mess += 'Введите номер телефона';
+                    mess += 'Введите заголовок задания';
                     i++;
                 }
 
                 if(task_description=='')
                 {
                     if (i>0) {mess = mess + '\r\n';}
-                    mess += 'Имя не должно быть пустым';
+                    mess += 'Описание не должно быть пустым';
                     i++;
                 }
                
-                if(task_cost=='')
+                if(task_cost=='' || task_cost==0)
                 {
                     if (i>0) {mess = mess + '\r\n';}
-                    mess += 'Пустой пароль';
+                    mess += 'Укажите стоимость';
                     i++;
                 }
+
                 if(time_start=='')
                 {
                     if (i>0) {mess = mess + '\r\n';}
-                    mess += 'Пароли не совпадают';
+                    mess += 'Укажите время начала';
                     i++;
                 }
 
@@ -102,7 +103,7 @@
                }
                 else
                 {
-                    $('#reg_form').submit();
+                    $('#add_task_form').submit();
                 }
 
                 
