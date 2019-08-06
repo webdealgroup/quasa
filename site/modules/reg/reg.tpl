@@ -32,23 +32,23 @@
 
                 if(p1=='')
                 {
-                    console.log('Пустой пароль');
+                    AndroidFunction.show_message('Пустой пароль');
                     //AndroidFunction.show_message('Пароли не совпадают');
                 }
                 if(p1!=p2)
                 {
-                    console.log('Пароли не совпадают');
+                    AndroidFunction.show_message('Пароли не совпадают');
                     //AndroidFunction.show_message('Пароли не совпадают');
                 }
 
                 if(tel=='')
                 {
-                    console.log('введите номер телефона');
+                    AndroidFunction.show_message('введите номер телефона');
                 }
 
                 if(name=='')
                 {
-                    console.log('имя не должно быть пустым');
+                    AndroidFunction.show_message('имя не должно быть пустым');
                 }
 
                 
