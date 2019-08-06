@@ -13,6 +13,10 @@
         ~~include file="tpl/fonts.tpl"~
         ~~include file="tpl/js.tpl"~
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/js/jquery.maskedinput.min.js"></script>
+
+
         <script type="text/javascript">
             function init() {
                 AndroidFunction.showMenu();
@@ -145,7 +149,7 @@
             		<input type="hidden" name="mod" value='login' />
 
 	            	<div class="grid">
-	            		<div><input class="login" type="text" name="login"  placeholder="номер телефона" autocomplete="off"></div>
+	            		<div><input class="login phone_mask" type="text" name="login"  placeholder="+7 (999) 999-99-99" autocomplete="off"></div>
 	            		<div><input class="login" type="password" name="password"  placeholder="пароль" autocomplete="off"></div>
 	            		<button class="btn_subm" type="submit">ВОЙТИ</button>
 	            	</div>
@@ -158,5 +162,13 @@
             </main>
 
         </div>
+
+        <script>
+            $(".phone_mask").mask("+7 (999) 999-99-99");
+
+            console.log('~~$error~');
+            //AndroidFunction.show_message(mess);
+        </script>  
+
     </body>
 </html>

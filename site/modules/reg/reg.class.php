@@ -12,11 +12,13 @@ class reg extends aModule{
 			if($in['ver_code'] == $_SESSION['ver_code'])
 			{
 				header('Location: /login/');
+				exit();
 			}
 			else 
 			{
 				$_SESSION['smarty']->assign('error', "код не верный");
 				$_SESSION['smarty']->display('reg/ver.tpl');  
+				exit();
 			}
 		}
 
@@ -27,11 +29,12 @@ class reg extends aModule{
 			) 
 		{
 			
-			q("INSERT INTO users(login, name, password) 
+			q("INSERT INTO users(login, name, password, phone) 
 				VALUES (
 				'".filter_num_characters($_REQUEST['phone'])."', 
 				'".noSQL($_REQUEST['name'])."', 
 				'".noSQL(MD5($_REQUEST['password']))."'
+				'".noSQL($_REQUEST['phone'])."'
 			)");
 			
 			require_once '/site/libs/sms.ru.php';
@@ -64,6 +67,7 @@ class reg extends aModule{
 				//echo "Текст ошибки: $sms->status_text.";
 				$_SESSION['smarty']->assign('error', "Ошибка отправки кода верификации");
 				$_SESSION['smarty']->display('reg/reg.tpl');   
+				exit();
 			}
 
 		}

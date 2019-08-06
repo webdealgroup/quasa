@@ -66,9 +66,9 @@
 
                 if (mess != '')
                 {
-                    //AndroidFunction.show_message(mess);
                     console.log(mess);
-                }
+                    //AndroidFunction.show_message(mess);
+               }
                 else
                 {
                     $('#reg_form').submit();
@@ -114,6 +114,7 @@
             $(".phone_mask").mask("+7 (999) 999-99-99");
 
             console.log('~~$error~');
+            //AndroidFunction.show_message(mess);
         </script>        
 
     </body>

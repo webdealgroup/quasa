@@ -142,7 +142,8 @@
 
         <script>
             console.log('~~$error~');
+            //AndroidFunction.show_message(mess);
         </script>          
-        
+
     </body>
 </html>
