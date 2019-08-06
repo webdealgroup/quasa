@@ -61,11 +61,11 @@
                     i++;
                 }
 
-                
+
                 if (mess != '')
                 {
-                    //AndroidFunction.show_message(mess);
-                    console.log(mess);
+                    AndroidFunction.show_message(mess);
+                    //console.log(mess);
                 }
                 else
                 {
