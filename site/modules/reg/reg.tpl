@@ -43,7 +43,7 @@
 						<div><input class="reg" type="text" name="fio" value="" placeholder="Ф.И.О" required autocomplete="off"></div>
 						<div><input class="reg" type="password" name="password" value="" placeholder="Пароль" required autocomplete="off"></div>
 						<div><input class="reg" type="password" name="pass_conf" value="" placeholder="Подтверждение пароля" required autocomplete="off"></div>
-						<button class="btn_subm" type="button" name="scSendBtn" value="Зарегистрироваться" onclick="AndroidFunction.showMessage('123456789');">ЗАРЕГИСТРИРОВАТЬСЯ</div>
+						<button class="btn_subm" type="button" name="scSendBtn" value="Зарегистрироваться" onclick="AndroidFunction.show_message('123456789');">ЗАРЕГИСТРИРОВАТЬСЯ</div>
 						</br>
 						<a style="text-decoration: none; color: #fff; font-size: 12px;" href="/login/">Авторизация</a>
 	            	</div>
