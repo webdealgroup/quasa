@@ -3,6 +3,23 @@ class reg extends aModule{
     function execute($arr)
     {           
 		$in = $arr["send_params"];
+		
+		if (	
+				   isset($_REQUEST['verification']) 
+				&& $_REQUEST['verification'] == 1 
+			) 
+		{
+			if($in['ver_code'] == $_SESSION['ver_code'])
+			{
+				header('Location: /login/');
+			}
+			else 
+			{
+				$_SESSION['smarty']->assign('error', "код не верный");
+				$_SESSION['smarty']->display('reg/ver.tpl');  
+			}
+		}
+
 
 		if (	
 				   isset($_REQUEST['registration']) 
@@ -38,14 +55,17 @@ class reg extends aModule{
 				//echo "ID сообщения: $sms->sms_id. ";
 				//echo "Ваш новый баланс: $sms->balance";
 
-				header('Location: /login/');	
+				$_SESSION['smarty']->display('reg/ver.tpl');
+				exit();	
 			} 
 			else {
 				//echo "Сообщение не отправлено. ";
 				//echo "Код ошибки: $sms->status_code. ";
 				//echo "Текст ошибки: $sms->status_text.";
+				$_SESSION['smarty']->assign('error', "Ошибка отправки кода верификации");
+				$_SESSION['smarty']->display('reg/reg.tpl');   
 			}
-			header('Location: /ver/');
+
 		}
 
 
