@@ -188,32 +188,11 @@
                         </div>
                         <div class="panel">
                             <ul class="atUl">
-                                ~~foreach from=$tasks item=i~
-                                <li onclick="javascript: document.location.href = '/task_card/?id=~~$i.id~&referrer=all_tasks';">
-                                    <div class="overviewIcon"><div class="icoCategory ico_03"></div></div>
-                                    <div class="overviewInfo">
-                                        <div class="title">~~$i.title~</div>
-                                        <div class="adress">~~$i.address~</div>
-                                        <div class="timeStart">начать: ~~$i.time_start~</div>
-                                        <div class="price"><span>до ~~$i.cost~</span> <span class="cardIco"></span></div>
-                                    </div>
-                                </li>
-                                ~~/foreach~
+
                             </ul>
                         </div>
                         <div class="panel">
                             <ul class="atUl">
-                                ~~foreach from=$tasks item=i~
-                                <li onclick="javascript: document.location.href = '/task_card/?id=~~$i.id~&referrer=all_tasks';">
-                                    <div class="overviewIcon"><div class="icoCategory ico_03"></div></div>
-                                    <div class="overviewInfo">
-                                        <div class="title">~~$i.title~</div>
-                                        <div class="adress">~~$i.address~</div>
-                                        <div class="timeStart">начать: ~~$i.time_start~</div>
-                                        <div class="price"><span>до ~~$i.cost~</span> <span class="cardIco"></span></div>
-                                    </div>
-                                </li>
-                                ~~/foreach~
                             </ul>
                         </div>
                     </div>

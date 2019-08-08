@@ -120,10 +120,10 @@
 
                 <div class="main-header tabs">
                     <div class="main-header__heading tab active">
-                        Я ИСПОЛНИТЕЛЬ
+                        Я ЗАКАЗЧИК
                     </div>
                     <div class="main-header__updates tab">
-                        Я ЗАКАЗЧИК
+                        Я ИСПОЛНИТЕЛЬ
                     </div>
                     <div class="line"></div>
                 </div>
@@ -133,24 +133,15 @@
 
                     <ul class="tasks">
 
-                      <li onclick="javascript: document.location.href = '#';">
-                        <div class="task__title">Вас выбрали в 5 заданиях</div>
+                      <li onclick="javascript: document.location.href = '/my_tasks/?all_tasks=a';">
+                        <div class="task__title">Заданий - ~~$count_tasks~</div>
                         <div class="body">
-                          <div class="task__icon icon_red"></div>
+                          <div class="task__icon icon_green"></div>
                           <div class="name">
-                            <div>Выполнены</div>
-                            <div class="status">5 заданий</div>
-                          </div>
-                          <div class="arrowCat"></div>
-                        </div>
-                      </li>
-                      <li onclick="javascript: document.location.href = '#';">
-                        <div class="task__title">Отменено или выбран другой исполнитель</div>
-                        <div class="body">
-                          <div class="task__icon icon_grey"></div>
-                          <div class="name">
-                            <div>В архиве</div>
-                            <div class="status">19 заданий</div>
+                            <div onclick="javascript: document.location.href = '/my_tasks/?all_tasks=c';">Выполнено</div>
+                            <div>
+                                Заданий - ~~$count_ready~
+                            </div>
                           </div>
                           <div class="arrowCat"></div>
                         </div>
@@ -159,38 +150,27 @@
                     </ul>
                 </div>
 
-<script language=JavaScript><!--
-    // onclick="javascript: document.location.href = '/my_tasks/?all_tasks=a';"
-  function GetOjInfo(oj)
-  {
-    var sText = '';
-    for (var i in oj) { sText += i + ' = ' + oj[i]+"; "; }
-    return sText;
-  }
-    function scfCall(the) {
-      if (the.innerHTML.length > 20) {
-        event.stopPropagation();
-        document.location.href = '/my_tasks/?all_tasks=a';
-      } else {
-        event.stopPropagation();
-        document.location.href = '/my_tasks/?all_tasks=c';
-      }
-    }
-    //--></script>
-<!--onclick="JavaScript: scfCall(this);"> -->
-
                 <div class="panel">
                   <ul class="tasks">
 
-                    <li onclick="javascript: document.location.href = '/my_tasks/?all_tasks=a';">
-                      <div class="task__title">Заданий - ~~$count_tasks~</div>
+                    <li onclick="javascript: document.location.href = '#';">
+                      <div class="task__title">Вас выбрали в 0 заданиях</div>
                       <div class="body">
-                        <div class="task__icon icon_green"></div>
+                        <div class="task__icon icon_red"></div>
                         <div class="name">
-                          <div onclick="javascript: document.location.href = '/my_tasks/?all_tasks=c';">Выполнено</div>
-                          <div>
-                              Заданий - ~~$count_ready~
-                          </div>
+                          <div>Выполнены</div>
+                          <div class="status">0 заданий</div>
+                        </div>
+                        <div class="arrowCat"></div>
+                      </div>
+                    </li>
+                    <li onclick="javascript: document.location.href = '#';">
+                      <div class="task__title">Отменено или выбран другой исполнитель</div>
+                      <div class="body">
+                        <div class="task__icon icon_grey"></div>
+                        <div class="name">
+                          <div>В архиве</div>
+                          <div class="status">0 заданий</div>
                         </div>
                         <div class="arrowCat"></div>
                       </div>

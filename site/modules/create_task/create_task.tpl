@@ -147,8 +147,8 @@
                             <input type="text" name="title" id="task_title" value="" />
                         </div>
                         <div class="inp">
-                            <p>Содержание задания</p>
-                            <input type="text" name="description" id="task_description" value="" />
+                            <p>Нужно</p>
+                            <textarea name="description" id="task_description" rows="10" ></textarea>
                         </div>
                         <div class="inp">
                             <p>Стоимость</p>
@@ -159,10 +159,12 @@
                             <input class="date" type="text" name="time_start" id="task_time_start" value="~~$now.days~.~~$now.months~.~~$now.year~ ~~$now.hours~:~~$now.minutes~" placeholder="дд.мм.гггг чч:мм"/>
                         </div>
                         <br/>
-                        
+
                     </form>
-                    <div class="btnNext" onclick="send_form();">Далее</div>
+                <div class="btnNext" onclick="send_form();">Далее</div> 
+                    
                 </div>
+
 
              </main>
         </div>
