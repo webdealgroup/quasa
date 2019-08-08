@@ -50,7 +50,7 @@
             <header class="header">
                 <div class="boxAllTasks">
                     <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <!--p class="radius200"></p--> </div>
-                    <div class="batName">~~$user.name~<p>~~$birthday~</p></div>
+                    <div class="batName">~~$user.name~<p>~~$user.age~~~if $user.city!=''~, ~~$user.city~ ~~/if~</p></div>
                     <div class="batCategory"><span class="ico share"></span></div>
                     <div class="batMap"><span class="ico options" onclick="javascript: document.location.href = '/profile_edit/';">
                         </span></div> <!-- sc //-->
@@ -63,9 +63,9 @@
                 <div class="boxUserSection">
                     <div class="boxUserCard">
                         <div class="avatarBox">
-                            <div class="orderBox"> ~~$task_no~ <p>задание <br/> создано</p> </div>
+                            <div class="orderBox"> ~~$task_no~ <p>создано</p> </div>
                             <div class="avatar"><img src="/img/ava.jpg.png" alt=""></div>
-                            <div class="orderBox"> ~~$task_done~ <p>заданий <br/> выполнено</p> </div>
+                            <div class="orderBox"> ~~$task_done~ <p>выполнено</p> </div>
                         </div>
                         <div class="greenBox"> <p class="radius200">Станьте проверенным исполнителем</p> </div>
                         <div class="sertBox">

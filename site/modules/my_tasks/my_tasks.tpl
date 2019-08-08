@@ -134,13 +134,27 @@
                     <ul class="tasks">
 
                       <li onclick="javascript: document.location.href = '/my_tasks/?all_tasks=a';">
-                        <div class="task__title">Заданий - ~~$count_tasks~</div>
+                        
+                        <div class="body">
+                          <div class="task__icon icon_green"></div>
+                          <div class="name">
+                            <div onclick="javascript: document.location.href = '/my_tasks/?all_tasks=c';">Создано</div>
+                            <div>
+                                Заданий - ~~$count_tasks~
+                            </div>
+                          </div>
+                          <div class="arrowCat"></div>
+                        </div>
+                      </li>
+
+                      <li onclick="javascript: document.location.href = '/my_tasks/?all_tasks=a';">
+                        
                         <div class="body">
                           <div class="task__icon icon_green"></div>
                           <div class="name">
                             <div onclick="javascript: document.location.href = '/my_tasks/?all_tasks=c';">Выполнено</div>
                             <div>
-                                Заданий - ~~$count_ready~
+                                Заданий - 0
                             </div>
                           </div>
                           <div class="arrowCat"></div>

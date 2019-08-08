@@ -147,8 +147,9 @@
                 <div class="boxAllTasks">
                     <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <!--p class="radius200"></p--> </div>
                     <div class="batSearch">
-                        <form action="#" method="post">
-                            <input type="text" name="search" class="radius200" value="" placeholder="Поиск по заданиям" />
+                        <form action="/all_tasks/" method="post">
+                            <input type="hidden" name="search_task" value="1"> 
+                            <input type="text" name="search" class="radius200" value="~~$search_string~" placeholder="Поиск по заданиям" />
                         </form>
                     </div>
                     <div class="batCategory"><span class="ico settings"></span></div>
@@ -161,12 +162,12 @@
 
             <main class="main toggle">
 
-                <div class="main-header tabs">
+                <!--div class="main-header tabs">
                     <div class="main-header__heading tab active">ВСЕ</div>
                     <div class="main-header__heading tab">РЕКОМЕНДОВАННЫЕ</div>
                     <div class="main-header__updates tab">ИЗБРАННЫЕ</div>
                     <div class="line"></div>
-                </div>
+                </div--> 
 
                 <div class="allTaskSection">
 
@@ -180,7 +181,7 @@
                                         <div class="title">~~$i.title~</div>
                                         <div class="adress">~~$i.address~</div>
                                         <div class="timeStart">начать: ~~$i.time_start~</div>
-                                        <div class="price"><span>до ~~$i.cost~</span> <span class="cardIco"></span></div>
+                                        <div class="price"><span>~~$i.cost~ руб.</span> <!--span class="cardIco"></span></div-->
                                     </div>
                                 </li>
                                 ~~/foreach~
