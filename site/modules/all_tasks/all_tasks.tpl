@@ -148,8 +148,8 @@
                     <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <!--p class="radius200"></p--> </div>
                     <div class="batSearch">
                         <form action="/all_tasks/" method="post">
-                            <input type="hidden" name="search_task" value="1"> 
-                            <input type="text" name="search" class="radius200" value="~~$search_string~" placeholder="Поиск по заданиям" />
+                            <input type="hidden" name="search_task" value="1">  
+                            <input type="text" name="search" class="radius200" value="~~$search_string~" placeholder="Поиск по заданиям"  autocomplete="off" />
                         </form>
                     </div>
                     <div class="batCategory"><span class="ico settings"></span></div>
