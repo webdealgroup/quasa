@@ -63,7 +63,7 @@ ul { margin: 0px; padding: 0px; list-style: none;}
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 1fr 50px;
+    grid-template-rows: 75px 1fr 0px;
     grid-template-areas:
             'header'
             'main'
@@ -333,7 +333,7 @@ span.icoSvgHelp{ -webkit-mask-image: url(../img/help.svg); mask-image: url(../im
 .boxTaskCard .check .ico{ background: url("/img/ico_pattern_category_two.png") no-repeat left; background-position: -10px -430px; padding-left: 32px; color: #b4aeba; }
 
 .boxTaskCard .name{ color: #302d33; font-weight: 600; font-size: 24px; padding: 0px 20px; }
-.boxTaskCard .name p{ padding-top: 10px; }
+.boxTaskCard .name p{ padding-top: 10px; font-weight: 400;}
 
 .boxTaskCard .mapGoogle{ overflow: hidden; margin: 25px 20px 35px; height: 170px; -webkit-border-radius: 20px; -moz-border-radius: 25px; border-radius: 25px; }
 

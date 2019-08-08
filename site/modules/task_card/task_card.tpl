@@ -163,14 +163,12 @@
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d46754.40056263223!2d37.601975890560354!3d55.759437993972426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1562929366358!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
                                 </div>
                                 <div class="description">
-                                    <p>~~$title~</p>
-                                    ~~$description~
+                                    <p>Описание задания</p>
+                                    ~~$task.description~
                                 </div>
                                 <div class="description">
                                     <p>Начать</p>
-                                    ~~$time_start~
-                                    <p>Завершить</p>
-                                    ~~$time_end~
+                                    ~~$task.time_start~
                                 </div>
                                 <div class="description">
                                     <ul>
@@ -179,15 +177,14 @@
                                     </ul>
                                 </div>
                                 <div class="description">
-                                    <p>Создано 17 декабря 2018, 09:21</p>
+                                    <p>Создано ~~$task.created_at~</p>
                                     <p>Подкатегория &laquo;Услуги курьера на легковом авто&raquo;</p>
                                 </div>
 
-                                <form action="#" method="post" enctype='multipart/form-data'>
-                                  <input type='submit' name='scSendBtn' value='50 руб.'>
-                                </form>
+                                <div class="editButton" style="background:#5ab82e;">Ответить на задание</div>
 
-                                <div class="boxReviews">
+
+                                <!--div class="boxReviews">
                                     <div class="capt"><span class="icoCategoryUser ico_like"></span> <span class="text">Отзыв исполнителя</span></div>
                                     <div class="ava">
                                         <div class="photo radius200"><img src="/img/ava.jpg.png" alt=""></div>
@@ -236,7 +233,7 @@
                                             <div class="like"> <span class="likeReview">396</span> <span class="dislikeReview">0</span> </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div-->
 
                             </div>
                             <div class="panel">
@@ -280,40 +277,9 @@
                     </div>
                 </div>
 
-
-
-                <!--div class="main-overview">
-
-                    ~~foreach from=$tasks item=i~
-                    <div class="overviewcard">
-                        <div class="overviewcard__icon">
-                            avatar
-                        </div>
-                        <div class="overviewcard__info">
-
-                            <div>~~$i.title~</div>
-                            <div>~~$i.address~</div>
-                            <div>Начать: ~~$i.time_start~</div> 
-                            <div>Закончить: ~~$i.time_start~</div> 
-                            <div>~~$i.cost~</div> 
-                            
-                        </div>
-                    </div>
-                    ~~/foreach~
-
-                </div-->
-
-
             </main>
 
-            <footer class="footer">
-                <div class="footer__copyright">
-                    &copy; 2019 
-                </div>
-                <div class="footer__signature">
-                    Quasa
-                </div>
-            </footer>
+
         </div>
     </body>
 </html>
