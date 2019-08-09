@@ -70,6 +70,8 @@
 		}
 	}
 
+	if(isset($_REQUEST['logout']))  {unset($_SESSION['user']);}
+
     $rout = new router();
     $rout->execute(getRequest()); 
 ?>

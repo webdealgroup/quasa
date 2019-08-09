@@ -29,13 +29,13 @@ class reg extends aModule{
 			) 
 		{
 
-			$res = rows("SELECT * FROM users WHERE login LIKE '".filter_num_characters($_REQUEST['phone'])."'");
+			/*$res = rows("SELECT * FROM users WHERE login LIKE '".filter_num_characters($_REQUEST['phone'])."'");
 			if (array_key_exists(0, $res))
 			{
 				$_SESSION['smarty']->assign('error', "Пользователь с таким номером телефона уже существует");
 				$_SESSION['smarty']->display('reg/reg.tpl');   
 				exit();
-			}
+			}*/
 			
 			q("INSERT INTO users(login, name, password, phone) 
 				VALUES (

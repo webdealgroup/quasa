@@ -103,6 +103,21 @@
 		return $month;
 	}
 
+// Comet Server  =================================================================================================================================================     
+
+
+	function send($link, $cLines)
+	{
+	    
+	    $result = mysqli_query($link, 'INSERT INTO pipes_messages (name, event, message)VALUES("time", "event_name", "'.base64_encode(json_encode($cLines)).'")');
+	    if($result != 11)
+	    {
+	        return false;
+	    }
+
+	    return true;
+	}
+
 // ================================================================================================================================================================     
 
 ?>
