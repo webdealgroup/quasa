@@ -56,7 +56,16 @@
 			}
 			else
 			{
-				print ($_SESSION['smarty']->fetch('mod:login')); exit();
+				
+				if(isset($_SESSION['user']) && $_SESSION['user']['id'] !=0)
+				{
+					print ($_SESSION['smarty']->fetch('mod:all_tasks')); exit();
+				}
+				else
+				{
+					print ($_SESSION['smarty']->fetch('mod:login')); exit();
+				}
+				
 			} 
 		}
 	}
