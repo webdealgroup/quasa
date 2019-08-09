@@ -188,7 +188,7 @@
                                         <div class="title">~~$i.title~</div>
                                         <div class="adress">~~$i.address~</div>
                                         <div class="timeStart">начать: ~~$i.time_start~</div>
-                                        <div class="price"><span>до ~~$i.cost~</span> <span class="cardIco"></span></div>
+                                        <div class="price"><span>~~$i.cost~</span> <span class="cardIco"></span></div>
                                     </div>
                                 </li>
                                 ~~/foreach~
