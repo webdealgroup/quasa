@@ -11,7 +11,12 @@ class reg extends aModule{
 		{
 			if($in['ver_code'] == $_SESSION['ver_code'])
 			{
-				header('Location: /login/');
+				$login = filter_num_characters(noSQL($in['login']));
+				$password = noSQL($in['password']);
+				$res = rows("SELECT * FROM users WHERE login LIKE '".$login."' AND password LIKE '".MD5($in['password'])."' ");
+				$_SESSION['user'] = $res[0];
+
+				header('Location: /all_tasks/');
 				exit();
 			}
 			else 
