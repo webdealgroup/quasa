@@ -45,7 +45,7 @@ class reg extends aModule{
 				'".noSQL($_REQUEST['phone'])."'
 			)");
 			
-			require_once '/site/libs/sms.ru.php';
+			require_once 'site/libs/sms.ru.php';
 			
 			$phone = $_REQUEST["phone"];
 			
