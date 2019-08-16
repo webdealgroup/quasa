@@ -70,7 +70,11 @@
 		}
 	}
 
-	if(isset($_REQUEST['logout']))  {unset($_SESSION['user']);}
+	if(isset($_REQUEST['logout']))  //выход 
+	{
+		unset($_SESSION['user']);
+		unset($_SESSION['mod']);
+	}
 
     $rout = new router();
     $rout->execute(getRequest()); 

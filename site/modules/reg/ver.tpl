@@ -126,6 +126,7 @@
 				<center><p style="font-size: 24px; font-weight: 600; text-transform: uppercase;"><a style="text-decoration: none; color: #fff;" href="/">QUASA</a></p></center>
             	<form method="POST" action="/reg/">
             		<input type="hidden" name="verification" value='1' />
+            		<input type="hidden" name="login" value='~~$login~' />
 
 	            	<div class="grid">
 	            		<div><input class="reg" type="text" name="ver_code" value="" placeholder="****" required autocomplete="off"></div>

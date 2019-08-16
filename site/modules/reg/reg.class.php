@@ -12,9 +12,10 @@ class reg extends aModule{
 			if($in['ver_code'] == $_SESSION['ver_code'])
 			{
 				$login = filter_num_characters(noSQL($in['login']));
-				$password = noSQL($in['password']);
-				$res = rows("SELECT * FROM users WHERE login LIKE '".$login."' AND password LIKE '".MD5($in['password'])."' ");
-				$_SESSION['user'] = $res[0];
+				
+				$_SESSION['user'] = row("SELECT * FROM users WHERE login LIKE '".$login."' ");
+				//echo "SELECT * FROM users WHERE login LIKE '".$login."' ";
+				//echo "<pre>"; print_r($_SESSION['user']); echo "</pre>"; //die();  
 
 				header('Location: /all_tasks/');
 				exit();
@@ -33,14 +34,15 @@ class reg extends aModule{
 				&& $_REQUEST['registration'] == 1 
 			) 
 		{
+			//защита от повторной регистрации
 
-			/*$res = rows("SELECT * FROM users WHERE login LIKE '".filter_num_characters($_REQUEST['phone'])."'");
+			$res = rows("SELECT * FROM users WHERE login LIKE '".filter_num_characters($_REQUEST['phone'])."'");
 			if (array_key_exists(0, $res))
 			{
 				$_SESSION['smarty']->assign('error', "Пользователь с таким номером телефона уже существует");
 				$_SESSION['smarty']->display('reg/reg.tpl');   
 				exit();
-			}*/
+			}
 			
 			q("INSERT INTO users(login, name, password, phone) 
 				VALUES (
@@ -70,7 +72,7 @@ class reg extends aModule{
 				//echo "Сообщение отправлено успешно. ";
 				//echo "ID сообщения: $sms->sms_id. ";
 				//echo "Ваш новый баланс: $sms->balance";
-
+				$_SESSION['smarty']->assign('login', filter_num_characters($_REQUEST['phone']));
 				$_SESSION['smarty']->display('reg/ver.tpl');
 				exit();	
 			} 

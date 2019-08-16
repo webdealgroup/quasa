@@ -24,7 +24,7 @@
                         Профиль
                     </li>
 					
-					<li class="sidenav__list-item" onclick="javascript: document.location.href = '/';">
+					<li class="sidenav__list-item" onclick="javascript: document.location.href = '/?logout';">
                         Выйти
                     </li>
                 </ul>                

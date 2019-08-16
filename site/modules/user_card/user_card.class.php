@@ -6,6 +6,7 @@ class user_card extends aModule{
 		    $in = $arr["send_params"];
 
         $_SESSION['smarty']->assign('user', $_SESSION['user']);
+        //echo "<pre>"; print_r($_SESSION['user']); echo "</pre>";
 
         if (isset($_REQUEST['bill'])) {
 
@@ -14,14 +15,23 @@ class user_card extends aModule{
         }
 
         $user = row("SELECT * FROM users WHERE id=" . $_SESSION['user']['id']);
+        //echo "<pre>"; print_r($user); echo "</pre>";
+
 
         $birthday = new DateTime($user['birthday']); // дата рождения
         $age = $birthday->diff(new DateTime)->format('%y'); // возраст
 
-        $user['age'] = $age." ".OOPSSpell($age,' ',array('год','года','лет'));
+        if($age == now()['year'] || $age == 0) 
+        {
+            $user['age'] = "";
+        }
+        else
+        {
+            $user['age'] = $age." ".OOPSSpell($age,' ',array('год','года','лет'));
+        }
 
-        $tasks_no = rows("SELECT count(id_client) as v FROM tasks WHERE id_client=" . $_SESSION['user']['id']);
-        $tasks_done = rows("SELECT count(1) as v FROM tasks WHERE completed > 0 and id_contractor=" . $_SESSION['user']['id']);
+        $user['t1'] = row("SELECT count(id) as v FROM tasks WHERE id_client=" . $_SESSION['user']['id']);
+        $user['t2'] = row("SELECT count(id) as v FROM tasks WHERE completed > 0 and id_contractor=" . $_SESSION['user']['id']);
 
         $_SESSION['smarty']->assign('now', $now);
         $_SESSION['smarty']->assign('user', $user);
