@@ -13,14 +13,6 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/main.css">
         
-        <script type="text/javascript">
-            function init() {
-                AndroidFunction.showMenu();
-            }
-            function show_user(user_name) {
-                Android.changeName(user_name);
-            }
-        </script>
 
         <style>
 
@@ -71,76 +63,6 @@
           integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
           crossorigin="anonymous">
         </script>
-        <script>
-            const menuIconEl = $('.menu-icon');
-            const sidenavEl = $('.sidenav');
-            const sidenavCloseEl = $('.sidenav__close-icon');
-
-            // Add and remove provided class names
-            function toggleClassName(el, className) {
-              if (el.hasClass(className)) {
-                el.removeClass(className);
-              } else {
-                el.addClass(className);
-              }
-            }
-
-            // Open the side nav on click
-            menuIconEl.on('click', function() {
-              toggleClassName(sidenavEl, 'active');
-            });
-
-            // Close the side nav on click
-            sidenavCloseEl.on('click', function() {
-              toggleClassName(sidenavEl, 'active');
-            });
-            
-            // Tabs
-            (function() {
-              $(function() {
-                var toggle;
-                return toggle = new Toggle('.toggle');
-              });
-
-              this.Toggle = (function() {
-                Toggle.prototype.el = null;
-
-                Toggle.prototype.tabs = null;
-
-                Toggle.prototype.panels = null;
-
-                function Toggle(toggleClass) {
-                  this.el = $(toggleClass);
-                  this.tabs = this.el.find(".tab");
-                  this.panels = this.el.find(".panel");
-                  this.bind();
-                }
-
-                Toggle.prototype.show = function(index) {
-                  var activePanel, activeTab;
-                  this.tabs.removeClass('active');
-                  activeTab = this.tabs.get(index);
-                  $(activeTab).addClass('active');
-                  this.panels.hide();
-                  activePanel = this.panels.get(index);
-                  return $(activePanel).show();
-                };
-
-                Toggle.prototype.bind = function() {
-                  var _this = this;
-                  return this.tabs.unbind('click').bind('click', function(e) {
-                    return _this.show($(e.currentTarget).index());
-                  });
-                };
-
-                return Toggle;
-
-              })();
-
-            }).call(this);
-
-        </script>
-
 
     </head>
 
@@ -149,33 +71,17 @@
         <div class="grid-container">
 
             <header class="header">
-                Открытые задания
-<!--
-                <div class="boxAllTasks">
-                    <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span></div>
-                    <div class="batSearch">
-                        <form action="#" method="post">
-                            <input type="text" name="search" class="radius200" value="" placeholder="Поиск по заданиям" />
-                        </form>
-                    </div>
-                    <div class="batCategory"><span class="ico settings"></span></div>
-                    <div class="batMap"><span class="ico map"></span></div>
+                <div class="boxAllTasks billUser">
+                    <div class="batMenu" onclick="javascript: document.location.href = '/my_tasks/';"><span class="ico arrowLeft"></span>  </div>
+                    <div class="batText">Открытые задания</div>
+                    <div class="batCategory"><!--span class="icoSvg icoSvgHelp"></span--></div>
                 </div>
-//-->
-<!--p class="radius200"></p-->
             </header>
 
             ~~include file='tpl/menu.tpl'~
 
             <main class="main toggle">
-<!--
-                <div class="main-header tabs">
-                    <div class="main-header__heading tab active">ВСЕ</div>
-                    <div class="main-header__heading tab">РЕКОМЕНДОВАННЫЕ</div>
-                    <div class="main-header__updates tab">ИЗБРАННЫЕ</div>
-                    <div class="line"></div>
-                </div>
-//-->
+
                 <div class="allTaskSection">
 
                     <div class="panels">

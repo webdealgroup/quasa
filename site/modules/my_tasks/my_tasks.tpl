@@ -103,17 +103,14 @@
         <div class="grid-container">
 
             <header class="header">
-                <div class="header__search" onClick="javascript:return init();">
-                        <span>&#9776;</span>
-                </div>
-                <div class="header__avatar">
-                    Мои задания
+                <div class="boxAllTasks billUser">
+                    <div class="batMenu" onclick="javascript: return init();"><span class="ico arrowLeft"></span>  </div>
+                    <div class="batText">Мои задания</div>
+                    <div class="batCategory"><!--span class="icoSvg icoSvgHelp"></span--></div>
                 </div>
             </header>
 
-
             ~~include file='tpl/menu.tpl'~
-
 
 
             <main class="main toggle">
@@ -133,33 +130,35 @@
 
                     <ul class="tasks">
 
-                      <li onclick="javascript: document.location.href = '/my_tasks/?all_tasks=a';">
+                      <li onclick="javascript: document.location.href = '/my_tasks/?section=open_tasks';">
                         
                         <div class="body">
                           <div class="task__icon icon_green"></div>
                           <div class="name">
-                            <div onclick="javascript: document.location.href = '/my_tasks/?all_tasks=c';">Создано</div>
+                            <div>Создано</div>
                             <div>
-                                Заданий - ~~$count_tasks~
+                                Заданий - ~~$counts.tasks.v~
                             </div>
                           </div>
                           <div class="arrowCat"></div>
                         </div>
                       </li>
 
-                      <li onclick="javascript: document.location.href = '/my_tasks/?all_tasks=a';">
+                      ~~if $counts.ready.v !=0 ~
+                      <li onclick="javascript: document.location.href = '/my_tasks/?section=completed_tasks';">
                         
                         <div class="body">
                           <div class="task__icon icon_green"></div>
                           <div class="name">
-                            <div onclick="javascript: document.location.href = '/my_tasks/?all_tasks=c';">Выполнено</div>
+                            <div>Выполнено</div>
                             <div>
-                                Заданий - 0
+                                Заданий - ~~$counts.ready.v~
                             </div>
                           </div>
                           <div class="arrowCat"></div>
                         </div>
                       </li>
+                      ~~/if~
 
                     </ul>
                 </div>
@@ -168,26 +167,31 @@
                   <ul class="tasks">
 
                     <li onclick="javascript: document.location.href = '#';">
-                      <div class="task__title">Вас выбрали в 0 заданиях</div>
+                      <div class="task__title">Вас выбрали в ~~$counts.approved_contractor.v~ заданиях</div>
+                      ~~if $counts.approved_contractor.v !=0 ~
                       <div class="body">
                         <div class="task__icon icon_red"></div>
                         <div class="name">
                           <div>Выполнены</div>
-                          <div class="status">0 заданий</div>
+                          <div class="status">~~$counts.approved_contractor.v~ заданий</div>
                         </div>
                         <div class="arrowCat"></div>
                       </div>
+                      ~~/if~
                     </li>
+
                     <li onclick="javascript: document.location.href = '#';">
-                      <div class="task__title">Отменено или выбран другой исполнитель</div>
+                      <div class="task__title">~~$counts.decline.v~ заданий отменено или выбран другой исполнитель</div>
+                      ~~if $counts.decline.v !=0 ~
                       <div class="body">
                         <div class="task__icon icon_grey"></div>
                         <div class="name">
                           <div>В архиве</div>
-                          <div class="status">0 заданий</div>
+                          <div class="status">~~$counts.decline.v~ заданий</div>
                         </div>
                         <div class="arrowCat"></div>
                       </div>
+                      ~~/if~
                     </li>
 
                   </ul>
