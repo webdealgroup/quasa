@@ -124,7 +124,7 @@
         <div class="grid-container">
             <header class="header">
                 <div class="boxAllTasks createTaskStep">
-                    <div class="batMenu" onClick="javascript:return init();">
+                    <div class="batMenu" >
                         <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=~~$sub_category.id_parent~';">
                         </span>
                     </div>
