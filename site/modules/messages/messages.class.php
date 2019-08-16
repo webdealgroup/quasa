@@ -5,9 +5,10 @@ class messages extends aModule{
         //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
 		$in = $arr["send_params"];
 		
-		$tasks = rows('SELECT * FROM tasks WHERE id_client ='.$_SESSION['user']['id']);
+		$messages = rows('SELECT * FROM messages WHERE id_client ='.$_SESSION['user']['id']);
+		$types = rows('SELECT * FROM message_types');
 
-	  $_SESSION['smarty']->assign('tasks', $tasks);
+	  	$_SESSION['smarty']->assign('tasks', $tasks);
 		$_SESSION['smarty']->display('messages/messages.tpl');
         
     }
