@@ -125,10 +125,10 @@
             <header class="header">
                 <div class="boxAllTasks createTaskStep">
                     <div class="batMenu" onClick="javascript:return init();">
-                        <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=~~$cat_id~';">
+                        <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=~~$sub_category.id_parent~';">
                         </span>
                     </div>
-                    <div class="batName">~~$cat_name~<p>Шаг 1 из 1</p></div>
+                    <div class="batName">~~$sub_category.name~<p>Шаг 1 из 1</p></div>
                     <div class="batCategory">Отмена</div>
                 </div>
             </header>

@@ -54,19 +54,19 @@
 <header class="header">
     <div class="boxAllTasks oneText">
         <div class="batMenu" onClick="javascript:return init();">
-            <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/?cat_id=0';">
+            <span class="ico arrowLeft" onclick="javascript: document.location.href = '/create_task/';">
             </span> <!--p class="radius200"></p--> </div>
-        <div class="batText">Грузоперевозки</div>
+        <div class="batText">~~$category.name~</div>
     </div>
 </header>
 ~~include file='tpl/menu.tpl'~
 
     <main class="main">
 
-        <ul class="category subCategoryTask"> <!-- ?cat_id=~~$i.id~-->
+        <ul class="category subCategoryTask"> 
 
             ~~foreach from=$cat_items item=i~
-            <li onclick="javascript: document.location.href = '/create_task/?cat_id=~~$i.id~&create_task=1';">
+            <li onclick="javascript: document.location.href = '/create_task/?cat_id=~~$i.id~&category=~~$category.id~&create_task=1';">
                 <div class="name">~~$i.name~</div>
                 <span class="icoSvg icoSvgArrowWhite"></span></li>
             ~~/foreach~
