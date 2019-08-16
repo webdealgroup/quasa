@@ -41,6 +41,7 @@ class create_task extends aModule{
             $res = row("SELECT * FROM cat WHERE id = ".noSQL($in['cat_id']));
             $_SESSION['smarty']->assign('sub_category', $res);
 
+            $_SESSION['smarty']->assign('now', now());
             $_SESSION['smarty']->display('create_task/create_task.tpl');
 
             exit();
@@ -65,7 +66,7 @@ class create_task extends aModule{
         $cat_items = rows("SELECT * FROM cat WHERE id_parent = 0");
         $_SESSION['smarty']->assign('cat_items', $cat_items);
 
-        $_SESSION['smarty']->assign('now', now());
+        
         $_SESSION['smarty']->display('create_task/show_catalog.tpl');
 
         

@@ -113,9 +113,6 @@
 
 
 
-
-
-
     </head>
 
     <body class="">
@@ -161,7 +158,8 @@
                         <br/>
 
                     </form>
-                <div class="btnNext" onclick="send_form();">Далее</div> 
+                    
+                    <div class="btnNext" onclick="send_form();">Создать задание</div> 
                     
                 </div>
 
