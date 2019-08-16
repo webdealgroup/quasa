@@ -13,6 +13,9 @@ class task_card extends aModule{
                WHERE tasks.id = ".noSQL($in['id'])."
              ");
             
+          $cat = rows("SELECT * FROM cat "); 
+          foreach($cat as $c=>$v) {$categories[$v['id']] = $v; }
+          $_SESSION['smarty']->assign('cat', $categories);
 
           $task = row('SELECT * FROM tasks WHERE id ='.$in['id']);
 

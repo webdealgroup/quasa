@@ -137,6 +137,8 @@
                 <div class="addTaskStep">
                     <form action="/create_task/" method="post" id="add_task_form">
                         <input type='hidden' name='save_task' value='1'>
+                        <input type='hidden' name='category' value='~~$sub_category.id_parent~'>
+                        <input type='hidden' name='subcategory' value='~~$sub_category.id~'>
 
                         <div class="capt">Что нужно сделать?</div>
                         <div class="inp">
@@ -158,7 +160,7 @@
                         <br/>
 
                     </form>
-                    
+
                     <div class="btnNext" onclick="send_form();">Создать задание</div> 
                     
                 </div>

@@ -14,7 +14,9 @@ class create_task extends aModule{
 
             
             q("INSERT INTO tasks (
-                id_client, 
+                id_client,
+                id_cat,
+                id_subcat,
                 title, 
                 description, 
                 cost, 
@@ -22,9 +24,11 @@ class create_task extends aModule{
               ) 
               VALUES (
                 {$_SESSION['user']['id']}, 
-                '{$_REQUEST['title']}', 
-                '{$_REQUEST['description']}', 
-                {$_REQUEST['cost']}, 
+                {$in['category']}, 
+                {$in['subcategory']}, 
+                '{$in['title']}', 
+                '{$in['description']}', 
+                {$in['cost']}, 
                 '{$time_start}'
             )");
 

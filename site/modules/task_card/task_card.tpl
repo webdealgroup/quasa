@@ -141,7 +141,7 @@
   background-color: #fff;
 }
 </style>
-
+~~*debug*~
             <main class="main">
 
                 <div class="boxTaskCard">
@@ -178,7 +178,7 @@
                                 </div>
                                 <div class="description">
                                     <p>Создано ~~$task.created_at~</p>
-                                    <p>Подкатегория &laquo;Услуги курьера на легковом авто&raquo;</p>
+                                    <p>Подкатегория &laquo;~~$cat[$task.id_subcat].name~&raquo;</p>
                                 </div>
 
                                 <div class="editButton" style="background:#5ab82e;">Ответить на задание</div>
