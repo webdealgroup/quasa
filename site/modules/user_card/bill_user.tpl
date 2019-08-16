@@ -51,7 +51,7 @@
 <div class="grid-container">
 <header class="header">
     <div class="boxAllTasks billUser">
-        <div class="batMenu" onClick="javascript:return init();"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
+        <div class="batMenu" onclick="javascript: document.location.href = '/user_card/';"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
         <div class="batText">Счет</div>
         <div class="batCategory"><span class="icoSvg icoSvgHelp"></span></div>
     </div>
@@ -61,10 +61,10 @@
     <main class="main">
         <div class="billUserBox">
             <div class="billUserGradient">
-                ~~$money~ &#x20bd;
+                ~~$user.money~ &#x20bd;
                <!-- <p>37 &#x20bd; + 1 000 &#x20bd; бонусов</p> //-->
             </div>
-            <div class="btnNext" onclick="javascript: document.location.href = '/pay/';">Далее</div>
+            <div class="btnNext" onclick="javascript: document.location.href = '/pay/';">Пополнить</div>
         </div>
      </main>
 </div>

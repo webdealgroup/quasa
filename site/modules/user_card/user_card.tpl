@@ -56,7 +56,7 @@
                 <div class="boxAllTasks">
                     <div class="batMenu" onClick="javascript:return init();"><span class="ico menu"></span> <!--p class="radius200"></p--> </div>
                     <div class="batName">~~$user.name~<p>~~if $user.age!=''~~~$user.age~~~/if~ ~~if $user.city !=''~~~$user.city~ ~~/if~</p></div>
-                    <div class="batCategory"><span class="ico share"></span></div>
+                    <div class="batCategory"><!--span class="ico share"></span--></div>
                     <div class="batMap"><span class="ico options" onclick="javascript: document.location.href = '/profile_edit/';">
                         </span></div> <!-- sc //-->
                 </div>
@@ -88,10 +88,10 @@
                     <ul class="category">
                         <li>
                             <div class="icoCategoryUser ico_01"></div>
-                              <div class="name" onclick="javascript: document.location.href = '/user_card/?bill=y';">На счете ~~$money~ &#8381;</div>
+                              <div class="name" onclick="javascript: document.location.href = '/user_card/?bill=y';">На счете ~~$user.money~ &#8381;</div>
                             <div class="arrowCat"></div>
                         </li>
-                        <li>
+                        <!--li>
                             <div class="icoCategoryUser ico_02"></div> <div class="name">Безлимитные предложения</div> <div class="arrowCat"></div>
                         </li>
                         <li>
@@ -102,26 +102,28 @@
                         </li>
                         <li>
                             <div class="icoCategoryUser ico_05"></div> <div class="name">Шаблоны предложений</div> <div class="arrowCat"></div>
-                        </li>
+                        </li-->
                     </ul>
 
                     <div class="aboutMe">
                         <div class="boxInfo">
                             <div class="capt"><span>О себе</span><span class="icoCategoryUser ico_06" onclick="javascript: document.location.href = '/profile_edit/';"></span> </div>
-                            <p>В сервисе с ~~$create_time~</p>
-                            <p>Номер пользователя: ~~$userid~</p>
+                            <p>В сервисе с ~~$user.create_time~</p>
+                            <p>Номер пользователя: ~~$user.id~</p>
                         </div>
 
                         <div class="boxNumber">
-                            <div class="capt"><span>Средняя оценка - </span><span class="number">~~$rating~</span> </div>
+                            <div class="capt"><span>Средняя оценка - </span><span class="number">~~$user.rating~</span> </div> 
+                            ~~*
                             <ul>
                                 <li><span class="title">Качество</span> <span class="star_0~~$rating~"></span></li>  <!-- star_05 -->
                                 <li><span class="title">Вежливость</span> <span class="star_0~~$rating~"></span></li>  <!-- star_04 -->
                                 <li><span class="title">Стоимость услуг</span> <span class="star_0~~$rating~"></span></li>  <!-- star_03 -->
                             </ul>
+                            *~
                         </div>
 
-                        <div class="boxReviews">
+                        <!--div class="boxReviews">
                             <div class="capt"><span>Отзывы </span><span class="likeReview">5</span> <span class="dislikeReview">0</span> </div>
                             <div class="text">
                                 &laquo;Все очень грамотно и оперативно, без лишних звонков и вопросов! Презентабельный внешний вид и отличный подход к работе! Только положительный отзыв! &raquo;
@@ -142,7 +144,7 @@
                                     <p>Выполнено 1 задание</p>
                                 </li>
                             </ul>
-                        </div>
+                        </div-->
 
                         <div class="boxCheck">
                             <div class="capt">Подтверждены</div>
@@ -150,12 +152,12 @@
                                 <li>
                                     <span class="icoCategoryUser ico_09"></span><span class="text">Телефон</span>
                                 </li>
-                                <li>
+                                <!--li>
                                     <span class="icoCategoryUser ico_10"></span><span class="text">Электронная почта</span>
                                 </li>
                                 <li>
                                     <span class="icoCategoryUser ico_11"></span><span>ВКонтакте <p>7 друзей</p></span>
-                                </li>
+                                </li-->
                             </ul>
                         </div>
 
