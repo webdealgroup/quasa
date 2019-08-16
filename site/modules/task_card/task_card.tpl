@@ -237,6 +237,10 @@
 
                             </div>
                             <div class="panel">
+
+                                <div class="captSmall"><span class="text">У задания нет предложений</span> <span class="icoCategoryUser ico_14"></span></div>
+
+                                ~~*
                                 <div class="captSmall"><span class="text">У задания 1 предложение</span> <span class="icoCategoryUser ico_14"></span></div>
 
                                 <div class="alertBox">
@@ -270,7 +274,7 @@
                                 </div>
                                 <div class="dateReviewsPred">15 июня 2019, 21:25</div>
                                 <div class="editButton">Редактировать задание</div>
-
+                                *~
                             </div>
                         </div>
 
