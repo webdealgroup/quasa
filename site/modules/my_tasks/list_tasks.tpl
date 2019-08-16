@@ -73,7 +73,7 @@
             <header class="header">
                 <div class="boxAllTasks billUser">
                     <div class="batMenu" onclick="javascript: document.location.href = '/my_tasks/';"><span class="ico arrowLeft"></span>  </div>
-                    <div class="batText">Открытые задания</div>
+                    <div class="batText">~~$title~</div>
                     <div class="batCategory"><!--span class="icoSvg icoSvgHelp"></span--></div>
                 </div>
             </header>

@@ -166,7 +166,7 @@
                 <div class="panel">
                   <ul class="tasks">
 
-                    <li onclick="javascript: document.location.href = '#';">
+                    <li onclick="javascript: document.location.href = '/my_tasks/?section=approved_contractor';">
                       <div class="task__title">Вас выбрали в ~~$counts.approved_contractor.v~ заданиях</div>
                       ~~if $counts.approved_contractor.v !=0 ~
                       <div class="body">
@@ -180,7 +180,7 @@
                       ~~/if~
                     </li>
 
-                    <li onclick="javascript: document.location.href = '#';">
+                    <li onclick="javascript: document.location.href = '/my_tasks/?section=decline';">
                       <div class="task__title">~~$counts.decline.v~ заданий отменено или выбран другой исполнитель</div>
                       ~~if $counts.decline.v !=0 ~
                       <div class="body">
