@@ -21,7 +21,8 @@ class user_card extends aModule{
         $birthday = new DateTime($user['birthday']); // дата рождения
         $age = $birthday->diff(new DateTime)->format('%y'); // возраст
 
-        if($age == now()['year'] || $age == 0) 
+        $today = now();
+        if($age == $today['year'] || $age == 0) 
         {
             $user['age'] = "";
         }
