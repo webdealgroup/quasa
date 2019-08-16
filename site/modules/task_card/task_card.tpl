@@ -146,14 +146,14 @@
 
                 <div class="boxTaskCard">
                     <div class="nameTask">
-                        <div class="check"><span>Выполнено</span> <span class="ico">1</span></div>
+                        <div class="check"><!--span>Выполнено</span--> <span class="ico">~~$task.views~</span></div>
                         <div class="name"> ~~$task.title~ <p> ~~$task.cost~ &#8381;</p> </div>
                     </div>
 
                     <div class="toggle">
                         <div class="tabs">
                             <div class="tab active">ДЕТАЛИ</div>
-                            <div class="tab">ПРЕДЛОЖЕНИЯ <span>(1)</span></div>
+                            <div class="tab">ПРЕДЛОЖЕНИЯ <span>(0)</span></div>
                             <div class="line"></div>
                         </div>
 
