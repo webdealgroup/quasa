@@ -181,7 +181,11 @@
                                     <p>Подкатегория &laquo;~~$cat[$task.id_subcat].name~&raquo;</p>
                                 </div>
 
-                                <div class="editButton" style="background:#5ab82e;">Ответить на задание</div>
+                                ~~if $task.id_contractor != $user.id ~
+                                <div class="editButton" style="background:#5ab82e;" onclick="javascript: document.location.href = '/task_card/?id=~~$task.id~&&referrer=~~$in.referrer~&answer=1';">Ответить на задание (50р)</div>
+                                ~~else~
+                                <div class="editButton" style="background:#cccccc;" onclick="javascript: document.location.href = '#';">Ответ отправлен</div>
+                                ~~/if~
 
 
                                 <!--div class="boxReviews">
@@ -285,5 +289,14 @@
 
 
         </div>
+
+
+        <script>
+
+            //console.log('~~$error~');
+            var err = '~~$error~';
+            if (err != '') AndroidFunction.show_message(err);
+        </script>   
+
     </body>
 </html>

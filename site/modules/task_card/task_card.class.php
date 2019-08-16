@@ -5,6 +5,56 @@ class task_card extends aModule{
       //echo "<pre>"; print_r($arr); echo "</pre>"; //die();   
   		$in = $arr["send_params"];
 
+
+      if (isset($in['answer']) && $in['answer'] == 1) 
+      {
+          
+          $user = row("SELECT * FROM users WHERE id=" . $_SESSION['user']['id']); 
+
+          if($user['money'] >= 50)
+          {
+            q("UPDATE tasks 
+               SET  id_contractor = ".$_SESSION['user']['id']."   
+               WHERE tasks.id = ".noSQL($in['id'])."
+             ");
+            
+            q("UPDATE users 
+               SET  money = money - 50    
+               WHERE id = ".$_SESSION['user']['id']."
+             ");            
+          }
+          else
+          {
+              $_SESSION['smarty']->assign('error', "Недостаточно средств");
+          }
+
+          $cat = rows("SELECT * FROM cat "); 
+          foreach($cat as $c=>$v) {$categories[$v['id']] = $v; }
+          $_SESSION['smarty']->assign('cat', $categories);
+
+          $task = row('SELECT * FROM tasks WHERE id ='.$in['id']);
+
+            $result = preg_match('/(\d\d\d\d)-(\d\d)-(\d\d) (\d\d):(\d\d):(\d\d)/',$task['time_start'],$t);
+            $month = month_text($t[2]);
+            if ($result == 1) $time_start = "{$t[3]} {$month} {$t[1]}, {$t[4]}:{$t[5]}";
+            
+
+            $result = preg_match('/(\d\d\d\d)-(\d\d)-(\d\d) (\d\d):(\d\d):(\d\d)/',$task['created_at'],$t);
+            $month = month_text($t[2]);
+            if ($result == 1) $created_at = "{$t[3]} {$month} {$t[1]}, {$t[4]}:{$t[5]}";
+
+      
+          $task['time_start'] = $time_start;
+          $task['created_at'] = $created_at;
+
+          $_SESSION['smarty']->assign('task', $task);
+          $_SESSION['smarty']->assign('in', $in);
+          $_SESSION['smarty']->assign('user', $user);
+          $_SESSION['smarty']->display('task_card/task_card.tpl');
+          exit();
+
+      }
+
       if (isset($in['id']) && strlen($in['id'])>0) 
       {
 
