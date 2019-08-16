@@ -53,7 +53,7 @@
     <div class="boxAllTasks billUser">
         <div class="batMenu" onclick="javascript: document.location.href = '/user_card/';"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
         <div class="batText">Счет</div>
-        <div class="batCategory"><span class="icoSvg icoSvgHelp"></span></div>
+        <div class="batCategory"><!--span class="icoSvg icoSvgHelp"></span--></div>
     </div>
 </header>
 ~~include file='tpl/menu.tpl'~
