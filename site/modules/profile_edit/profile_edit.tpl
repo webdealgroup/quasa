@@ -49,7 +49,7 @@
         <div class="grid-container">
             <header class="header">
                 <div class="boxAllTasks oneText">
-                    <div class="batMenu" onClick="javascript:return init();"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
+                    <div class="batMenu"  onclick="javascript: document.location.href = '/user_card/';"><span class="ico arrowLeft"></span> <!--p class="radius200"></p--> </div>
                     <div class="batText">Личная информация</div>
                 </div>
             </header>
